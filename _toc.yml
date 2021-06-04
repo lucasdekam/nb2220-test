@@ -3,6 +3,7 @@
 #
 - file: intro
 - file: chapter1
+- file: project
   # sections:
     # - file: markdown
     # - file: notebooks
