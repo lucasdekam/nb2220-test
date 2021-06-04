@@ -60,6 +60,6 @@ outcomes. For example, the expectation of the speed $v$ may be written as
 
 $$\langle v \rangle = \int_{0}^\infty v p(v) \mathrm{d}v $$
 
-(note that the speed -- the magnitude of the velocity -- is always positive, $p(v)$ must be
+(note that the speed -- the magnitude of the velocity -- is always positive, so $p(v)$ must be
 zero for $v<0$, so the lower limit of the integral can be set to zero).
 ```
