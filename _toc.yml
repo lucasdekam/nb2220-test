@@ -11,4 +11,4 @@ parts:
     - file: chapter1
   - caption: Temporary
     chapters:
-      -file: project
+    - file: project
