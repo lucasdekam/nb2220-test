@@ -9,6 +9,4 @@ parts:
   - caption: Name of the first part
     chapters:
     - file: chapter1
-  - caption: Temporary
-    chapters:
     - file: project

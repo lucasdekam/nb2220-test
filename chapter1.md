@@ -1,4 +1,4 @@
-Chapter 1: Probability recap
+Probability recap
 =======================
 
 ```{admonition} Learning goals
@@ -9,7 +9,7 @@ After reading this chapter, you will be able to
 * ...
 ```
 
-## 1.1 Random variables
+## Random variables
 In statistical physics, we are interested in deriving macro-scale properties
 from what we know about the micro-scale. Often, we are concerned with large
 numbers of particles (or other things), and we apply the theory of probability
@@ -31,7 +31,7 @@ $$
 which is known as the Maxwell-Boltzmann distribution.
 ```
 
-## 1.2 Expectation values
+## Expectation values
 The expectation of a random variable is the average of its possible outcomes,
 weighted by their probabilities. Mathematicians like to denote the expectation of
 a random variable $X$ as $\mathbb{E}[X]$. In this course, we will use a notation
