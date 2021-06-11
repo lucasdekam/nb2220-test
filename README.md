@@ -5,6 +5,5 @@ Test version for publishing the open lecture notes that are being developed for 
 * Jupyter Book is a Python module that can build markdown and .ipynb files into
 a website that looks like this (you can also include python scripts for
 interactive plots, etc.)
-* The idea is to keep track of the markdown files on GitLab, and publish (deploy)
-the website from there.
-* This can be done using Netlify, or possibly a GitLab pipeline
+* The markdown files are stored in the main branch
+* The website is deployed in the gh-pages branch using GitHub Actions, and published using GitHub Pages. (The \_build folder is still there for publishing on Netlify, which I tried earlier. However, it is redundant for publishing using Actions and Pages.) 
