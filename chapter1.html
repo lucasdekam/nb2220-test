@@ -204,6 +204,11 @@
    1.2. Expectation values
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variance">
+   1.3. Variance
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -278,6 +283,24 @@ outcomes. For example, the expectation of the speed <span class="math notranslat
 <p>(note that the speed – the magnitude of the velocity – is always positive, so <span class="math notranslate nohighlight">\(p(v)\)</span> must be
 zero for <span class="math notranslate nohighlight">\(v&lt;0\)</span>, so the lower limit of the integral can be set to zero).</p>
 </div>
+</div>
+<div class="section" id="variance">
+<h2><span class="section-number">1.3. </span>Variance<a class="headerlink" href="#variance" title="Permalink to this headline">¶</a></h2>
+<p>The variance of a random variable is a measure of how much its outcomes deviate from the mean. With the notation common in mathematics, it is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+    \mathrm{Var}[X] = \mathbb{E}[(X - \mathbb{E}[X])^2].
+\]</div>
+<p>In physics, we often denote the variance as the square of the standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+    \sigma_X^2 = \langle(X-\langle X \rangle )^2 \rangle.
+\]</div>
+<p>By working out the square and using that the expectation is linear, you can rewrite the variance in the convenient form</p>
+<div class="math notranslate nohighlight" id="equation-variance-formula">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-variance-formula" title="Permalink to this equation">¶</a></span>\[
+    \sigma_X^2 = \langle X^2\rangle - \langle X \rangle ^2.
+\]</div>
 </div>
 </div>
 

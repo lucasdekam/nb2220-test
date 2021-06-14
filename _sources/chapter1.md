@@ -63,3 +63,23 @@ $$\langle v \rangle = \int_{0}^\infty v p(v) \mathrm{d}v $$
 (note that the speed -- the magnitude of the velocity -- is always positive, so $p(v)$ must be
 zero for $v<0$, so the lower limit of the integral can be set to zero).
 ```
+
+## Variance
+The variance of a random variable is a measure of how much its outcomes deviate from the mean. With the notation common in mathematics, it is defined as
+
+$$
+    \mathrm{Var}[X] = \mathbb{E}[(X - \mathbb{E}[X])^2].
+$$ 
+
+In physics, we often denote the variance as the square of the standard deviation $\sigma$:
+
+$$
+    \sigma_X^2 = \langle(X-\langle X \rangle )^2 \rangle.
+$$
+
+By working out the square and using that the expectation is linear, you can rewrite the variance in the convenient form
+
+$$
+    \sigma_X^2 = \langle X^2\rangle - \langle X \rangle ^2.
+$$ (variance_formula)
+
