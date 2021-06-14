@@ -3,6 +3,7 @@
 
 title: NB2220 Statistical Physics
 author: JZ/LDK
+copyright: 2021 Delft University of Technology, CC BY-SA 4.0
 logo: tudelft.png
 
 # Only build files in the ToC to avoid building README, etc.
