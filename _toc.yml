@@ -8,5 +8,6 @@ defaults:
 parts:
   - caption: Name of the first part
     chapters:
-    - file: chapter1
+    - file: probability
+    - file: phasetransitions
     - file: project
