@@ -4,7 +4,7 @@
 format: jb-book
 root: index
 defaults:
-  numbered: 1
+  numbered: true
 parts:
   - caption: Name of the first part
     chapters:
