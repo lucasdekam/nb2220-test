@@ -1,85 +1,37 @@
-Probability recap
+Probability
 =======================
 
-```{admonition} Learning goals
-After reading this chapter, you will be able to
-* recall what random variables are
-* recall how to calculate expectation values of random variables and functions of random variables
-* recall how to compute the variance of a random variable
-* ...
-```
+## Probability density function and moments
 
-## Random variables
-In statistical physics, we are interested in deriving macro-scale properties
-from what we know about the micro-scale. Often, we are concerned with large
-numbers of particles (or other things), and we apply the theory of probability
-to find out how they behave on average.
-
-An important concept in probability is _random variables_. A random variable does
-not have a definite value, but rather a set of possible outcomes, each with a
-certain probability. For example, a die can be represented by a random variable $X$
-with outcomes $1, 2, 3, 4, 5$ and $6$, all with probability $1/6$.
-
-```{admonition} Example
-Another example of a random variable is the speed of molecules in an ideal gas. As you will be able
-to derive later, the probability of finding a certain speed $v$ is given by
+A probability density function should be normalised:
 
 $$
-  p(v) = \left( \frac{m}{2 \pi k T} \right)^{3/2} 4 \pi v^2 e^{-m v^2/2 k T},
-$$
+  \int_{-\infty}^{\infty} P(x) \mathrm{d}x = 1
+$$ (normalized_probability_density)
 
-which is known as the Maxwell-Boltzmann distribution.
-```
+For simplicity we consider a probability density function of a single stochastic variable $X$ with a continuous set of potential outcomes $x$, but it could be generalised to multiple variables and discrete sets.
 
-## Expectation values
-The expectation of a random variable is the average of its possible outcomes,
-weighted by their probabilities. Mathematicians like to denote the expectation of
-a random variable $X$ as $\mathbb{E}[X]$. In this course, we will use a notation
-commonly used by physicists: $\langle X \rangle$.
-
-If $X$ is a discrete random variable that can take values $x_1, x_2, ..., x_n$ with
-corresponding probabilities $p_1, p_2, ..., p_n$, its expectation is given by
+The $n^\mathrm{th}$ moment of this distribution is defined as:
 
 $$
-  \langle X \rangle = \sum_{i=1}^n x_i p_i.
-$$ (expectation_discrete)
+  \langle x^n \rangle \equiv \int_{-\infty}^{\infty} x^n P(x) \mathrm{d}x
+$$ (moments)
 
-If $X$ is a continuous random variable, the probability of getting an outcome $x$
-is described by a probability density function $p(x)$. To be precise, the probability
-for $X$ to take a value in the interval $[x, x+\mathrm{d}x]$ is $p(x)\mathrm{d}x$.
-The sum in Equation {eq}`expectation_discrete` then becomes an integral, so that
-the expectation for a continuous random variable $X$ is given by
+The first and second moments are particularly useful, and yield the mean $\mu$ and standard deviation $\sigma$ of the distribution:
 
 $$
-  \langle X \rangle = \int_{-\infty}^\infty x p(x) \mathrm{d}x.
-$$ (expectation_continuous)
-
-```{tip}
-In practice, the same symbol is often used for the random variable and its
-outcomes. For example, the expectation of the speed $v$ may be written as
-
-$$\langle v \rangle = \int_{0}^\infty v p(v) \mathrm{d}v $$
-
-(note that the speed -- the magnitude of the velocity -- is always positive, so $p(v)$ must be
-zero for $v<0$, so the lower limit of the integral can be set to zero).
-```
-
-## Variance
-The variance of a random variable is a measure of how much its outcomes deviate from the mean. With the notation common in mathematics, it is defined as
+  \mu = \langle x \rangle
+$$ (mean_def)
 
 $$
-    \mathrm{Var}[X] = \mathbb{E}[(X - \mathbb{E}[X])^2].
-$$ 
+  \sigma = \sqrt{\langle x^2 \rangle - \langle x \rangle ^2}
+$$ (stdev_def)
 
-In physics, we often denote the variance as the square of the standard deviation $\sigma$:
-
-$$
-    \sigma_X^2 = \langle(X-\langle X \rangle )^2 \rangle.
-$$
-
-By working out the square and using that the expectation is linear, you can rewrite the variance in the convenient form
+## Central limit theorem
+Given that $P(x)$ has a mean $\mu$ and a standard deviation $\sigma$, one can derive that the probability density function of the sum of many ourcomes of $X$ is a Gaussian distribution. Defining the sum of $n$ random variables as $X_1 + X_2 + ... + X_n = Y$, then
 
 $$
-    \sigma_X^2 = \langle X^2\rangle - \langle X \rangle ^2.
-$$ (variance_formula)
+  P(Y=y) \propto e^{\frac{(y - n \mu)^2}{2 n \sigma^2}}
+$$
 
+with standard deviation $\sigma_Y = \sqrt{n} \sigma$ and mean $\mu_Y = n \mu$. This is independent of the form of the distribution of $X$, as long as $n$ is \`large\'. What is called large may depend somewhat on the distribution, but usually, the number $10^{23}$ is more than sufficient. Another property of $P(y)$ is that the standard deviation becomes negligible compared to the mean, $\sigma_Y/\mu_Y \propto 1/\sqrt{n}$, such that a sample of $Y=y$ will almost certainly have the mean value as the outcome. This is one reason why the Gaussian distribution is so extremely important in the field of statistics. It appears everywhere, and tends to describe the properties of systems of many degrees of freedom (the velocity distribution in a gas, density fluctuations in a fluid, spatial fluctuations in a membrane, the \`shape\' of a flexible polymer etc.).

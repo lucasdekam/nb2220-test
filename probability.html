@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Probability recap &#8212; NB2220 Statistical Physics</title>
+    <title>1. Probability &#8212; NB2220 Statistical Physics</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -99,7 +99,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. Probability recap
+   1. Probability
   </a>
  </li>
  <li class="toctree-l1">
@@ -200,18 +200,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#random-variables">
-   1.1. Random variables
+  <a class="reference internal nav-link" href="#probability-density-function-and-moments">
+   1.1. Probability density function and moments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#expectation-values">
-   1.2. Expectation values
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variance">
-   1.3. Variance
+  <a class="reference internal nav-link" href="#central-limit-theorem">
+   1.2. Central limit theorem
   </a>
  </li>
 </ul>
@@ -225,87 +220,39 @@
         
               <div>
                 
-  <div class="section" id="probability-recap">
-<h1><span class="section-number">1. </span>Probability recap<a class="headerlink" href="#probability-recap" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-learning-goals admonition">
-<p class="admonition-title">Learning goals</p>
-<p>After reading this chapter, you will be able to</p>
-<ul class="simple">
-<li><p>recall what random variables are</p></li>
-<li><p>recall how to calculate expectation values of random variables and functions of random variables</p></li>
-<li><p>recall how to compute the variance of a random variable</p></li>
-<li><p>…</p></li>
-</ul>
+  <div class="section" id="probability">
+<h1><span class="section-number">1. </span>Probability<a class="headerlink" href="#probability" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="probability-density-function-and-moments">
+<h2><span class="section-number">1.1. </span>Probability density function and moments<a class="headerlink" href="#probability-density-function-and-moments" title="Permalink to this headline">¶</a></h2>
+<p>A probability density function should be normalised:</p>
+<div class="math notranslate nohighlight" id="equation-normalized-probability-density">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-normalized-probability-density" title="Permalink to this equation">¶</a></span>\[
+  \int_{-\infty}^{\infty} P(x) \mathrm{d}x = 1
+\]</div>
+<p>For simplicity we consider a probability density function of a single stochastic variable <span class="math notranslate nohighlight">\(X\)</span> with a continuous set of potential outcomes <span class="math notranslate nohighlight">\(x\)</span>, but it could be generalised to multiple variables and discrete sets.</p>
+<p>The <span class="math notranslate nohighlight">\(n^\mathrm{th}\)</span> moment of this distribution is defined as:</p>
+<div class="math notranslate nohighlight" id="equation-moments">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-moments" title="Permalink to this equation">¶</a></span>\[
+  \langle x^n \rangle \equiv \int_{-\infty}^{\infty} x^n P(x) \mathrm{d}x
+\]</div>
+<p>The first and second moments are particularly useful, and yield the mean <span class="math notranslate nohighlight">\(\mu\)</span> and standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span> of the distribution:</p>
+<div class="math notranslate nohighlight" id="equation-mean-def">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-mean-def" title="Permalink to this equation">¶</a></span>\[
+  \mu = \langle x \rangle
+\]</div>
+<div class="math notranslate nohighlight" id="equation-stdev-def">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-stdev-def" title="Permalink to this equation">¶</a></span>\[
+  \sigma = \sqrt{\langle x^2 \rangle - \langle x \rangle ^2}
+\]</div>
 </div>
-<div class="section" id="random-variables">
-<h2><span class="section-number">1.1. </span>Random variables<a class="headerlink" href="#random-variables" title="Permalink to this headline">¶</a></h2>
-<p>In statistical physics, we are interested in deriving macro-scale properties
-from what we know about the micro-scale. Often, we are concerned with large
-numbers of particles (or other things), and we apply the theory of probability
-to find out how they behave on average.</p>
-<p>An important concept in probability is <em>random variables</em>. A random variable does
-not have a definite value, but rather a set of possible outcomes, each with a
-certain probability. For example, a die can be represented by a random variable <span class="math notranslate nohighlight">\(X\)</span>
-with outcomes <span class="math notranslate nohighlight">\(1, 2, 3, 4, 5\)</span> and <span class="math notranslate nohighlight">\(6\)</span>, all with probability <span class="math notranslate nohighlight">\(1/6\)</span>.</p>
-<div class="admonition-example admonition">
-<p class="admonition-title">Example</p>
-<p>Another example of a random variable is the speed of molecules in an ideal gas. As you will be able
-to derive later, the probability of finding a certain speed <span class="math notranslate nohighlight">\(v\)</span> is given by</p>
+<div class="section" id="central-limit-theorem">
+<h2><span class="section-number">1.2. </span>Central limit theorem<a class="headerlink" href="#central-limit-theorem" title="Permalink to this headline">¶</a></h2>
+<p>Given that <span class="math notranslate nohighlight">\(P(x)\)</span> has a mean <span class="math notranslate nohighlight">\(\mu\)</span> and a standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>, one can derive that the probability density function of the sum of many ourcomes of <span class="math notranslate nohighlight">\(X\)</span> is a Gaussian distribution. Defining the sum of <span class="math notranslate nohighlight">\(n\)</span> random variables as <span class="math notranslate nohighlight">\(X_1 + X_2 + ... + X_n = Y\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[
-  p(v) = \left( \frac{m}{2 \pi k T} \right)^{3/2} 4 \pi v^2 e^{-m v^2/2 k T},
+  P(Y=y) \propto e^{\frac{(y - n \mu)^2}{2 n \sigma^2}}
 \]</div>
-<p>which is known as the Maxwell-Boltzmann distribution.</p>
-</div>
-</div>
-<div class="section" id="expectation-values">
-<h2><span class="section-number">1.2. </span>Expectation values<a class="headerlink" href="#expectation-values" title="Permalink to this headline">¶</a></h2>
-<p>The expectation of a random variable is the average of its possible outcomes,
-weighted by their probabilities. Mathematicians like to denote the expectation of
-a random variable <span class="math notranslate nohighlight">\(X\)</span> as <span class="math notranslate nohighlight">\(\mathbb{E}[X]\)</span>. In this course, we will use a notation
-commonly used by physicists: <span class="math notranslate nohighlight">\(\langle X \rangle\)</span>.</p>
-<p>If <span class="math notranslate nohighlight">\(X\)</span> is a discrete random variable that can take values <span class="math notranslate nohighlight">\(x_1, x_2, ..., x_n\)</span> with
-corresponding probabilities <span class="math notranslate nohighlight">\(p_1, p_2, ..., p_n\)</span>, its expectation is given by</p>
-<div class="math notranslate nohighlight" id="equation-expectation-discrete">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-expectation-discrete" title="Permalink to this equation">¶</a></span>\[
-  \langle X \rangle = \sum_{i=1}^n x_i p_i.
-\]</div>
-<p>If <span class="math notranslate nohighlight">\(X\)</span> is a continuous random variable, the probability of getting an outcome <span class="math notranslate nohighlight">\(x\)</span>
-is described by a probability density function <span class="math notranslate nohighlight">\(p(x)\)</span>. To be precise, the probability
-for <span class="math notranslate nohighlight">\(X\)</span> to take a value in the interval <span class="math notranslate nohighlight">\([x, x+\mathrm{d}x]\)</span> is <span class="math notranslate nohighlight">\(p(x)\mathrm{d}x\)</span>.
-The sum in Equation <a class="reference internal" href="#equation-expectation-discrete">(1.1)</a> then becomes an integral, so that
-the expectation for a continuous random variable <span class="math notranslate nohighlight">\(X\)</span> is given by</p>
-<div class="math notranslate nohighlight" id="equation-expectation-continuous">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-expectation-continuous" title="Permalink to this equation">¶</a></span>\[
-  \langle X \rangle = \int_{-\infty}^\infty x p(x) \mathrm{d}x.
-\]</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>In practice, the same symbol is often used for the random variable and its
-outcomes. For example, the expectation of the speed <span class="math notranslate nohighlight">\(v\)</span> may be written as</p>
-<div class="math notranslate nohighlight">
-\[\langle v \rangle = \int_{0}^\infty v p(v) \mathrm{d}v \]</div>
-<p>(note that the speed – the magnitude of the velocity – is always positive, so <span class="math notranslate nohighlight">\(p(v)\)</span> must be
-zero for <span class="math notranslate nohighlight">\(v&lt;0\)</span>, so the lower limit of the integral can be set to zero).</p>
-</div>
-</div>
-<div class="section" id="variance">
-<h2><span class="section-number">1.3. </span>Variance<a class="headerlink" href="#variance" title="Permalink to this headline">¶</a></h2>
-<p>The variance of a random variable is a measure of how much its outcomes deviate from the mean. With the notation common in mathematics, it is defined as</p>
-<div class="math notranslate nohighlight">
-\[
-    \mathrm{Var}[X] = \mathbb{E}[(X - \mathbb{E}[X])^2].
-\]</div>
-<p>In physics, we often denote the variance as the square of the standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-    \sigma_X^2 = \langle(X-\langle X \rangle )^2 \rangle.
-\]</div>
-<p>By working out the square and using that the expectation is linear, you can rewrite the variance in the convenient form</p>
-<div class="math notranslate nohighlight" id="equation-variance-formula">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-variance-formula" title="Permalink to this equation">¶</a></span>\[
-    \sigma_X^2 = \langle X^2\rangle - \langle X \rangle ^2.
-\]</div>
+<p>with standard deviation <span class="math notranslate nohighlight">\(\sigma_Y = \sqrt{n} \sigma\)</span> and mean <span class="math notranslate nohighlight">\(\mu_Y = n \mu\)</span>. This is independent of the form of the distribution of <span class="math notranslate nohighlight">\(X\)</span>, as long as <span class="math notranslate nohighlight">\(n\)</span> is `large’. What is called large may depend somewhat on the distribution, but usually, the number <span class="math notranslate nohighlight">\(10^{23}\)</span> is more than sufficient. Another property of <span class="math notranslate nohighlight">\(P(y)\)</span> is that the standard deviation becomes negligible compared to the mean, <span class="math notranslate nohighlight">\(\sigma_Y/\mu_Y \propto 1/\sqrt{n}\)</span>, such that a sample of <span class="math notranslate nohighlight">\(Y=y\)</span> will almost certainly have the mean value as the outcome. This is one reason why the Gaussian distribution is so extremely important in the field of statistics. It appears everywhere, and tends to describe the properties of systems of many degrees of freedom (the velocity distribution in a gas, density fluctuations in a fluid, spatial fluctuations in a membrane, the `shape’ of a flexible polymer etc.).</p>
 </div>
 </div>
 
