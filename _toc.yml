@@ -4,10 +4,11 @@
 format: jb-book
 root: intro
 defaults:
-  numbered: true
+  numbered: 1
 parts:
   - caption: Name of the first part
     chapters:
     - file: placeholder
+    - file: probability
     - file: phasetransitions
     - file: project
