@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 1: Probability recap &#8212; NB2220 Statistical Physics</title>
+    <title>2. Probability &#8212; NB2220 Statistical Physics</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Statistical Physics for Nanobiology" href="intro.html" />
+    <link rel="next" title="3. Phase transitions" href="phasetransitions.html" />
+    <link rel="prev" title="1. Some placeholder text" href="placeholder.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -90,10 +91,30 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Name of the first part
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="placeholder.html">
+   1. Some placeholder text
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Chapter 1: Probability recap
+   2. Probability
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="phasetransitions.html">
+   3. Phase transitions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project.html">
+   4. Project notes
   </a>
  </li>
 </ul>
@@ -137,7 +158,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/chapter1.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/probability.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -153,11 +174,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/lucasdekam/nb2220-test"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter1.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/lucasdekam/nb2220-test/issues/new?title=Issue%20on%20page%20%2Fprobability.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -184,14 +205,31 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#random-variables">
-   1.1 Random variables
+  <a class="reference internal nav-link" href="#probability-density-function-and-moments">
+   Probability density function and moments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#expectation-values">
-   1.2 Expectation values
+  <a class="reference internal nav-link" href="#central-limit-theorem">
+   Central limit theorem
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problems">
+   Problems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problem-1-probability">
+     Problem 1: Probability
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#problem-2-probability-density-functions">
+     Problem 2: Probability density functions
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -204,68 +242,56 @@
         
               <div>
                 
-  <div class="section" id="chapter-1-probability-recap">
-<h1>Chapter 1: Probability recap<a class="headerlink" href="#chapter-1-probability-recap" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-learning-goals admonition">
-<p class="admonition-title">Learning goals</p>
-<p>After reading this chapter, you will be able to</p>
-<ul class="simple">
-<li><p>recall what random variables are</p></li>
-<li><p>recall how to calculate expectation values of random variables and functions of random variables</p></li>
-<li><p>recall how to compute the variance of a random variable</p></li>
-<li><p>…</p></li>
-</ul>
-</div>
-<div class="section" id="random-variables">
-<h2>1.1 Random variables<a class="headerlink" href="#random-variables" title="Permalink to this headline">¶</a></h2>
-<p>In statistical physics, we are interested in deriving macro-scale properties
-from what we know about the micro-scale. Often, we are concerned with large
-numbers of particles (or other things), and we apply the theory of probability
-to find out how they behave on average.</p>
-<p>An important concept in probability is <em>random variables</em>. A random variable does
-not have a definite value, but rather a set of possible outcomes, each with a
-certain probability. For example, a die can be represented by a random variable <span class="math notranslate nohighlight">\(X\)</span>
-with outcomes <span class="math notranslate nohighlight">\(1, 2, 3, 4, 5\)</span> and <span class="math notranslate nohighlight">\(6\)</span>, all with probability <span class="math notranslate nohighlight">\(1/6\)</span>.</p>
-<div class="admonition-example admonition">
-<p class="admonition-title">Example</p>
-<p>Another example of a random variable is the speed of molecules in an ideal gas. As you will be able
-to derive later, the probability of finding a certain speed <span class="math notranslate nohighlight">\(v\)</span> is given by</p>
-<div class="math notranslate nohighlight">
-\[
-  p(v) = \left( \frac{m}{2 \pi k T} \right)^{3/2} 4 \pi v^2 e^{-m v^2/2 k T},
+  <div class="section" id="probability">
+<h1><span class="section-number">2. </span>Probability<a class="headerlink" href="#probability" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="probability-density-function-and-moments">
+<h2>Probability density function and moments<a class="headerlink" href="#probability-density-function-and-moments" title="Permalink to this headline">¶</a></h2>
+<p>A probability density function should be normalised:</p>
+<div class="math notranslate nohighlight" id="equation-normalized-probability-density">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-normalized-probability-density" title="Permalink to this equation">¶</a></span>\[
+  \int_{-\infty}^{\infty} P(x) \mathrm{d}x = 1
 \]</div>
-<p>which is known as the Maxwell-Boltzmann distribution.</p>
-</div>
-</div>
-<div class="section" id="expectation-values">
-<h2>1.2 Expectation values<a class="headerlink" href="#expectation-values" title="Permalink to this headline">¶</a></h2>
-<p>The expectation of a random variable is the average of its possible outcomes,
-weighted by their probabilities. Mathematicians like to denote the expectation of
-a random variable <span class="math notranslate nohighlight">\(X\)</span> as <span class="math notranslate nohighlight">\(\mathbb{E}[X]\)</span>. In this course, we will use a notation
-commonly used by physicists: <span class="math notranslate nohighlight">\(\langle X \rangle\)</span>.</p>
-<p>If <span class="math notranslate nohighlight">\(X\)</span> is a discrete random variable that can take values <span class="math notranslate nohighlight">\(x_1, x_2, ..., x_n\)</span> with
-corresponding probabilities <span class="math notranslate nohighlight">\(p_1, p_2, ..., p_n\)</span>, its expectation is given by</p>
-<div class="math notranslate nohighlight" id="equation-expectation-discrete">
-<span class="eqno">(1)<a class="headerlink" href="#equation-expectation-discrete" title="Permalink to this equation">¶</a></span>\[
-  \langle X \rangle = \sum_{i=1}^n x_i p_i.
+<p>For simplicity we consider a probability density function of a single stochastic variable <span class="math notranslate nohighlight">\(X\)</span> with a continuous set of potential outcomes <span class="math notranslate nohighlight">\(x\)</span>, but it could be generalised to multiple variables and discrete sets.</p>
+<p>The <span class="math notranslate nohighlight">\(n^\mathrm{th}\)</span> moment of this distribution is defined as:</p>
+<div class="math notranslate nohighlight" id="equation-moments">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-moments" title="Permalink to this equation">¶</a></span>\[
+  \langle x^n \rangle \equiv \int_{-\infty}^{\infty} x^n P(x) \mathrm{d}x
 \]</div>
-<p>If <span class="math notranslate nohighlight">\(X\)</span> is a continuous random variable, the probability of getting an outcome <span class="math notranslate nohighlight">\(x\)</span>
-is described by a probability density function <span class="math notranslate nohighlight">\(p(x)\)</span>. To be precise, the probability
-for <span class="math notranslate nohighlight">\(X\)</span> to take a value in the interval <span class="math notranslate nohighlight">\([x, x+\mathrm{d}x]\)</span> is <span class="math notranslate nohighlight">\(p(x)\mathrm{d}x\)</span>.
-The sum in Equation <a class="reference internal" href="#equation-expectation-discrete">(1)</a> then becomes an integral, so that
-the expectation for a continuous random variable <span class="math notranslate nohighlight">\(X\)</span> is given by</p>
-<div class="math notranslate nohighlight" id="equation-expectation-continuous">
-<span class="eqno">(2)<a class="headerlink" href="#equation-expectation-continuous" title="Permalink to this equation">¶</a></span>\[
-  \langle X \rangle = \int_{-\infty}^\infty x p(x) \mathrm{d}x.
+<p>The first and second moments are particularly useful, and yield the mean <span class="math notranslate nohighlight">\(\mu\)</span> and standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span> of the distribution:</p>
+<div class="math notranslate nohighlight" id="equation-mean-def">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-mean-def" title="Permalink to this equation">¶</a></span>\[
+  \mu = \langle x \rangle
 \]</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>In practice, the same symbol is often used for the random variable and its
-outcomes. For example, the expectation of the speed <span class="math notranslate nohighlight">\(v\)</span> may be written as</p>
-<div class="math notranslate nohighlight">
-\[\langle v \rangle = \int_{0}^\infty v p(v) \mathrm{d}v \]</div>
-<p>(note that the speed – the magnitude of the velocity – is always positive, so <span class="math notranslate nohighlight">\(p(v)\)</span> must be
-zero for <span class="math notranslate nohighlight">\(v&lt;0\)</span>, so the lower limit of the integral can be set to zero).</p>
+<div class="math notranslate nohighlight" id="equation-stdev-def">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-stdev-def" title="Permalink to this equation">¶</a></span>\[
+  \sigma = \sqrt{\langle x^2 \rangle - \langle x \rangle ^2}
+\]</div>
+</div>
+<div class="section" id="central-limit-theorem">
+<h2>Central limit theorem<a class="headerlink" href="#central-limit-theorem" title="Permalink to this headline">¶</a></h2>
+<p>Given that <span class="math notranslate nohighlight">\(P(x)\)</span> has a mean <span class="math notranslate nohighlight">\(\mu\)</span> and a standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>, one can derive that the probability density function of the sum of many ourcomes of <span class="math notranslate nohighlight">\(X\)</span> is a Gaussian distribution. Defining the sum of <span class="math notranslate nohighlight">\(n\)</span> random variables as <span class="math notranslate nohighlight">\(X_1 + X_2 + ... + X_n = Y\)</span>, then</p>
+<div class="math notranslate nohighlight" id="equation-clt">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-clt" title="Permalink to this equation">¶</a></span>\[
+  P(Y=y) \propto e^{\frac{(y - n \mu)^2}{2 n \sigma^2}}
+\]</div>
+<p>with standard deviation <span class="math notranslate nohighlight">\(\sigma_Y = \sqrt{n} \sigma\)</span> and mean <span class="math notranslate nohighlight">\(\mu_Y = n \mu\)</span>. This is independent of the form of the distribution of <span class="math notranslate nohighlight">\(X\)</span>, as long as <span class="math notranslate nohighlight">\(n\)</span> is ‘large’. What is called large may depend somewhat on the distribution, but usually, the number <span class="math notranslate nohighlight">\(10^{23}\)</span> is more than sufficient. Another property of <span class="math notranslate nohighlight">\(P(y)\)</span> is that the standard deviation becomes negligible compared to the mean, <span class="math notranslate nohighlight">\(\sigma_Y/\mu_Y \propto 1/\sqrt{n}\)</span>, such that a sample of <span class="math notranslate nohighlight">\(Y=y\)</span> will almost certainly have the mean value as the outcome. This is one reason why the Gaussian distribution is so extremely important in the field of statistics. It appears everywhere, and tends to describe the properties of systems of many degrees of freedom (the velocity distribution in a gas, density fluctuations in a fluid, spatial fluctuations in a membrane, the ‘shape’ of a flexible polymer etc.).</p>
+</div>
+<div class="section" id="problems">
+<h2>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem-1-probability">
+<h3>Problem 1: Probability<a class="headerlink" href="#problem-1-probability" title="Permalink to this headline">¶</a></h3>
+<p>Imagine that we could label and track the oxygen molecules in the air, and that we would label two of them inside a classroom. In the corner of the classroom is a box with a volume of about <span class="math notranslate nohighlight">\(0.1 \%\)</span> of the total volume of the room. After some time someone takes a snapshot of where the molecules are at that point in time.</p>
+<ol class="simple">
+<li><p>Assuming that the two molecules can be anywhere with equal probability, what would be the probability that they would both be inside the box?</p></li>
+<li><p>What would be the probability that all the oxygen molecules would be inside the box? (Assume for simplicity that there are <span class="math notranslate nohighlight">\(10^{25}\)</span> oxygen molecules in the room.)</p></li>
+</ol>
+</div>
+<div class="section" id="problem-2-probability-density-functions">
+<h3>Problem 2: Probability density functions<a class="headerlink" href="#problem-2-probability-density-functions" title="Permalink to this headline">¶</a></h3>
+<p>A person throws with a perfect dice, i.e. each possible outcome <span class="math notranslate nohighlight">\(x \in {1, 2, ..., 6}\)</span> has probability <span class="math notranslate nohighlight">\(P(x) = \frac{1}{6}\)</span>.</p>
+<ol class="simple">
+<li><p>Calculate the expectation value of the outcome <span class="math notranslate nohighlight">\(\mu\)</span>. What is the most likely outcome? What is the standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>? What is <span class="math notranslate nohighlight">\(\sigma/\mu\)</span>? Draw the distribution.</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -295,7 +321,8 @@ zero for <span class="math notranslate nohighlight">\(v&lt;0\)</span>, so the lo
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Statistical Physics for Nanobiology</a>
+    <a class='left-prev' id="prev-link" href="placeholder.html" title="previous page"><span class="section-number">1. </span>Some placeholder text</a>
+    <a class='right-next' id="next-link" href="phasetransitions.html" title="next page"><span class="section-number">3. </span>Phase transitions</a>
 
         </div>
         
@@ -307,7 +334,7 @@ zero for <span class="math notranslate nohighlight">\(v&lt;0\)</span>, so the lo
         
           By JZ/LDK<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021 Delft University of Technology, CC BY-SA 4.0.<br/>
       </p>
     </div>
   </footer>

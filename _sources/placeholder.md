@@ -1,4 +1,4 @@
-Probability recap
+Some placeholder text
 =======================
 
 ```{admonition} Learning goals
@@ -69,7 +69,7 @@ The variance of a random variable is a measure of how much its outcomes deviate 
 
 $$
     \mathrm{Var}[X] = \mathbb{E}[(X - \mathbb{E}[X])^2].
-$$ 
+$$
 
 In physics, we often denote the variance as the square of the standard deviation $\sigma$:
 
@@ -82,4 +82,3 @@ By working out the square and using that the expectation is linear, you can rewr
 $$
     \sigma_X^2 = \langle X^2\rangle - \langle X \rangle ^2.
 $$ (variance_formula)
-
