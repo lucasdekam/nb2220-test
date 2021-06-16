@@ -86,7 +86,7 @@
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="index.html">
    Statistical Physics for Nanobiology
   </a>
  </li>
@@ -208,11 +208,13 @@
   <a class="reference internal nav-link" href="#probability-density-function-and-moments">
    Probability density function and moments
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#central-limit-theorem">
-   Central limit theorem
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#central-limit-theorem">
+     Central limit theorem
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problems">
@@ -266,15 +268,15 @@
 <span class="eqno">(2.4)<a class="headerlink" href="#equation-stdev-def" title="Permalink to this equation">¶</a></span>\[
   \sigma = \sqrt{\langle x^2 \rangle - \langle x \rangle ^2}
 \]</div>
-</div>
 <div class="section" id="central-limit-theorem">
-<h2>Central limit theorem<a class="headerlink" href="#central-limit-theorem" title="Permalink to this headline">¶</a></h2>
+<h3>Central limit theorem<a class="headerlink" href="#central-limit-theorem" title="Permalink to this headline">¶</a></h3>
 <p>Given that <span class="math notranslate nohighlight">\(P(x)\)</span> has a mean <span class="math notranslate nohighlight">\(\mu\)</span> and a standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>, one can derive that the probability density function of the sum of many ourcomes of <span class="math notranslate nohighlight">\(X\)</span> is a Gaussian distribution. Defining the sum of <span class="math notranslate nohighlight">\(n\)</span> random variables as <span class="math notranslate nohighlight">\(X_1 + X_2 + ... + X_n = Y\)</span>, then</p>
 <div class="math notranslate nohighlight" id="equation-clt">
 <span class="eqno">(2.5)<a class="headerlink" href="#equation-clt" title="Permalink to this equation">¶</a></span>\[
   P(Y=y) \propto e^{\frac{(y - n \mu)^2}{2 n \sigma^2}}
 \]</div>
 <p>with standard deviation <span class="math notranslate nohighlight">\(\sigma_Y = \sqrt{n} \sigma\)</span> and mean <span class="math notranslate nohighlight">\(\mu_Y = n \mu\)</span>. This is independent of the form of the distribution of <span class="math notranslate nohighlight">\(X\)</span>, as long as <span class="math notranslate nohighlight">\(n\)</span> is ‘large’. What is called large may depend somewhat on the distribution, but usually, the number <span class="math notranslate nohighlight">\(10^{23}\)</span> is more than sufficient. Another property of <span class="math notranslate nohighlight">\(P(y)\)</span> is that the standard deviation becomes negligible compared to the mean, <span class="math notranslate nohighlight">\(\sigma_Y/\mu_Y \propto 1/\sqrt{n}\)</span>, such that a sample of <span class="math notranslate nohighlight">\(Y=y\)</span> will almost certainly have the mean value as the outcome. This is one reason why the Gaussian distribution is so extremely important in the field of statistics. It appears everywhere, and tends to describe the properties of systems of many degrees of freedom (the velocity distribution in a gas, density fluctuations in a fluid, spatial fluctuations in a membrane, the ‘shape’ of a flexible polymer etc.).</p>
+</div>
 </div>
 <div class="section" id="problems">
 <h2>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
