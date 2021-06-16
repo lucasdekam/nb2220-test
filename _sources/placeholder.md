@@ -9,7 +9,7 @@ After reading this chapter, you will be able to
 * ...
 ```
 
-## Random variables
+##### Random variables
 In statistical physics, we are interested in deriving macro-scale properties
 from what we know about the micro-scale. Often, we are concerned with large
 numbers of particles (or other things), and we apply the theory of probability
@@ -31,7 +31,7 @@ $$
 which is known as the Maxwell-Boltzmann distribution.
 ```
 
-## Expectation values
+##### Expectation values
 The expectation of a random variable is the average of its possible outcomes,
 weighted by their probabilities. Mathematicians like to denote the expectation of
 a random variable $X$ as $\mathbb{E}[X]$. In this course, we will use a notation
@@ -64,7 +64,9 @@ $$\langle v \rangle = \int_{0}^\infty v p(v) \mathrm{d}v $$
 zero for $v<0$, so the lower limit of the integral can be set to zero).
 ```
 
-## Variance
+The expectation of a function of $X$, e.g. $g(X)$, is given by
+
+##### Variance
 The variance of a random variable is a measure of how much its outcomes deviate from the mean. With the notation common in mathematics, it is defined as
 
 $$
