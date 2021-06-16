@@ -23,6 +23,11 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    # Clean up files
+    - name: Clean up files
+      run: |
+        jupyter-book clean .
+
     # Build the book
     - name: Build the book
       run: |
