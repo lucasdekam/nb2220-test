@@ -208,27 +208,25 @@
   <a class="reference internal nav-link" href="#probability-density-function-and-moments">
    2.1. Probability density function and moments
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#central-limit-theorem">
-     2.1.1. Central limit theorem
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#central-limit-theorem">
+   2.2. Central limit theorem
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problems">
-   2.2. Problems
+   2.3. Problems
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     2.2.1. Probability
+    <a class="reference internal nav-link" href="#problem-1-probability">
+     Problem 1: Probability
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#probability-density-functions">
-     2.2.2. Probability density functions
+    <a class="reference internal nav-link" href="#problem-2-probability-density-functions">
+     Problem 2: Probability density functions
     </a>
    </li>
   </ul>
@@ -268,8 +266,9 @@
 <span class="eqno">(2.4)<a class="headerlink" href="#equation-stdev-def" title="Permalink to this equation">¶</a></span>\[
   \sigma = \sqrt{\langle x^2 \rangle - \langle x \rangle ^2}
 \]</div>
+</div>
 <div class="section" id="central-limit-theorem">
-<h3><span class="section-number">2.1.1. </span>Central limit theorem<a class="headerlink" href="#central-limit-theorem" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">2.2. </span>Central limit theorem<a class="headerlink" href="#central-limit-theorem" title="Permalink to this headline">¶</a></h2>
 <p>Given that <span class="math notranslate nohighlight">\(P(x)\)</span> has a mean <span class="math notranslate nohighlight">\(\mu\)</span> and a standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>, one can derive that the probability density function of the sum of many ourcomes of <span class="math notranslate nohighlight">\(X\)</span> is a Gaussian distribution. Defining the sum of <span class="math notranslate nohighlight">\(n\)</span> random variables as <span class="math notranslate nohighlight">\(X_1 + X_2 + ... + X_n = Y\)</span>, then</p>
 <div class="math notranslate nohighlight" id="equation-clt">
 <span class="eqno">(2.5)<a class="headerlink" href="#equation-clt" title="Permalink to this equation">¶</a></span>\[
@@ -277,19 +276,18 @@
 \]</div>
 <p>with standard deviation <span class="math notranslate nohighlight">\(\sigma_Y = \sqrt{n} \sigma\)</span> and mean <span class="math notranslate nohighlight">\(\mu_Y = n \mu\)</span>. This is independent of the form of the distribution of <span class="math notranslate nohighlight">\(X\)</span>, as long as <span class="math notranslate nohighlight">\(n\)</span> is ‘large’. What is called large may depend somewhat on the distribution, but usually, the number <span class="math notranslate nohighlight">\(10^{23}\)</span> is more than sufficient. Another property of <span class="math notranslate nohighlight">\(P(y)\)</span> is that the standard deviation becomes negligible compared to the mean, <span class="math notranslate nohighlight">\(\sigma_Y/\mu_Y \propto 1/\sqrt{n}\)</span>, such that a sample of <span class="math notranslate nohighlight">\(Y=y\)</span> will almost certainly have the mean value as the outcome. This is one reason why the Gaussian distribution is so extremely important in the field of statistics. It appears everywhere, and tends to describe the properties of systems of many degrees of freedom (the velocity distribution in a gas, density fluctuations in a fluid, spatial fluctuations in a membrane, the ‘shape’ of a flexible polymer etc.).</p>
 </div>
-</div>
 <div class="section" id="problems">
-<h2><span class="section-number">2.2. </span>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3><span class="section-number">2.2.1. </span>Probability<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">2.3. </span>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="problem-1-probability">
+<h3>Problem 1: Probability<a class="headerlink" href="#problem-1-probability" title="Permalink to this headline">¶</a></h3>
 <p>Imagine that we could label and track the oxygen molecules in the air, and that we would label two of them inside a classroom. In the corner of the classroom is a box with a volume of about <span class="math notranslate nohighlight">\(0.1 \%\)</span> of the total volume of the room. After some time someone takes a snapshot of where the molecules are at that point in time.</p>
 <ol class="simple">
 <li><p>Assuming that the two molecules can be anywhere with equal probability, what would be the probability that they would both be inside the box?</p></li>
 <li><p>What would be the probability that all the oxygen molecules would be inside the box? (Assume for simplicity that there are <span class="math notranslate nohighlight">\(10^{25}\)</span> oxygen molecules in the room.)</p></li>
 </ol>
 </div>
-<div class="section" id="probability-density-functions">
-<h3><span class="section-number">2.2.2. </span>Probability density functions<a class="headerlink" href="#probability-density-functions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="problem-2-probability-density-functions">
+<h3>Problem 2: Probability density functions<a class="headerlink" href="#problem-2-probability-density-functions" title="Permalink to this headline">¶</a></h3>
 <p>A person throws with a perfect dice, i.e. each possible outcome <span class="math notranslate nohighlight">\(x \in {1, 2, ..., 6}\)</span> has probability <span class="math notranslate nohighlight">\(P(x) = \frac{1}{6}\)</span>.</p>
 <ol class="simple">
 <li><p>Calculate the expectation value of the outcome <span class="math notranslate nohighlight">\(\mu\)</span>. What is the most likely outcome? What is the standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>? What is <span class="math notranslate nohighlight">\(\sigma/\mu\)</span>? Draw the distribution.</p></li>
