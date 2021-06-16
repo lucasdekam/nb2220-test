@@ -26,7 +26,7 @@ $$
   \sigma = \sqrt{\langle x^2 \rangle - \langle x \rangle ^2}
 $$ (stdev_def)
 
-##### Central limit theorem
+## Central limit theorem
 Given that $P(x)$ has a mean $\mu$ and a standard deviation $\sigma$, one can derive that the probability density function of the sum of many ourcomes of $X$ is a Gaussian distribution. Defining the sum of $n$ random variables as $X_1 + X_2 + ... + X_n = Y$, then
 
 $$
@@ -38,11 +38,11 @@ with standard deviation $\sigma_Y = \sqrt{n} \sigma$ and mean $\mu_Y = n \mu$. T
 
 ## Problems
 
-### Probability
+### Problem 1: Probability
 Imagine that we could label and track the oxygen molecules in the air, and that we would label two of them inside a classroom. In the corner of the classroom is a box with a volume of about $0.1 \%$ of the total volume of the room. After some time someone takes a snapshot of where the molecules are at that point in time.
 1. Assuming that the two molecules can be anywhere with equal probability, what would be the probability that they would both be inside the box?
 2. What would be the probability that all the oxygen molecules would be inside the box? (Assume for simplicity that there are $10^{25}$ oxygen molecules in the room.)
 
-### Probability density functions
+### Problem 2: Probability density functions
 A person throws with a perfect dice, i.e. each possible outcome $x \in {1, 2, ..., 6}$ has probability $P(x) = \frac{1}{6}$.
 1. Calculate the expectation value of the outcome $\mu$. What is the most likely outcome? What is the standard deviation $\sigma$? What is $\sigma/\mu$? Draw the distribution.
