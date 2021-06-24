@@ -10,5 +10,6 @@ parts:
     chapters:
     - file: placeholder
     - file: probability
-    - file: phasetransitions
-    - file: project
+      sections:
+        - file: phasetransitions
+        - file: project
