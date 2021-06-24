@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Probability &#8212; NB2220 Statistical Physics</title>
+    <title>Probability &#8212; NB2220 Statistical Physics</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Phase transitions" href="phasetransitions.html" />
+    <link rel="next" title="1. Phase transitions" href="phasetransitions.html" />
     <link rel="prev" title="1. Some placeholder text" href="placeholder.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -102,20 +102,27 @@
    1. Some placeholder text
   </a>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   2. Probability
+   Probability
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="phasetransitions.html">
-   3. Phase transitions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="project.html">
-   4. Project notes
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="phasetransitions.html">
+     1. Phase transitions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="project.html">
+     2. Project notes
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -206,17 +213,17 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#probability-density-function-and-moments">
-   2.1. Probability density function and moments
+   Probability density function and moments
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#central-limit-theorem">
-   2.2. Central limit theorem
+   Central limit theorem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#problems">
-   2.3. Problems
+   Problems
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -243,41 +250,41 @@
               <div>
                 
   <div class="section" id="probability">
-<h1><span class="section-number">2. </span>Probability<a class="headerlink" href="#probability" title="Permalink to this headline">¶</a></h1>
+<h1>Probability<a class="headerlink" href="#probability" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="probability-density-function-and-moments">
-<h2><span class="section-number">2.1. </span>Probability density function and moments<a class="headerlink" href="#probability-density-function-and-moments" title="Permalink to this headline">¶</a></h2>
+<h2>Probability density function and moments<a class="headerlink" href="#probability-density-function-and-moments" title="Permalink to this headline">¶</a></h2>
 <p>A probability density function should be normalised:</p>
 <div class="math notranslate nohighlight" id="equation-normalized-probability-density">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-normalized-probability-density" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(1)<a class="headerlink" href="#equation-normalized-probability-density" title="Permalink to this equation">¶</a></span>\[
   \int_{-\infty}^{\infty} P(x) \mathrm{d}x = 1
 \]</div>
 <p>For simplicity we consider a probability density function of a single stochastic variable <span class="math notranslate nohighlight">\(X\)</span> with a continuous set of potential outcomes <span class="math notranslate nohighlight">\(x\)</span>, but it could be generalised to multiple variables and discrete sets.</p>
 <p>The <span class="math notranslate nohighlight">\(n^\mathrm{th}\)</span> moment of this distribution is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-moments">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-moments" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(2)<a class="headerlink" href="#equation-moments" title="Permalink to this equation">¶</a></span>\[
   \langle x^n \rangle \equiv \int_{-\infty}^{\infty} x^n P(x) \mathrm{d}x
 \]</div>
 <p>The first and second moments are particularly useful, and yield the mean <span class="math notranslate nohighlight">\(\mu\)</span> and standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span> of the distribution:</p>
 <div class="math notranslate nohighlight" id="equation-mean-def">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-mean-def" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(3)<a class="headerlink" href="#equation-mean-def" title="Permalink to this equation">¶</a></span>\[
   \mu = \langle x \rangle
 \]</div>
 <div class="math notranslate nohighlight" id="equation-stdev-def">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-stdev-def" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(4)<a class="headerlink" href="#equation-stdev-def" title="Permalink to this equation">¶</a></span>\[
   \sigma = \sqrt{\langle x^2 \rangle - \langle x \rangle ^2}
 \]</div>
 </div>
 <div class="section" id="central-limit-theorem">
-<h2><span class="section-number">2.2. </span>Central limit theorem<a class="headerlink" href="#central-limit-theorem" title="Permalink to this headline">¶</a></h2>
+<h2>Central limit theorem<a class="headerlink" href="#central-limit-theorem" title="Permalink to this headline">¶</a></h2>
 <p>Given that <span class="math notranslate nohighlight">\(P(x)\)</span> has a mean <span class="math notranslate nohighlight">\(\mu\)</span> and a standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>, one can derive that the probability density function of the sum of many ourcomes of <span class="math notranslate nohighlight">\(X\)</span> is a Gaussian distribution. Defining the sum of <span class="math notranslate nohighlight">\(n\)</span> random variables as <span class="math notranslate nohighlight">\(X_1 + X_2 + ... + X_n = Y\)</span>, then</p>
 <div class="math notranslate nohighlight" id="equation-clt">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-clt" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5)<a class="headerlink" href="#equation-clt" title="Permalink to this equation">¶</a></span>\[
   P(Y=y) \propto e^{\frac{(y - n \mu)^2}{2 n \sigma^2}}
 \]</div>
 <p>with standard deviation <span class="math notranslate nohighlight">\(\sigma_Y = \sqrt{n} \sigma\)</span> and mean <span class="math notranslate nohighlight">\(\mu_Y = n \mu\)</span>. This is independent of the form of the distribution of <span class="math notranslate nohighlight">\(X\)</span>, as long as <span class="math notranslate nohighlight">\(n\)</span> is ‘large’. What is called large may depend somewhat on the distribution, but usually, the number <span class="math notranslate nohighlight">\(10^{23}\)</span> is more than sufficient. Another property of <span class="math notranslate nohighlight">\(P(y)\)</span> is that the standard deviation becomes negligible compared to the mean, <span class="math notranslate nohighlight">\(\sigma_Y/\mu_Y \propto 1/\sqrt{n}\)</span>, such that a sample of <span class="math notranslate nohighlight">\(Y=y\)</span> will almost certainly have the mean value as the outcome. This is one reason why the Gaussian distribution is so extremely important in the field of statistics. It appears everywhere, and tends to describe the properties of systems of many degrees of freedom (the velocity distribution in a gas, density fluctuations in a fluid, spatial fluctuations in a membrane, the ‘shape’ of a flexible polymer etc.).</p>
 </div>
 <div class="section" id="problems">
-<h2><span class="section-number">2.3. </span>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
+<h2>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="problem-1-probability">
 <h3>Problem 1: Probability<a class="headerlink" href="#problem-1-probability" title="Permalink to this headline">¶</a></h3>
 <p>Imagine that we could label and track the oxygen molecules in the air, and that we would label two of them inside a classroom. In the corner of the classroom is a box with a volume of about <span class="math notranslate nohighlight">\(0.1 \%\)</span> of the total volume of the room. After some time someone takes a snapshot of where the molecules are at that point in time.</p>
@@ -289,6 +296,8 @@
 <p>A person throws with a perfect dice, i.e. each possible outcome <span class="math notranslate nohighlight">\(x \in {1, 2, ..., 6}\)</span> has probability <span class="math notranslate nohighlight">\(P(x) = \frac{1}{6}\)</span>.</p>
 <p>(a) Calculate the expectation value of the outcome <span class="math notranslate nohighlight">\(\mu\)</span>. What is the most likely outcome? What is the standard deviation <span class="math notranslate nohighlight">\(\sigma\)</span>? What is <span class="math notranslate nohighlight">\(\sigma/\mu\)</span>? Draw the distribution.</p>
 </div>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -318,7 +327,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="placeholder.html" title="previous page"><span class="section-number">1. </span>Some placeholder text</a>
-    <a class='right-next' id="next-link" href="phasetransitions.html" title="next page"><span class="section-number">3. </span>Phase transitions</a>
+    <a class='right-next' id="next-link" href="phasetransitions.html" title="next page"><span class="section-number">1. </span>Phase transitions</a>
 
         </div>
         
