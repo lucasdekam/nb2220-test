@@ -4,11 +4,12 @@
 format: jb-book
 root: index
 defaults:
-  numbered: 2
+  numbered: True
 parts:
   - caption: Name of the first part
     chapters:
     - file: placeholder
+    - file: Exercise_set_3
     - file: probability
       sections:
         - file: phasetransitions
