@@ -1,0 +1,563 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Classical thermodynamics &#8212; NB2220 Statistical Physics</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Probability" href="probability.html" />
+    <link rel="prev" title="1. Some placeholder text" href="placeholder.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/tudelft.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NB2220 Statistical Physics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Statistical Physics for Nanobiology
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Name of the first part
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="placeholder.html">
+   1. Some placeholder text
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Classical thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="probability.html">
+   Probability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="phasetransitions.html">
+     1. Phase transitions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="project.html">
+     2. Project notes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Exercise_set_3.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/lucasdekam/nb2220-test"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/lucasdekam/nb2220-test/issues/new?title=Issue%20on%20page%20%2FExercise_set_3.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#thermodynamic-potentials">
+   2.1. Thermodynamic potentials
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#thermodynamic-variables-and-ensembles">
+   2.2. Thermodynamic variables and ensembles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-second-law-of-thermodynamics">
+   2.3. The second law of thermodynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-carnot-cycle">
+   2.4. The Carnot cycle
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entropy-part-i">
+   2.5. Entropy, part I
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   2.6. References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="classical-thermodynamics">
+<span id="sec-chapter3"></span><h1><span class="section-number">2. </span>Classical thermodynamics<a class="headerlink" href="#classical-thermodynamics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="thermodynamic-potentials">
+<span id="sec-thermodynamic-potentials"></span><h2><span class="section-number">2.1. </span>Thermodynamic potentials<a class="headerlink" href="#thermodynamic-potentials" title="Permalink to this headline">¶</a></h2>
+<p>The first law of thermodynamics states that:</p>
+<blockquote>
+<div><p>The amount of work required to change an isolated system from state 1 to
+state 2 is independent of how the work is performed.</p>
+</div></blockquote>
+<p>In other systems, there may also be heat exchange with the environment,
+or particle exchange. Properties of a given state are called a
+<em>functions of state</em>. The energy <span class="math notranslate nohighlight">\(E\)</span> is a function of state, and so are
+<span class="math notranslate nohighlight">\(p, T\)</span> and <span class="math notranslate nohighlight">\(V\)</span>. Heat <span class="math notranslate nohighlight">\(Q\)</span> and work <span class="math notranslate nohighlight">\(W\)</span> are not functions of state,
+because they represent energy transfer during a transition from state 1
+to state 2, and depend on the path taken from 1 to 2. External processes
+can change the energy <span class="math notranslate nohighlight">\(E\)</span> of the system, and an infinitesimal change is
+described by</p>
+<div class="math notranslate nohighlight" id="equation-eq-firstlaw">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-eq-firstlaw" title="Permalink to this equation">¶</a></span>\[
+  \mathrm{d}E = T\mathrm{d}S - p\mathrm{d}V + \mu \mathrm{d}N.
+\]</div>
+<p>The Helmholtz free energy <span class="math notranslate nohighlight">\(F\)</span> can be obtained via a <em>Legendre transform</em>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-helmholtz">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-helmholtz" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\begin{aligned}
+    F(T,V,N) &amp;= E(S,V,N) - \frac{\partial E}{\partial S} S \\
+    &amp;= E - TS.
+\end{aligned}
+\end{split}\]</div>
+<p>As you can see, the Helmholtz free energy
+is written as a function of <span class="math notranslate nohighlight">\(T\)</span> whereas the energy is written as a
+function of <span class="math notranslate nohighlight">\(S\)</span>. With similar Legendre transforms one can replace <span class="math notranslate nohighlight">\(V\)</span>
+with <span class="math notranslate nohighlight">\(p\)</span>, or <span class="math notranslate nohighlight">\(N\)</span> with <span class="math notranslate nohighlight">\(\mu\)</span>. The new functions that one obtains are
+called <em>thermodynamic potentials</em>. These potentials contain useful
+information about different systems: <span class="math notranslate nohighlight">\(E(S,V,N)\)</span> about isolated systems,
+<span class="math notranslate nohighlight">\(F(T,V,N)\)</span> about systems in contact with a thermal reservoir, <span class="math notranslate nohighlight">\(G(T,p,N)\)</span>
+about systems in contact with a thermal reservoir and at constant
+pressure, <span class="math notranslate nohighlight">\(\Phi(T,V,\mu)\)</span> about systems in contact with a thermal
+reservoir and particle reservoir.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">The Legendre transform</p>
+<p>Similar to a Fourier transform or a Laplace transform, the Legendre transform
+is a way to display information in a different way that might be more useful
+in a certain context. The Legendre transform of a
+function <span class="math notranslate nohighlight">\(f(x)\)</span> is used when it is easier to think about or control the
+<em>derivative</em> of <span class="math notranslate nohighlight">\(f\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>, than <span class="math notranslate nohighlight">\(x\)</span> itself. Mathematically,
+the Legendre transform of <span class="math notranslate nohighlight">\(f\)</span> is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-legendre-def">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-legendre-def" title="Permalink to this equation">¶</a></span>\[
+  g(u) = ux - f(x),
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(u = \mathrm{d}f/\mathrm{d}x\)</span>.</p>
+<p>For a system in contact with a thermal reservoir, <span class="math notranslate nohighlight">\(T = \partial E/\partial S\)</span>
+is easier to think about than the entropy <span class="math notranslate nohighlight">\(S\)</span>. The temperature is
+constant and easy to measure or control, whereas the entropy may depend on the
+temperature in some complicated manner. Taking the Legendre transform of <span class="math notranslate nohighlight">\(E(S)\)</span> now
+gives us a convenient quantity <span class="math notranslate nohighlight">\(F(T)\)</span> that contains information about the energy
+in terms of the temperature.</p>
+<p>You may notice that according to equation
+<a class="reference internal" href="#equation-eq-legendre-def">(2.3)</a>, the Legendre transform of <span class="math notranslate nohighlight">\(E(S)\)</span> is actually
+<span class="math notranslate nohighlight">\(TS - E = -F(T)\)</span>. The advantage of the definition in equation <a class="reference internal" href="#equation-eq-helmholtz">(2.2)</a>
+is that <span class="math notranslate nohighlight">\(F\)</span> has the same sign as the internal energy <span class="math notranslate nohighlight">\(E\)</span>, so we can talk
+about it in the same way. The same thing is true for other thermodynamic potentials.</p>
+<p>So far we considered exchanging <span class="math notranslate nohighlight">\(S\)</span> with <span class="math notranslate nohighlight">\(T\)</span> for a system
+in contact with a thermal reservoir. If your system is in direct contact with
+the atmosphere, the pressure is just the atmospheric pressure (in equilibrium),
+and the volume may change. Hence, you might consider exchanging <span class="math notranslate nohighlight">\(V\)</span> with
+<span class="math notranslate nohighlight">\(p= -\partial E/\partial V\)</span> using a Legendre transform. Similarly, if your
+system can exchange particles with its environment, it’s often easier to consider
+the chemical potential <span class="math notranslate nohighlight">\(\mu = \partial E/ \partial N\)</span> than <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<p>If you want to know more about Legendre transforms, <a class="reference external" href="https://www.lpsm.paris/pageperso/lecomte/references2013/making-sense-of-legendre-transform.pdf">this</a> article is a good place to start <span id="id1">[<a class="reference internal" href="#id4">1</a>]</span>.</p>
+</div>
+<div class="figure align-default" id="thermodynamic-systems">
+<a class="reference internal image-reference" href="_images/foursystems.svg"><img alt="_images/foursystems.svg" src="_images/foursystems.svg" width="100%" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Find the appropriate thermodynamic potential for these four systems.</span><a class="headerlink" href="#thermodynamic-systems" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Find the appropriate thermodynamic potential for the
+systems in <a class="reference internal" href="#thermodynamic-systems"><span class="std std-numref">Fig. 2.1</span></a>. (Hint: check which variables
+in the system are constant. One of the systems is not mentioned
+above, but try to figure out what variables this potential should
+depend on.)</p></li>
+<li><p>Give the differential form of <span class="math notranslate nohighlight">\(F\)</span>, that is, <span class="math notranslate nohighlight">\(\mathrm{d}F = ...\)</span> (Hint: use
+the product rule for forms: <span class="math notranslate nohighlight">\(\mathrm{d}(xy)= y \mathrm{d}x + x \mathrm{d}y\)</span>.)</p></li>
+<li><p>Derive the Grand potential <span class="math notranslate nohighlight">\(\Phi(\mu,V,T)\)</span> from the Helmholtz free
+energy, by means of a Legendre transformation.</p></li>
+<li><p>Derive the Gibbs free energy from the Helmholtz free energy, by
+means of a Legendre transformation. What thermodynamic variables
+does it depend on, and what thermodynamic process does it naturally
+describe?</p></li>
+<li><p>Argue that <span class="math notranslate nohighlight">\(G\)</span> can be written as <span class="math notranslate nohighlight">\(G = \mu(p,T) N\)</span>. (Hint: check
+whether variables are extensive or intensive.)</p></li>
+</ol>
+<p>When physicists talk about “free energy” they usually mean the
+Helmholtz free energy <span class="math notranslate nohighlight">\(F\)</span>, and when chemists talk about free energy,
+they usually mean the Gibbs free energy <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div>
+<div class="section" id="thermodynamic-variables-and-ensembles">
+<span id="sec-thermodynamic-variables"></span><h2><span class="section-number">2.2. </span>Thermodynamic variables and ensembles<a class="headerlink" href="#thermodynamic-variables-and-ensembles" title="Permalink to this headline">¶</a></h2>
+<p>A simple way to check whether a variable is <em>extensive</em> or <em>intensive</em>
+is to duplicate a system and to check what happens to the variable. For
+example, the volume will double, and the number of particles as well,
+but the temperature will remain the same. Volume <span class="math notranslate nohighlight">\(V\)</span> and the number of
+particles <span class="math notranslate nohighlight">\(N\)</span> are extensive variables, and temperature <span class="math notranslate nohighlight">\(T\)</span> is an
+intensive variable.</p>
+<ol class="simple">
+<li><p>Which thermodynamic variables are extensive, and which are
+intensive? Check <span class="math notranslate nohighlight">\(V,p,N,\)</span> and <span class="math notranslate nohighlight">\(E\)</span>. What about the number density
+<span class="math notranslate nohighlight">\(\rho\equiv\frac{N}{V}\)</span> and chemical potential <span class="math notranslate nohighlight">\(\mu\)</span>?</p></li>
+<li><p>What kind of thermodynamic process is naturally described by the
+Helmholtz free energy? (you may also mention a type of system
+instead)</p></li>
+<li><p>In terms of which thermodynamic variables is the Helmholtz free
+energy usually expressed?</p></li>
+<li><p>Calculate the change in free energy <span class="math notranslate nohighlight">\(F_B-F_A\)</span> during the isothermal
+expansion of an ideal gas from volume <span class="math notranslate nohighlight">\(V_A\)</span> to <span class="math notranslate nohighlight">\(V_B\)</span>. (Hint: you
+need the ideal gas law.)</p></li>
+<li><p>What does this amount of energy correspond to? (Hint: you can reuse
+a lot of words from the previous question, but one word is missing.)</p></li>
+<li><p>Calculate the change in energy <span class="math notranslate nohighlight">\(E_B-E_A\)</span> during an adiabatic
+expansion of an ideal gas from volume <span class="math notranslate nohighlight">\(V_A\)</span> to <span class="math notranslate nohighlight">\(V_B\)</span>.</p></li>
+<li><p>Did you not forget one of the subquestions?</p></li>
+</ol>
+</div>
+<div class="section" id="the-second-law-of-thermodynamics">
+<span id="sec-second-law"></span><h2><span class="section-number">2.3. </span>The second law of thermodynamics<a class="headerlink" href="#the-second-law-of-thermodynamics" title="Permalink to this headline">¶</a></h2>
+<p>The second law of thermodynamics can be expressed in different,
+equivalent forms. The version by Clausius (1850) states that</p>
+<blockquote>
+<div><p>“Heat, by itself, cannot pass from a colder to a hotter body”.</p>
+</div></blockquote>
+<p>Lord Kelvin introduced an equivalent statement</p>
+<blockquote>
+<div><p>“A process whose only effect is the complete conversion of heat into
+work cannot occur”.</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>Prove that the version of Clausius implies Kelvin’s, by showing that
+“not-Kelvin” implies “not-Clausius”. In other words (without
+obscure mathematical language) show that if you could build a
+machine that would violate Kelvin’s rule, that it would also violate
+the rule of Clausius. (Hint: let this machine power another machine
+pumping heat from a cold to a hot reservoir, and look at the net
+effect of both machines.)</p></li>
+<li><p>Now prove that Kelvin’s rule implies Clausius’ (hint: you can
+do something similar as in the previous question). This would finish
+the proof that the two statements are equivalent.</p></li>
+</ol>
+</div>
+<div class="section" id="the-carnot-cycle">
+<span id="sec-carnot-cycle"></span><h2><span class="section-number">2.4. </span>The Carnot cycle<a class="headerlink" href="#the-carnot-cycle" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>Sketch the Carnot cycle in a pressure vs. volume diagram, and label
+the thermodynamic processes that are used.</p></li>
+<li><p>After one cycle, the energy is back to its original value. In other
+words <span class="math notranslate nohighlight">\(\oint dE =0\)</span> (<span class="math notranslate nohighlight">\(E\)</span> is an equation of state). This implies that
+<span class="math notranslate nohighlight">\(\oint dQ = \oint pdV\)</span>, meaning that one can convert an amount of
+heat into work (the integrals are along the Carnot cycle, and
+reflect the total change in heat, and the total work being
+performed, respectively). Why is this not in conflict with the
+second law of thermodynamics?</p></li>
+<li><p>The efficiency of the Carnot cycle is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+      \eta = \frac{W}{Q_\mathrm{H}}.
+    \]</div>
+<p>The amount of heat extracted from
+the hot reservoir is <span class="math notranslate nohighlight">\(Q_\mathrm{H}\)</span>, and <span class="math notranslate nohighlight">\(\eta\)</span> represents the
+fraction of that amount that is being converted into work <span class="math notranslate nohighlight">\(W\)</span>. If
+the Carnot cycle is performed with an ideal gas, one can prove that</p>
+<div class="math notranslate nohighlight" id="equation-eq-carnot-efficiency">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-carnot-efficiency" title="Permalink to this equation">¶</a></span>\[
+            \eta = 1 - \frac{T_\mathrm{C}}{T_\mathrm{H}}.
+    \]</div>
+<p>Show this.
+Hint: This will require a series of steps. First calculate the
+heat exchange and work during each of the four processes of the
+cycle, and use that <span class="math notranslate nohighlight">\(W=Q_\mathrm{H}-Q_\mathrm{C}\)</span>.</p>
+</li>
+</ol>
+<p>In the last question we made use of the ideal gas law, where we secretly
+used the notion of temperature <span class="math notranslate nohighlight">\(T\)</span>. So secretly, we defined temperature
+by the behavior of the ideal gas (in principle one could measure this
+directly, by measuring the pressure of a dilute gas). However, one can
+also define temperature from the Carnot cycle. See for the explanation
+David Tong’s reader, section 4.3.2. However, the result is identical to
+the one you derived, equation <a class="reference internal" href="#equation-eq-carnot-efficiency">(2.4)</a>.</p>
+</div>
+<div class="section" id="entropy-part-i">
+<span id="sec-entropy-part-i"></span><h2><span class="section-number">2.5. </span>Entropy, part I<a class="headerlink" href="#entropy-part-i" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>In a Carnot cycle an amount of heat <span class="math notranslate nohighlight">\(Q_\mathrm{H}\)</span> is partially
+converted into work <span class="math notranslate nohighlight">\(W\)</span> and partially deposited into a colder
+reservoir, by an amount <span class="math notranslate nohighlight">\(Q_\mathrm{C}\)</span>. Demonstrate that after one
+cycle</p>
+<div class="math notranslate nohighlight">
+\[
+      \frac{Q_\mathrm{H}}{T_\mathrm{H}} - \frac{Q_\mathrm{C}}{T_\mathrm{C}}=0.
+    \]</div>
+<p>(Hint: remember what you derived about the efficiency <span class="math notranslate nohighlight">\(\eta\)</span>.)</p>
+<p>With a few lines of math one can derive that for <em>any</em> reversible
+loop</p>
+<div class="math notranslate nohighlight">
+\[
+      \oint \frac{dQ}{T} = 0.
+    \]</div>
+<p>It seems like there is an equation
+of state. This equation of state is called <em>entropy</em> with symbol
+<span class="math notranslate nohighlight">\(S\)</span>, and <span class="math notranslate nohighlight">\(dQ = TdS\)</span>.</p>
+</li>
+<li><p>The Carnot cycle is a reversible cycle. One can prove quickly that
+reversible cycles all have the same efficiency, and that this
+efficiency is optimal. Irreversible cycles have a lower efficiency.
+Using this knowledge, we are going to compare two cycles, one being
+the Carnot cycle, the other an irreversible cycle. The irreversible
+cycle extracts an amount of heat <span class="math notranslate nohighlight">\(Q'_\mathrm{H}\)</span> and deposits
+<span class="math notranslate nohighlight">\(Q'_\mathrm{C}\)</span> and is designed to perform the same amount of work
+as the Carnot cycle (although less efficient), such that
+<span class="math notranslate nohighlight">\(Q_\mathrm{H}-Q_\mathrm{C}=Q'_\mathrm{H}-Q'_\mathrm{C}\)</span>. Now use
+this to derive that</p>
+<div class="math notranslate nohighlight">
+\[
+      \frac{Q'_\mathrm{H}}{T_\mathrm{H}} - \frac{Q'_\mathrm{C}}{T_\mathrm{C}} \leq 0.
+    \]</div>
+</li>
+</ol>
+<p>With some more math one can derive now that for <em>any</em> cycle</p>
+<div class="math notranslate nohighlight">
+\[
+  \oint \frac{dQ}{T} \leq 0.
+\]</div>
+<p>This is called the Clausius
+inequality. A consequence is that for an adiabatic process
+<span class="math notranslate nohighlight">\(S_2\geq S_1\)</span> if the system undergoes a change from state 1 to
+state 2.</p>
+<blockquote>
+<div><p>The entropy of an isolated system never decreases.</p>
+</div></blockquote>
+<p>For a more detailed description of the math, see David Tong’s reader, page 122.</p>
+</div>
+<div class="section" id="references">
+<h2><span class="section-number">2.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id2"><dl class="citation">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Royce KP Zia, Edward F Redish, and Susan R McKay. Making sense of the Legendre transform. <em>American Journal of Physics</em>, 77(7):614–622, 2009.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="placeholder.html" title="previous page"><span class="section-number">1. </span>Some placeholder text</a>
+    <a class='right-next' id="next-link" href="probability.html" title="next page">Probability</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By JZ/LDK<br/>
+        
+            &copy; Copyright 2021 Delft University of Technology, CC BY-SA 4.0.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
