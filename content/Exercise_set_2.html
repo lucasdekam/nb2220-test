@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Phases of matter and random walks, part I &#8212; NB2220 Statistical Physics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ordered_lists_with_lowercase_letters.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Classical thermodynamics" href="Exercise_set_3.html" />
+    <link rel="prev" title="1. Large numbers" href="Exercise_set_1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/tudelft.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NB2220 Statistical Physics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Statistical Physics for Nanobiology
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problem sets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_1.html">
+   1. Large numbers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Phases of matter and random walks, part I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_3.html">
+   3. Classical thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_4.html">
+   4. Boltzmann statistics and entropy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_5.html">
+   5. Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_6.html">
+   6. Phase transitions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_7.html">
+   7. Ionic screening
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Solutions.html">
+   Solutions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_1_solutions.html">
+     Problem set 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_2_solutions.html">
+     Problem set 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_3_solutions.html">
+     Problem set 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_4_solutions.html">
+     Problem set 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_6_solutions.html">
+     Problem set 6
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Exercise_set_2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercise_set_2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#phases-of-matter">
+   2.1. Phases of matter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#particles">
+   2.2. Particles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#random-walk-part-i">
+   2.3. Random walk, part I
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#association-dissociation-equilibrium-of-a-polymer-part-i">
+   2.4. Association-dissociation equilibrium of a polymer, part I
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="phases-of-matter-and-random-walks-part-i">
+<span id="ch-chapter2"></span><h1><span class="section-number">2. </span>Phases of matter and random walks, part I<a class="headerlink" href="#phases-of-matter-and-random-walks-part-i" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="phases-of-matter">
+<span id="sec-phases-of-matter"></span><h2><span class="section-number">2.1. </span>Phases of matter<a class="headerlink" href="#phases-of-matter" title="Permalink to this headline">¶</a></h2>
+<p>One can distinguish many phases of matter, beyond the standard division
+of gas, liquid and solid. For example, solids are called crystalline
+when the atoms or components are ordered in a regular, periodic fashion,
+and amorphous when there is no regular order. But there are many more
+substances that would be difficult to classify as solid, liquid or gas.
+These phases of matter are characterized by unique properties. Sometimes
+the phase refers to a specific symmetry of their components e.g. in the
+case of liquid crystals.</p>
+<p>Liquid crystals can have positional order or orientational order, or
+both. When there is only orientational order (i.e. the particles are
+more or less aligned in the same direction), but no positional order, it
+is called a nematic phase. Each type of order is indicated with a
+specific name.</p>
+<p>Other phases of matter are characterized by their mechanical properties
+e.g. gels and foams. Gels and foams tend to behave solid-like, but
+deform easily and respond elastically. Foams may also turn into liquids
+upon external stress.</p>
+<p>Glasses form a class of materials that are “dynamically arrested”.
+They are usually formed by a rapid process, where the components have no
+time to find their optimal position, such that they get trapped in a
+frozen, usually amorphous configuration (imagine some radical form of
+musical chairs, “stoelendans” in Dutch). This process is appropriately called
+“vitrification”.</p>
+<p>Some phases have specific dimensions, such as membranes (2D) and fibers
+(1D). These phases can also be liquid or solid or glassy or liquid
+crystalline, or any other combination of properties. There are also
+phases characterized by their topology (“vortex matter”), electric
+properties (superconductive materials), rheological properties
+(superfluids), energetic properties (“active matter” / materials with
+molecular motors), and… let us stop here for now.</p>
+<p>Try to classify the following phases of matter, and give arguments by
+commenting on their properties:</p>
+<ol class="simple">
+<li><p>Yogurt</p></li>
+<li><p>Diamond</p></li>
+<li><p>The salt ions in vegetable soup</p></li>
+<li><p>a school of sardines</p></li>
+<li><p>actin networks</p></li>
+<li><p>a cell membrane</p></li>
+<li><p>a sample of proteins after Cryo-EM</p></li>
+<li><p>skin tissue</p></li>
+<li><p>a soap bubble</p></li>
+<li><p>muscle tissue</p></li>
+</ol>
+</div>
+<div class="section" id="particles">
+<span id="sec-particles"></span><h2><span class="section-number">2.2. </span>Particles<a class="headerlink" href="#particles" title="Permalink to this headline">¶</a></h2>
+<p>In the 19<sup>th</sup> century the physics community did not believe in
+atoms, except the Austrian scientist Ludwig Boltzmann and a handful of
+his followers. Even Max Planck had been a strong opponent of the idea,
+until much later, when he introduced the word “quantum” and treated
+light as consisting of particles (a much more radical and absurd
+assumption) based on Boltzmann’s ideas.</p>
+<p>It may sound absurd now not to believe in atoms, but still, there is no
+direct way of observing them. Even with powerful light microscopes, we
+cannot see water molecules. Our observation of these particles is all
+based on concepts and indirect inference.</p>
+<p>Why do you believe in atoms? What is your proof?</p>
+</div>
+<div class="section" id="random-walk-part-i">
+<span id="sec-random-walk-part-i"></span><h2><span class="section-number">2.3. </span>Random walk, part I<a class="headerlink" href="#random-walk-part-i" title="Permalink to this headline">¶</a></h2>
+<p>The “random walk” is a famous example of a stochastic process, and it
+relates to many different phenomena around us. Einstein used it to
+derive that the average position of randomly colliding particles is
+described by the diffusion equation. Here is a 1-dimensional version of
+a random walk.</p>
+<p>A random walker is taking steps left and right with equal probability
+(so for every step the random walker takes, there is a probability of
+0.5 that the step will be to the right, and 0.5 that it will be to the
+left).</p>
+<ol class="simple">
+<li><p>What is the mean and standard deviation after one step?</p></li>
+<li><p>What is the mean and standard deviation after <span class="math notranslate nohighlight">\(N=100\)</span> steps? (Hint:
+Remember <a class="reference internal" href="Exercise_set_1.html#sec-central-limit-theorem-dice"><span class="std std-ref">the exercise</span></a> about the dice, and the
+central limit theorem.)</p></li>
+<li><p>What after <span class="math notranslate nohighlight">\(N=10.000\)</span> steps? Argue why diffusion can be a limiting
+process. (in other words, argue why diffusion may not be a very
+efficient process if you want to transport something from <span class="math notranslate nohighlight">\(A\)</span> to
+<span class="math notranslate nohighlight">\(B\)</span>.)</p></li>
+<li><p>Calculate the probability <span class="math notranslate nohighlight">\(P\)</span> that you end up <span class="math notranslate nohighlight">\(n\)</span> steps to the right
+of the starting point after <span class="math notranslate nohighlight">\(N\)</span> steps, using the central limit
+theorem.</p></li>
+<li><p>Calculate the same probability <span class="math notranslate nohighlight">\(P(n)\)</span>, but now exactly. [hint: you
+would have to do some combinatorics here] This distribution will be
+indistinguishable from the answer to part (d) for large <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="association-dissociation-equilibrium-of-a-polymer-part-i">
+<span id="sec-association-dissociation-part-i"></span><h2><span class="section-number">2.4. </span>Association-dissociation equilibrium of a polymer, part I<a class="headerlink" href="#association-dissociation-equilibrium-of-a-polymer-part-i" title="Permalink to this headline">¶</a></h2>
+<p>A long polymer has <span class="math notranslate nohighlight">\(N\)</span> sites where certain types of particles can bind.
+These particles can bind to each site with equal probability. If a
+particle is bound to a site, no other particle can bind to that site.</p>
+<ol class="simple">
+<li><p>In how many different ways can one particle bind? (this question was
+intended to be obvious)</p></li>
+<li><p>In how many different ways can <span class="math notranslate nohighlight">\(n\)</span> particles bind, if the particles
+are not identical?</p></li>
+<li><p>In how many different ways can <span class="math notranslate nohighlight">\(n\)</span> particles bind, if the particles
+are all identical? (in more formal language: how many different
+configurations are there for <span class="math notranslate nohighlight">\(n\)</span> identical particles?)</p></li>
+<li><p>For which value of <span class="math notranslate nohighlight">\(n\)</span> do you obtain the largest number of different
+configurations?</p></li>
+<li><p>Draw the number of configurations as a function of <span class="math notranslate nohighlight">\(n\)</span>, for <span class="math notranslate nohighlight">\(N=100\)</span></p></li>
+<li><p>Does this distribution look familiar? (Can you connect it somehow to
+the previous exercise? If not, no problem.)</p></li>
+<li><p>Bonus challenge (optional): Can you do this exercise again, but
+assuming that any number of particles can bind to the same site?</p></li>
+</ol>
+<p>These results will be used later.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Exercise_set_1.html" title="previous page"><span class="section-number">1. </span>Large numbers</a>
+    <a class='right-next' id="next-link" href="Exercise_set_3.html" title="next page"><span class="section-number">3. </span>Classical thermodynamics</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By JZ/LDK<br/>
+        
+            &copy; Copyright Delft University of Technology, CC BY-SA 4.0.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

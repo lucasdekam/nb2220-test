@@ -1,0 +1,141 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/nbclient/client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/nbclient/client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.8.10/x64/lib/python3.8/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+from scipy.optimize import fsolve
+
+kbt = 1
+
+def pressure(rho, a, b):
+    p = rho*kbt/(1-b*rho) - a*rho**2
+    return p
+
+def chempot(rho, a, b):
+    kbt = 1
+    mu = kbt*np.log(rho/(1-b*rho)) + kbt*b*rho/(1-b*rho) - 2*a*rho
+    return mu
+
+## Define the range of densities to plot
+rho = np.linspace(0.01, 0.99, 200)
+range_a = np.arange(0, 10, 0.25)
+
+## Create plot
+fig = make_subplots(rows=1, cols=2, horizontal_spacing=0.18)
+
+# Add ideal gas traces
+fig.add_trace(go.Scatter(
+    visible=True,
+    x=rho,
+    y=pressure(rho, 0, 0),
+    line=dict(color="#000000"),
+    mode='lines',
+    name='Ideal gas'), row=1, col=1)
+
+fig.add_trace(go.Scatter(
+    visible=True,
+    x=rho,
+    y=chempot(rho, 0, 0),
+    line=dict(color="#000000"),
+    mode='lines',
+    name='Ideal gas',
+    showlegend=False,), row=1, col=2)
+
+base_traces = 2 # Number of traces that are always visible
+
+# Add traces, one for each slider step
+for a in range_a:
+    fig.add_trace(        
+        go.Scatter(
+            visible=False,
+            x=rho,
+            y=pressure(rho, a, 1),
+            line=dict(color="#ff5638"),
+            mode='lines',
+            name='VdW fluid'), row=1, col=1)
+
+    fig.add_trace(        
+        go.Scatter(
+            visible=False,
+            x=rho,
+            y=chempot(rho, a, 1),
+            line=dict(color="#ff5638"),
+            mode='lines',
+            name='VdW fluid',
+            showlegend=False), row=1, col=2)
+
+traces_per_step = 2 # Number of traces per value of a
+
+# Show the traces for one value of a when loading the plot (initial setup)
+active_a_index = 10
+fig.data[active_a_index + base_traces].visible = True
+fig.data[active_a_index + base_traces + 1].visible = True
+
+# Create and add slider
+steps = []
+for i in range(0, range_a.shape[0]):
+    visarray = [False] * len(fig.data)
+    visarray[0:base_traces] = [True] * base_traces
+    curr_idx = int(base_traces + i * traces_per_step)
+    next_idx = int(base_traces + (i+1) * traces_per_step)
+    visarray[curr_idx:next_idx] = [True] * traces_per_step
+    step = dict(
+        method="update",
+        args=[{"visible": visarray}],
+        label=range_a[i]
+    )
+    steps.append(step)
+
+sliders = [dict(
+    active=active_a_index,
+    currentvalue={"prefix": "a: "},
+    steps=steps
+)]
+
+fig.update_layout(
+    sliders=sliders,
+    xaxis_title=r'$\mathrm{density} \; \rho$',
+    yaxis_title=r'$\mathrm{pressure} \; p$',
+    legend_title="Legend",
+    height=400
+)
+
+fig.update_xaxes(title_text=r'$\mathrm{density} \; \rho$', row=1, col=1)
+fig.update_xaxes(title_text=r'$\mathrm{density} \; \rho$', row=1, col=2)
+
+# Update yaxis properties
+fig.update_yaxes(title_text=r'$\mathrm{pressure} \; p$', range=[-3, 4], row=1, col=1)
+fig.update_yaxes(title_text=r'$\mathrm{chemical \; potential} \; \mu$', range=[-5.5, 0.25], row=1, col=2)
+
+fig
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+[0;32m/tmp/ipykernel_1764/2638345590.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      2[0m [0;32mimport[0m [0mplotly[0m[0;34m.[0m[0mgraph_objects[0m [0;32mas[0m [0mgo[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;32mfrom[0m [0mplotly[0m[0;34m.[0m[0msubplots[0m [0;32mimport[0m [0mmake_subplots[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 4[0;31m [0;32mfrom[0m [0mscipy[0m[0;34m.[0m[0moptimize[0m [0;32mimport[0m [0mfsolve[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m [0;34m[0m[0m
+[1;32m      6[0m [0mkbt[0m [0;34m=[0m [0;36m1[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mModuleNotFoundError[0m: No module named 'scipy'
+ModuleNotFoundError: No module named 'scipy'
+

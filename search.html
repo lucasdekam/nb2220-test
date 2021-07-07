@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/ordered_lists_with_lowercase_letters.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -41,6 +42,7 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -50,6 +52,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -95,23 +98,55 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Name of the first part
+  Problem sets
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="placeholder.html">
-   1. Some placeholder text
+  <a class="reference internal" href="content/Exercise_set_1.html">
+   1. Large numbers
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Exercise_set_3.html">
-   2. Classical thermodynamics
+  <a class="reference internal" href="content/Exercise_set_2.html">
+   2. Phases of matter and random walks, part I
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content/Exercise_set_3.html">
+   3. Classical thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content/Exercise_set_4.html">
+   4. Boltzmann statistics and entropy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content/Exercise_set_5.html">
+   5. Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content/Exercise_set_6.html">
+   6. Phase transitions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="content/Exercise_set_7.html">
+   7. Ionic screening
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="probability.html">
-   Probability
+  <a class="reference internal" href="content/Solutions.html">
+   Solutions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -120,13 +155,28 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="phasetransitions.html">
-     1. Phase transitions
+    <a class="reference internal" href="content/Exercise_set_1_solutions.html">
+     Problem set 1
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="project.html">
-     2. Project notes
+    <a class="reference internal" href="content/Exercise_set_2_solutions.html">
+     Problem set 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/Exercise_set_3_solutions.html">
+     Problem set 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/Exercise_set_4_solutions.html">
+     Problem set 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/Exercise_set_6_solutions.html">
+     Problem set 6
     </a>
    </li>
   </ul>
@@ -171,11 +221,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/lucasdekam/nb2220-test"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/lucasdekam/nb2220-test/issues/new?title=Issue%20on%20page%20%2Fsearch.html&body=Your%20issue%20content%20here."><button
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology/issues/new?title=Issue%20on%20page%20%2Fsearch.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -242,7 +292,7 @@
         
           By JZ/LDK<br/>
         
-            &copy; Copyright 2021 Delft University of Technology, CC BY-SA 4.0.<br/>
+            &copy; Copyright Delft University of Technology, CC BY-SA 4.0.<br/>
       </p>
     </div>
   </footer>

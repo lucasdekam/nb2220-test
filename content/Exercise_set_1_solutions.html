@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem set 1 &#8212; NB2220 Statistical Physics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ordered_lists_with_lowercase_letters.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Problem set 2" href="Exercise_set_2_solutions.html" />
+    <link rel="prev" title="Solutions" href="Solutions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/tudelft.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NB2220 Statistical Physics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Statistical Physics for Nanobiology
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problem sets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_1.html">
+   1. Large numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_2.html">
+   2. Phases of matter and random walks, part I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_3.html">
+   3. Classical thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_4.html">
+   4. Boltzmann statistics and entropy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_5.html">
+   5. Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_6.html">
+   6. Phase transitions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_7.html">
+   7. Ionic screening
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Solutions.html">
+   Solutions
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Problem set 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_2_solutions.html">
+     Problem set 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_3_solutions.html">
+     Problem set 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_4_solutions.html">
+     Problem set 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_6_solutions.html">
+     Problem set 6
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Exercise_set_1_solutions.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercise_set_1_solutions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-1-1">
+   Problem 1.1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-1-2">
+   Problem 1.2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-1-3">
+   Problem 1.3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problem-1-4">
+   Problem 1.4
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="problem-set-1">
+<h1>Problem set 1<a class="headerlink" href="#problem-set-1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="problem-1-1">
+<h2>Problem 1.1<a class="headerlink" href="#problem-1-1" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="Exercise_set_1.html#sec-oxygen-in-box"><span class="std std-ref">Link to problem</span></a></p>
+<ol>
+<li><p>The probability density function is assumed to be constant, so
+<span class="math notranslate nohighlight">\(P(\mathbf{x}) = 1/V\)</span>, where <span class="math notranslate nohighlight">\(V\)</span> is the volume of the classroom (<span class="math notranslate nohighlight">\(P\)</span>
+needs to be normalised). So, the probability of a single particle to
+be inside the box <span class="math notranslate nohighlight">\(p\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+        p = \frac{V_\mathrm{box}}{V} = 0.001
+    \]</div>
+<p>The probability that both are inside the box is therefore
+<span class="math notranslate nohighlight">\(p^2 = 1\cdot10^{-6}\)</span>, i.e. one in a million.</p>
+</li>
+<li><p>That probability would be, under the same assumptions as before,
+<span class="math notranslate nohighlight">\(P_\mathrm{in}\equiv p^N\)</span> where <span class="math notranslate nohighlight">\(N\)</span> is the number of particles, so</p>
+<div class="math notranslate nohighlight">
+\[
+        P_\mathrm{in} \equiv p^N = \frac{1}{10^{3\cdot10^{25}}},
+    \]</div>
+<p>that is, 1 divided by a 1 with <span class="math notranslate nohighlight">\(3\cdot 10^{25}\)</span> zeroes.</p>
+</li>
+<li><p>The total number of grains of sand on Earth and the total number of
+elementary particles in the Universe are completely negligible
+compared to this number.</p></li>
+<li><p>Given that the distribution randomises every hour, and that one
+would sample <span class="math notranslate nohighlight">\(M \equiv 10^{14}\)</span> configurations, the probability that
+it would not occur is <span class="math notranslate nohighlight">\((1-P_\mathrm{in})^M\)</span>. The probability to
+sample at least one situation where all the molecules are inside the
+box is</p>
+<div class="math notranslate nohighlight">
+\[    
+        P_\mathrm{occur} = 1 - (1-P_\mathrm{in})^M \approx M P_\mathrm{in},
+    \]</div>
+<p>which is still a fantastically small number, so there is no need to
+be afraid. (If you believe in the assumptions.)</p>
+</li>
+<li><p>Even if <span class="math notranslate nohighlight">\(M\)</span> were to be increased by a hundred orders of magnitude,
+it would still not be noticeable, except in the
+<span class="math notranslate nohighlight">\((10^{25}-114)^\mathrm{th}\)</span> significant digit.</p></li>
+<li><p>According to the above assumptions that probability would be</p>
+<div class="math notranslate nohighlight">
+\[
+        P_\mathrm{in} = p^N = \frac{1}{10^{3000}},
+    \]</div>
+<p>which is still
+unimaginably small. However, one needs to be careful with the
+assumption that the proteins be everywhere with equal probability.
+Proteins are constantly produced at certain locations in the cell,
+and they also interact with each other and the environment, changing
+the probability density distribution. To answer that, we need to
+know more about the Boltzmann distribution and other important
+concepts in Statistical Physics.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="problem-1-2">
+<h2>Problem 1.2<a class="headerlink" href="#problem-1-2" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="Exercise_set_1.html#sec-central-limit-theorem-dice"><span class="std std-ref">Link to problem</span></a></p>
+<ol>
+<li><p>The expectation value <span class="math notranslate nohighlight">\(\mu = 3.5\)</span>, and all outcomes are equally
+probable. The standard deviation is
+<span class="math notranslate nohighlight">\(\sigma = \sqrt{\langle x^2\rangle - \langle x \rangle^2} \approx 1.708\)</span>,
+<span class="math notranslate nohighlight">\(\sigma/\mu = 0.489\)</span>, and the distribution is constant,
+<span class="math notranslate nohighlight">\(P_n = \frac{1}{6}\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is the outcome.</p></li>
+<li><p>The expectation value is <span class="math notranslate nohighlight">\(\mu_2 = 7\)</span>, the most probable outcome is
+<span class="math notranslate nohighlight">\(7\)</span>, and the distribution is triangular, peaked at 7</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+        P = \begin{cases}
+                 a(n-1) &amp; n\leq 7 \\
+                 a(n-13) &amp; n \geq 7
+            \end{cases}
+    \end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(a\)</span> a normalisation constant. The
+standard deviation is close to <span class="math notranslate nohighlight">\(2.415\)</span>, <span class="math notranslate nohighlight">\(\sigma_2/\mu_2 = 0.345\)</span>.</p>
+</li>
+<li><p>The expectation value is <span class="math notranslate nohighlight">\(\mu_3 = 10.5\)</span>, and the distribution
+consists of two parabolas, peaked at <span class="math notranslate nohighlight">\(n=10\)</span> and <span class="math notranslate nohighlight">\(n=11\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+        P = \begin{cases}
+                     a(n-2)^2 &amp; n\leq 10 \\
+                     a(n-19)^2 &amp; n \geq 11
+            \end{cases}
+    \end{split}\]</div>
+<p>with <span class="math notranslate nohighlight">\(a\)</span> a normalisation constant. The
+standard deviation should be close to <span class="math notranslate nohighlight">\(\sqrt{3}\sigma \approx 2.96\)</span>,
+<span class="math notranslate nohighlight">\(\sigma_3/\mu_3 = 0.282\)</span>.</p>
+</li>
+<li><p>One can use the central limit theorem here. The mean would be
+<span class="math notranslate nohighlight">\(100\mu\)</span>, and the standard deviation <span class="math notranslate nohighlight">\(10\sigma\)</span>,
+<span class="math notranslate nohighlight">\(\sigma_{100}/\mu_{100} = 0.049\)</span>, which is visible as a very narrow
+peak at <span class="math notranslate nohighlight">\(x = 350\)</span>.</p></li>
+<li><p>Similar as d) except that the distribution is extremely peaked at
+the mean. The mean is <span class="math notranslate nohighlight">\(\mu_N=N\mu_1 = 10^{12}\mu_1\)</span> and the standard
+deviation is <span class="math notranslate nohighlight">\(\sigma_N=\sqrt{N}\sigma = 10^6\sigma\)</span>,
+<span class="math notranslate nohighlight">\(\sigma_N/\mu_N \approx 5\cdot 10^{-7}\)</span>, with <span class="math notranslate nohighlight">\(N=10^{12}\)</span>. The
+figure of this distribution cannot be distinguished from a delta
+distribution (which is zero everywhere, except at the mean), except
+if you would use a microscope and zoom in at the position of the
+mean.</p></li>
+</ol>
+</div>
+<div class="section" id="problem-1-3">
+<h2>Problem 1.3<a class="headerlink" href="#problem-1-3" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="Exercise_set_1.html#sec-orders-of-magnitude"><span class="std std-ref">Link to problem</span></a></p>
+<p>These are estimates of the order of magnitude.</p>
+<ul class="simple">
+<li><p>Taking the water molecule to be roughly 0.01 nm<span class="math notranslate nohighlight">\(^3\)</span>, and the cell to
+be <span class="math notranslate nohighlight">\(10 \mu \mathrm{m}^3\)</span>, would add up to <span class="math notranslate nohighlight">\(10^{12}\)</span> molecules per
+cell, which is a number computer simulation algorithms cannot
+handle.</p></li>
+<li><p>Taking the human body to be roughly 0.1 m<span class="math notranslate nohighlight">\(^3\)</span> and a cell to be 10
+<span class="math notranslate nohighlight">\(\mu\)</span>m<span class="math notranslate nohighlight">\(^3\)</span>, and assuming the body to consist completely of densely
+packed cells, this would add up to <span class="math notranslate nohighlight">\(10^{16}\)</span> cells. This is a slight
+overestimation, by about two orders of magnitude.</p></li>
+<li><p>Taking a lipid membrane to be 10 <span class="math notranslate nohighlight">\(\mu\)</span>m<span class="math notranslate nohighlight">\(^2\)</span> and a single lipid
+molecule to occupy 0.1 nm<span class="math notranslate nohighlight">\(^2\)</span>, this would add up to <span class="math notranslate nohighlight">\(10^8\)</span> lipid
+molecules.</p></li>
+<li><p>Taking the skin to be 1 m<span class="math notranslate nohighlight">\(^2\)</span> and the cell to occupy 1 <span class="math notranslate nohighlight">\(\mu\)</span>m<span class="math notranslate nohighlight">\(^2\)</span>
+would add up to <span class="math notranslate nohighlight">\(10^{12}\)</span> microbes, if the skin were densely packed
+with a monolayer of cells.</p></li>
+</ul>
+</div>
+<div class="section" id="problem-1-4">
+<h2>Problem 1.4<a class="headerlink" href="#problem-1-4" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="Exercise_set_1.html#sec-emergent-behavior"><span class="std std-ref">Link to problem</span></a></p>
+<p>All phenomena can be seen as emergent. The final points would deserve a
+much longer discussion, and have been discussed throughout the
+centuries, around the globe. These short sketches add a nanobiological
+flavor.</p>
+<ol class="simple">
+<li><p>Temperature from the motion of molecules</p></li>
+<li><p>Brownian motion from the collisions with other particles</p></li>
+<li><p>The elasticity of a cell membrane from the interactions between the
+molecules in the membrane and the average kinetic energy of the
+molecules (their temperature)</p></li>
+<li><p>Cell division from multiple processes including protein interaction
+networks that regulate the binding of filamentous proteins that
+shape and contract the cell at the right location. Underneath is
+still the mechanics of all the molecules, having very specific
+interactions. The expression of genes into proteins should also be
+distinguished.</p></li>
+<li><p>Thoughts could be (speculatively) the consequence of a specific
+firing pattern of neurons, coupled to sensorial patterns and
+physical stimuli, which relate to the functioning of the individual
+cells involved, their components and their molecules. Many
+layers…</p></li>
+<li><p>Music as emerging from individual notes, or a delicate superposition
+and succession of sounds, coupling to thoughts and internal
+processes via aural stimuli.</p></li>
+<li><p>Awareness could be a collection of thoughts and other neuronal
+patterns, coupled to the physical infrastructure and environment,
+and seems difficult to define.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Solutions.html" title="previous page">Solutions</a>
+    <a class='right-next' id="next-link" href="Exercise_set_2_solutions.html" title="next page">Problem set 2</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By JZ/LDK<br/>
+        
+            &copy; Copyright Delft University of Technology, CC BY-SA 4.0.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

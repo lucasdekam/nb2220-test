@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Distributions &#8212; NB2220 Statistical Physics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ordered_lists_with_lowercase_letters.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Phase transitions" href="Exercise_set_6.html" />
+    <link rel="prev" title="4. Boltzmann statistics and entropy" href="Exercise_set_4.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/tudelft.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NB2220 Statistical Physics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Statistical Physics for Nanobiology
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problem sets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_1.html">
+   1. Large numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_2.html">
+   2. Phases of matter and random walks, part I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_3.html">
+   3. Classical thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_4.html">
+   4. Boltzmann statistics and entropy
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_6.html">
+   6. Phase transitions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_7.html">
+   7. Ionic screening
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Solutions.html">
+   Solutions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_1_solutions.html">
+     Problem set 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_2_solutions.html">
+     Problem set 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_3_solutions.html">
+     Problem set 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_4_solutions.html">
+     Problem set 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_6_solutions.html">
+     Problem set 6
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Exercise_set_5.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercise_set_5.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#short-summary-of-important-terms">
+   5.1. Short summary of important terms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-fluctuation-dissipation-theorem">
+   5.2. The fluctuation-dissipation theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#temperature-and-equipartition">
+   5.3. Temperature and equipartition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-barometric-height-distribution">
+   5.4. The barometric height distribution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#open-systems-association-dissociation-equilibrium-of-a-polymer-part-ii">
+   5.5. Open systems: association-dissociation equilibrium of a polymer, part II
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="distributions">
+<h1><span class="section-number">5. </span>Distributions<a class="headerlink" href="#distributions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="short-summary-of-important-terms">
+<h2><span class="section-number">5.1. </span>Short summary of important terms<a class="headerlink" href="#short-summary-of-important-terms" title="Permalink to this headline">¶</a></h2>
+<p>A system with volume <span class="math notranslate nohighlight">\(V\)</span> and number of particles <span class="math notranslate nohighlight">\(N\)</span>, in thermal contact
+with a large reservoir with temperature <span class="math notranslate nohighlight">\(T\)</span> is described by the
+Helmholtz free energy <span class="math notranslate nohighlight">\(F(N,V,T)\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
+    F = E - TS
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(E\)</span> the energy of the system and <span class="math notranslate nohighlight">\(S\)</span> the entropy. Boltzmann defined the entropy to be</p>
+<div class="math notranslate nohighlight">
+\[
+  S(E) = k_\mathrm{B} \ln{\Omega(E)}
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(\Omega(E)\)</span> the number of
+microstates with energy <span class="math notranslate nohighlight">\(E\)</span>. From this definition, it follows that the
+entropy is extensive. The temperature is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+  \frac{\partial S}{\partial E} = \frac{1}{T}
+\]</div>
+<p>which may look abstract,
+but it contains all the intuitive properties that we associate with
+temperature (homework set 4 derived an important one). A fundamental
+assumption in statistical physics is that</p>
+<blockquote>
+<div><p>In a closed system, each microstate is equally probable.</p>
+</div></blockquote>
+<p>A closed system has a fixed energy <span class="math notranslate nohighlight">\(E(N,V,S)\)</span>. In statistical physics a
+closed system is sometimes referred to as a “microcanonical ensemble”.
+The fundamental assumption does not apply to systems that are in thermal
+contact with a large reservoir, that is, an “<span class="math notranslate nohighlight">\((N,V,T)\)</span>-ensemble”. The
+probability to find such a system in state <span class="math notranslate nohighlight">\(n\)</span>, with energy <span class="math notranslate nohighlight">\(E_n\)</span> is
+given by the Boltzmann distribution</p>
+<div class="math notranslate nohighlight" id="equation-eq-boltzmann-distribution-set-5">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-boltzmann-distribution-set-5" title="Permalink to this equation">¶</a></span>\[
+    P(n) = \frac{1}{Z} e^{-\beta E_n},
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(\beta = 1/k_\mathrm{B}T\)</span>.
+The normalisation constant</p>
+<div class="math notranslate nohighlight">
+\[
+    Z = \sum \limits_n e^{-\beta E_n}
+\]</div>
+<p>is called the partition function. The <span class="math notranslate nohighlight">\((N,V,T)\)</span>-ensemble is also called the
+“canonical ensemble”. The Helmholtz free energy can be written as
+(skipping the derivation, but it can be found in David Tong, chapter 1)</p>
+<div class="math notranslate nohighlight">
+\[
+    F = - k_\mathrm{B}T \ln{Z}
+\]</div>
+<p>from which all kinds of useful properties
+of the system can be derived. The partition function <span class="math notranslate nohighlight">\(Z\)</span> gives all the
+information of a system in thermodynamic equilibrium. However, in many
+cases <span class="math notranslate nohighlight">\(Z\)</span> is very difficult (if not impossible) to calculate. There are
+many beautiful methods to approximate <span class="math notranslate nohighlight">\(Z\)</span>, and to calculate the
+thermodynamic properties of complex systems. We will not have time to
+study these methods in this course.</p>
+<p>States can be labeled in different ways. Here we pretend that we can
+count all the states with a label <span class="math notranslate nohighlight">\(n\)</span> and energy <span class="math notranslate nohighlight">\(E_n\)</span>, for simplicity.
+In many cases, a state is characterized by all the positions of the
+particles, so that instead of the label <span class="math notranslate nohighlight">\(n\)</span>, the state is described by a
+large vector <span class="math notranslate nohighlight">\(\vec{\Gamma} = (\vec{r}_1,\vec{r}_2,...,\vec{r}_N)\)</span>. In
+that case, one has to integrate over all possible positions of the
+particles, and that is in general a difficult task if the particles are
+interacting with each other. For an ideal gas, in which the particles do
+not interact, the situation is much simpler. In the exercise
+<a class="reference internal" href="Exercise_set_4.html#sec-random-walk-part-ii"><span class="std std-ref">Random walk, part II</span></a> a polymer was considered as “the
+system” and the surrounding solvent as a temperature reservoir. Each
+state was characterized by the orientation of all the segments of the
+polymer. There are many situations where polymers behave as “ideal
+polymers”, i.e. where the segments do not interact with each other and
+can be oriented in any direction with equal probability, independent of
+what their neighbors are doing.</p>
+<p>The Boltzmann distribution will be needed in the following exercises,
+and in the rest of the course. In this set you will derive an example of
+the so-called “fluctuation-dissipation theorem”, i.e. how energy
+fluctuations in the system are related to the ability of the system to
+dissipate heat. You will also see that the temperature of a system is
+directly coupled to the kinetic energy of its particles</p>
+<div class="math notranslate nohighlight">
+\[
+  \left\langle \frac{1}{2}mv^2 \right\rangle = \frac{3}{2}k_\mathrm{B}T
+\]</div>
+<p>and derive the “equipartition theorem”, i.e. that the energy of the
+particles in a solid is equally distributed between kinetic energy and
+potential energy (on average, and under the right circumstances).</p>
+</div>
+<div class="section" id="the-fluctuation-dissipation-theorem">
+<h2><span class="section-number">5.2. </span>The fluctuation-dissipation theorem<a class="headerlink" href="#the-fluctuation-dissipation-theorem" title="Permalink to this headline">¶</a></h2>
+<p>The energy in the canonical ensemble can fluctuate, because of heat
+exchange between the system and the reservoir.</p>
+<ol>
+<li><p>Show that in the canonical ensemble (<span class="math notranslate nohighlight">\(N,V,T\)</span>-ensemble) the
+expectation value of the energy obeys</p>
+<div class="math notranslate nohighlight">
+\[
+        \langle E \rangle = -\frac{\partial}{\partial \beta} \ln{Z}
+    \]</div>
+<p>with <span class="math notranslate nohighlight">\(Z\)</span> the partition function.</p>
+</li>
+<li><p>Show that the fluctuations in the energy (in other words, the
+standard deviation) is</p>
+<div class="math notranslate nohighlight">
+\[
+        \sigma_E^2 = \langle E^2 \rangle - \langle E \rangle^2 = \frac{\partial^2}{\partial \beta^2} \ln {Z} = -\frac{\partial \langle E \rangle}{\partial \beta}.
+    \]</div>
+<p>The heat capacity <span class="math notranslate nohighlight">\(C_V = \partial \langle E \rangle / \partial T\)</span> is
+the amount of energy required to raise the temperature of the system
+(usually expressed in Joule per Kelvin). The subscript <span class="math notranslate nohighlight">\(V\)</span> in <span class="math notranslate nohighlight">\(C_V\)</span>
+emphasizes that the volume of the system is fixed, which is
+appropriate for this system. (There is a different expression for
+<span class="math notranslate nohighlight">\(C_p\)</span>.)</p>
+</li>
+<li><p>Show that</p>
+<div class="math notranslate nohighlight">
+\[
+        \sigma_E^2 = k_\mathrm{B}T^2 C_V.
+    \]</div>
+<p>You just derived an
+example of the so-called <em>fluctuation-dissipation theorem</em>.
+Fluctuations in the energy of the system (left hand side) are
+related to its heat capacity (right hand side), that is, the ability
+to absorb / dissipate energy. The larger the heat capacity of a
+system is, the more energy the system needs to raise the
+temperature, and according to this equation, the more the energy can
+fluctuate.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="temperature-and-equipartition">
+<h2><span class="section-number">5.3. </span>Temperature and equipartition<a class="headerlink" href="#temperature-and-equipartition" title="Permalink to this headline">¶</a></h2>
+<p>In classical mechanics, one has to solve a lot of questions about
+colliding billiard balls, accelerating cars, boxes being dropped from
+airplanes, rolling cylinders, &amp;c. In situations where friction can be
+ignored, one can use a very useful theorem, that the total energy is
+conserved. This theorem follows directly from Newton’s laws of motion.
+This concept was an inspiration, two centuries later, to define the
+first law of thermodynamics. Even later, Boltzmann united the “energy”
+in classical mechanics with the “energy” in thermodynamics as the same
+concept, the energy of a fluid being nothing but the energy (from
+classical mechanics) of all the particles together. This made the
+meaning of “energy” more concrete and straightforward.</p>
+<p>According to classical mechanics, a particle moving in 1 dimension has
+total energy</p>
+<div class="math notranslate nohighlight">
+\[
+  E = \frac{1}{2}mv^2 + V(x) = \frac{p^2}{2m} + V(x)
+\]</div>
+<p>The first term represents the kinetic energy of the particle, the second the
+potential energy. The potential energy could originate from gravity
+<span class="math notranslate nohighlight">\(V(x)=mgx\)</span> or a spring <span class="math notranslate nohighlight">\(V(x)=\frac{1}{2}kx^2\)</span>, for example. One can
+rewrite the equation in terms of momentum <span class="math notranslate nohighlight">\(p=mv\)</span>. If one wants to write
+down the total energy of <span class="math notranslate nohighlight">\(N\)</span> non-interacting particles in a fluid, the
+expression is almost the same, except for a summation sign:</p>
+<div class="math notranslate nohighlight" id="equation-eq-total-energy-hamiltonian">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-total-energy-hamiltonian" title="Permalink to this equation">¶</a></span>\[
+    E = \sum \limits_{i=1}^N \left(\frac{p_i^2}{2m} + V(x_i)\right)
+\]</div>
+<p>One simply sums the total energy of each particle. The term
+“non-interacting” is important here, otherwise the expression becomes
+more complicated. In that case one would have to add another term, an
+interaction term</p>
+<div class="math notranslate nohighlight">
+\[
+    V_\mathrm{int} = \sum \limits_{i=j+1}^N \sum \limits_{j=1}^N V(|x_i - x_j|)
+\]</div>
+<p>One can generalize the situation also to three dimensions, but to keep
+the notation simple, we will focus on one dimension for now, and use
+equation <a class="reference internal" href="#equation-eq-total-energy-hamiltonian">(5.2)</a>.</p>
+<p>If we enclose these particles in a volume <span class="math notranslate nohighlight">\(V\)</span> coupled to a thermal
+reservoir (that is, we create a canonical ensemble) then we can
+calculate the probability to find the system in a certain configuration
+<span class="math notranslate nohighlight">\(\vec{\Gamma} = (x_1, p_1, x_2, p_2, ..., x_N, p_N)\)</span>, thanks to the
+Boltzmann distribution, equation <a class="reference internal" href="#equation-eq-boltzmann-distribution-set-5">(5.1)</a>:</p>
+<div class="math notranslate nohighlight">
+\[
+    P(\vec{\Gamma}) = \frac{1}{Z} e^{-\beta E(\vec{\Gamma})}.
+\]</div>
+<p>The energy
+depends now on <span class="math notranslate nohighlight">\(\vec{\Gamma}\)</span>, that is, all the positions and momenta of
+the particles. It makes the notation less pretty, but wait until you see
+the next equation. In case this is the first time you see the
+expression, I would like to ask for your tolerance, and can assure that
+it will grow on you. It will be more than sufficient if you understand
+conceptually what is going on. The notational difficulty is that we have
+to replace the sum over <span class="math notranslate nohighlight">\(n\)</span> by integrals over all positions <span class="math notranslate nohighlight">\(x_i\)</span> and
+momenta <span class="math notranslate nohighlight">\(p_i\)</span>, if one wants to evaluate <span class="math notranslate nohighlight">\(Z\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-partition-sum-hamiltonian">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-partition-sum-hamiltonian" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\begin{aligned}
+    Z &amp;= \int e^{-\beta E(\vec{\Gamma})}d\vec{\Gamma}\\
+    &amp;= \int e^{-\beta \sum \limits_{i=1}^N \left(\frac{p_i^2}{2m} + V(x_i)\right)}dx_1 dp_1 \cdots dx_N dp_N.
+\end{aligned}
+\end{split}\]</div>
+<p>Conceptually, the expression is not as complicated as it looks: one
+rearranges the particles in all possible ways, with all possible
+momenta, and sums (integrates) all the <span class="math notranslate nohighlight">\(e\)</span>-factors. Equation
+<a class="reference internal" href="#equation-eq-partition-sum-hamiltonian">(5.3)</a> is a <span class="math notranslate nohighlight">\(2N\)</span>-dimensional
+integral, over all the positions <span class="math notranslate nohighlight">\(x_i\)</span> and momenta <span class="math notranslate nohighlight">\(p_i\)</span> of <span class="math notranslate nohighlight">\(N\)</span>
+particles. In practice we can use clever tricks to deal with this
+integral.</p>
+<ol>
+<li><p>Show that</p>
+<div class="math notranslate nohighlight">
+\[
+        e^{-\beta \sum \limits_{i=1}^N \left(\frac{p_i^2}{2m} + V(x_i)\right)} = \prod \limits_{i=1}^N e^{-\beta \left(\frac{p_i^2}{2m} + V(x_i)\right)}.
+    \]</div>
+</li>
+<li><p>Argue that the intimidating expression, equation <a class="reference internal" href="#equation-eq-partition-sum-hamiltonian">(5.3)</a>, is just
+the product of <span class="math notranslate nohighlight">\(N\)</span> identical terms, and that one only needs to calculate</p>
+<div class="math notranslate nohighlight">
+\[
+        \left( \int e^{-\beta V(x)} dx \int e^{-\beta \frac{p^2}{2m}} dp \right )^N.
+    \]</div>
+</li>
+<li><p>To calculate the expectation value of the kinetic energy of all the
+particles, one has to evaluate, in principle</p>
+<div class="math notranslate nohighlight">
+\[
+        \left\langle \sum \limits_{i=1}^N \frac{p_i^2}{2m} \right\rangle.
+    \]</div>
+<p>However, instead one only needs to calculate</p>
+<div class="math notranslate nohighlight">
+\[
+        \left\langle \sum \limits_{i=1}^N \frac{p_i^2}{2m} \right\rangle = N \left\langle \frac{p_1^2}{2m} \right\rangle
+    \]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[
+    \begin{aligned}
+        \left\langle \frac{p_1^2}{2m} \right\rangle = \frac{ \int \frac{p_1^2}{2m} e^{-\beta \frac{p_1^2}{2m}} dp_1}{ \int e^{-\beta \frac{p_1^2}{2m}} dp_1}.
+    \end{aligned}
+    \]</div>
+<p>Argue why.</p>
+</li>
+<li><p>Evaluate this integral, using the following properties of a Gaussian integral:</p>
+<div class="math notranslate nohighlight">
+\[
+        \int \limits_{-\infty}^\infty e^{-a p^2} dp = \sqrt{\frac{\pi}{a}}
+    \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+        \int \limits_{-\infty}^\infty p^2 e^{-a p^2} dp = \frac{1}{2a} \sqrt{\frac{\pi}{a}}.
+    \]</div>
+<p>If everything worked out well, you found that the mean kinetic
+energy of a particle is</p>
+<div class="math notranslate nohighlight">
+\[
+        \left \langle \frac{p^2}{2m} \right \rangle = \frac{1}{2}k_\mathrm{B}T.
+    \]</div>
+<p>In 3 dimensions, this value would be <span class="math notranslate nohighlight">\(\frac{3}{2}k_\mathrm{B}T\)</span>. So,
+temperature relates directly to the kinetic energy of the particles,
+i.e. how fast they move and vibrate. This is independent of how the
+particles interact, or other properties of the system. It is a
+universal relation.</p>
+</li>
+<li><p>If the particles are trapped in harmonic potential wells
+<span class="math notranslate nohighlight">\(V(x) = \frac{1}{2}kx^2\)</span>, what would be the average potential energy
+of one particle?</p>
+<!-- Add a sentence introducing the formula below? -->
+<div class="math notranslate nohighlight">
+\[
+        \left \langle \frac{1}{2}kx^2  \right \rangle = \frac{ \int \frac{1}{2}kx^2 e^{-\beta \frac{1}{2}kx^2} dx}{ \int e^{-\beta \frac{1}{2}kx^2} dx}
+    \]</div>
+<p>If everything worked out well, you found that for particles in
+harmonic wells</p>
+<div class="math notranslate nohighlight">
+\[
+        \left \langle \frac{p^2}{2m} \right \rangle = \left \langle \frac{1}{2}kx^2 \right \rangle = \frac{1}{2}k_\mathrm{B}T.
+    \]</div>
+<p>This is called the <em>equipartition theorem</em>: the energy of each
+particle is equally divided between kinetic energy and potential
+energy, on average.</p>
+<p>And as if that is not puzzling enough, this situation is not
+artificial, but very common. In every solid, the atoms or molecules
+are trapped in some position, and vibrate at some location, in some
+potential well. Close to the minimum of that potential well, the
+potential is harmonic, regardless of the nature of the potential. If
+we make a Taylor expansion up to second order, around the minimum of
+the well <span class="math notranslate nohighlight">\(x_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+        V(x_0+x) = V(x_0) + V'(x_0) x + \frac{1}{2} V''(x_0) x^2,
+    \]</div>
+<p>then we can ignore the linear term in <span class="math notranslate nohighlight">\(x\)</span>, because <span class="math notranslate nohighlight">\(V'(x_0) = 0\)</span> at the
+minimum, but <span class="math notranslate nohighlight">\(V''(x_0) \neq 0\)</span>, so that the potential is
+approximately harmonic (i.e. quadratic in <span class="math notranslate nohighlight">\(x\)</span>) close to its minimum,
+with “spring constant” <span class="math notranslate nohighlight">\(k = V''(x_0)\)</span>. So, in any solid at
+sufficiently low temperature, the equipartition theorem applies.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="the-barometric-height-distribution">
+<h2><span class="section-number">5.4. </span>The barometric height distribution<a class="headerlink" href="#the-barometric-height-distribution" title="Permalink to this headline">¶</a></h2>
+<p>In this exercise you will derive the density of a gas in a gravitational
+field (say, the atmosphere, or a dilute solution) as a function of
+height. The gas behaves approximately as an ideal gas at a fixed
+temperature <span class="math notranslate nohighlight">\(T\)</span>, number of particles <span class="math notranslate nohighlight">\(N\)</span>, and volume <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<ol>
+<li><p>Calculate the probability <span class="math notranslate nohighlight">\(P(h)\)</span> to find a particle at height <span class="math notranslate nohighlight">\(h\)</span>
+using the Boltzmann distribution.</p></li>
+<li><p>Calculate the density of particles <span class="math notranslate nohighlight">\(\rho(h)\)</span> at height <span class="math notranslate nohighlight">\(h\)</span>, using
+<span class="math notranslate nohighlight">\(\rho(h) = \rho_0 P(h)\)</span>, with <span class="math notranslate nohighlight">\(\rho_0 = N/V\)</span> the average density</p></li>
+<li><p>Find an expression for the length scale over which the density drops
+by a factor <span class="math notranslate nohighlight">\(e^{-1}\approx37\%\)</span>.</p></li>
+<li><p>What would this length scale be for oxygen molecules, if the
+temperature of the air were 0 <span class="math notranslate nohighlight">\(^\mathrm{o}\)</span>C? You can use the
+following numbers:</p>
+<ul class="simple">
+<li><p>Avogadro’s number: <span class="math notranslate nohighlight">\(R_\mathrm{A}=6,022\cdot10^{23}\)</span> (particles
+per mole)</p></li>
+<li><p>Boltzmann’s constant: <span class="math notranslate nohighlight">\(k_\mathrm{B} = 1.38\cdot10^{-23}\)</span> (J
+K<span class="math notranslate nohighlight">\(^{-1}\)</span>)</p></li>
+<li><p>Mass oxygen: 16u or 16 g per mole</p></li>
+</ul>
+</li>
+<li><p>What would this length scale be for spherical gold nanoparticles
+with a radius of <span class="math notranslate nohighlight">\(5\)</span> nm in an aqueous solution? The mass density of
+gold is approximately <span class="math notranslate nohighlight">\(19.3\cdot10^3\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span> (19 kg per liter).</p>
+<p>The mass density of organic components is much lower than that of
+gold, so you can see that gravity is of no influence on a cellular
+scale.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="open-systems-association-dissociation-equilibrium-of-a-polymer-part-ii">
+<h2><span class="section-number">5.5. </span>Open systems: association-dissociation equilibrium of a polymer, part II<a class="headerlink" href="#open-systems-association-dissociation-equilibrium-of-a-polymer-part-ii" title="Permalink to this headline">¶</a></h2>
+<p>A system that can exchange heat and particles with a reservoir is called
+an “open system”, or a “<span class="math notranslate nohighlight">\(\mu,V,T\)</span>-ensemble”, or a “grand canonical
+ensemble”. The terms are used as synonyms, but shed light on specific
+properties of these systems. As an example of an open system, one can
+consider the electrolytes in a hydrogel in contact with a salt buffer,
+or the electrolytes in a solution of proteins in contact with a buffer,
+separated by a semi-permeable membrane. Open systems are called “open”
+because particles can float in and out, they have a chemical potential
+<span class="math notranslate nohighlight">\(\mu\)</span> and temperature <span class="math notranslate nohighlight">\(T\)</span> fixed by a reservoir (a “buffer”), and obey
+specific statistical properties. The probability that an open system is
+in a state <span class="math notranslate nohighlight">\(m\)</span> is given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-grand-canonical-distribution">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-grand-canonical-distribution" title="Permalink to this equation">¶</a></span>\[
+    P(m) = \frac{1}{\mathcal{Z}}e^{-\beta E_m + \beta \mu N_m}.
+\]</div>
+<p>The expression looks similar to the Boltzmann distribution, equation
+<a class="reference internal" href="#equation-eq-boltzmann-distribution-set-5">(5.1)</a>, but with an extra term
+<span class="math notranslate nohighlight">\(\beta \mu N_m\)</span>. It can be derived in a similar way as the Boltzmann
+distribution. The chemical potential <span class="math notranslate nohighlight">\(\mu\)</span> (the amount of energy needed
+to add one particle to the system) is fixed by the reservoir, and
+basically depends on the density of particles in the reservoir. The
+number <span class="math notranslate nohighlight">\(N_m\)</span> stands for the number of particles in the system, in state
+<span class="math notranslate nohighlight">\(m\)</span> (different states may have different numbers of particles, in
+contrast to the <span class="math notranslate nohighlight">\(N,V,T\)</span>-ensemble). The factor <span class="math notranslate nohighlight">\(\mathcal{Z}\)</span> is a
+normalization factor, given by</p>
+<div class="math notranslate nohighlight" id="equation-eq-grand-partition-function">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-eq-grand-partition-function" title="Permalink to this equation">¶</a></span>\[
+    \mathcal{Z} = \sum \limits_m e^{-\beta E_m + \beta \mu N_m}
+\]</div>
+<p>and is called the “grand canonical partition function”. It seems an
+inappropriately long name for a normalization factor, but it is secretly
+much more than that. A few properties will be explored in this exercise.</p>
+<ol>
+<li><p>Show that the average number of particles in an open system can be
+derived from <span class="math notranslate nohighlight">\(\mathcal{Z}\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[
+        \langle N \rangle = k_\mathrm{B}T \frac{\partial}{\partial \mu} \ln{\mathcal{Z}}
+    \]</div>
+<p>Hint: work out the right hand side and see that it results in the
+definition of the expectation value.</p>
+<p>A certain polymer has <span class="math notranslate nohighlight">\(M\)</span> sites where particles can bind. It is in
+contact with a solution (the buffer) with a chemical potential <span class="math notranslate nohighlight">\(\mu\)</span>
+and temperature <span class="math notranslate nohighlight">\(T\)</span>. The binding energy of a particle to the polymer
+is <span class="math notranslate nohighlight">\(\epsilon\)</span>, such that the energy of a configuration of <span class="math notranslate nohighlight">\(N\)</span>
+particles on the polymer is simply</p>
+<div class="math notranslate nohighlight">
+\[
+        E = N\epsilon
+    \]</div>
+<p>In equation <a class="reference internal" href="#equation-eq-grand-partition-function">(5.5)</a> the sum is over all states.
+In the following questions, this sum will be rewritten as a sum over
+<span class="math notranslate nohighlight">\(N\)</span>, the number of particles in the system. For that, one needs to
+know how many states there are with <span class="math notranslate nohighlight">\(N\)</span> particles.</p>
+</li>
+<li><p>How many different states are there given that <span class="math notranslate nohighlight">\(N\)</span> particles are
+bound to the polymer? Hint: in other words, in how many ways can
+<span class="math notranslate nohighlight">\(N\)</span> identical particles bind to <span class="math notranslate nohighlight">\(M\)</span> sites?</p></li>
+<li><p>Show that <span class="math notranslate nohighlight">\(\mathcal{Z}\)</span> can be rewritten as</p>
+<div class="math notranslate nohighlight">
+\[
+        \mathcal{Z} = \sum \limits_{N=0}^M \binom{M}{N} \left( e^{-\beta(\epsilon - \mu)} \right)^N
+    \]</div>
+</li>
+<li><p>Use the relation</p>
+<div class="math notranslate nohighlight">
+\[
+        \sum \limits_{N=0}^{M} \binom{M}{N} a^N b^{M-N} = (a + b)^M
+    \]</div>
+<p>to derive that</p>
+<div class="math notranslate nohighlight">
+\[
+        \mathcal{Z} = (e^{-\beta(\epsilon-\mu)} + 1)^M
+    \]</div>
+</li>
+<li><p>Find the average number of particles that bind to the polymer
+<span class="math notranslate nohighlight">\(\langle N \rangle\)</span>, as a function of <span class="math notranslate nohighlight">\(\mu\)</span> and sketch this
+function. Hint: when sketching it may be useful to check the
+limits of <span class="math notranslate nohighlight">\(\mu \rightarrow \infty\)</span> and <span class="math notranslate nohighlight">\(\mu \rightarrow -\infty\)</span> and
+<span class="math notranslate nohighlight">\(\mu = \epsilon\)</span>, and to check whether those limits make sense.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Exercise_set_4.html" title="previous page"><span class="section-number">4. </span>Boltzmann statistics and entropy</a>
+    <a class='right-next' id="next-link" href="Exercise_set_6.html" title="next page"><span class="section-number">6. </span>Phase transitions</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By JZ/LDK<br/>
+        
+            &copy; Copyright Delft University of Technology, CC BY-SA 4.0.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

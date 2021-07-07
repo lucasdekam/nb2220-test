@@ -1,0 +1,880 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6. Phase transitions &#8212; NB2220 Statistical Physics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ordered_lists_with_lowercase_letters.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7. Ionic screening" href="Exercise_set_7.html" />
+    <link rel="prev" title="5. Distributions" href="Exercise_set_5.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/tudelft.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NB2220 Statistical Physics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Statistical Physics for Nanobiology
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problem sets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_1.html">
+   1. Large numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_2.html">
+   2. Phases of matter and random walks, part I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_3.html">
+   3. Classical thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_4.html">
+   4. Boltzmann statistics and entropy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_5.html">
+   5. Distributions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. Phase transitions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_7.html">
+   7. Ionic screening
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Solutions.html">
+   Solutions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_1_solutions.html">
+     Problem set 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_2_solutions.html">
+     Problem set 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_3_solutions.html">
+     Problem set 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_4_solutions.html">
+     Problem set 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_6_solutions.html">
+     Problem set 6
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/content/Exercise_set_6.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Exercise_set_6.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercise_set_6.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nucleation-and-growth">
+   6.1. Nucleation and growth
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#van-der-waals-fluids">
+   6.2. Van der Waals fluids
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="phase-transitions">
+<h1><span class="section-number">6. </span>Phase transitions<a class="headerlink" href="#phase-transitions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nucleation-and-growth">
+<h2><span class="section-number">6.1. </span>Nucleation and growth<a class="headerlink" href="#nucleation-and-growth" title="Permalink to this headline">¶</a></h2>
+<p>In the first half of the 18<sup>th</sup> century, the Swedish scientist
+Anders Celsius developed a temperature scale that is now named after
+him. Orginally he defined the boiling point of water at a pressure of 1
+atm (<span class="math notranslate nohighlight">\(\approx 10^5 \;\mathrm{Pa}\)</span>) to be 0 degrees, and the freezing point to be
+100 degrees. Shortly after, the scale was reversed by the French
+scientist Christin, and independently by the Swedish botanist Carl
+Linnaeus. The Celsius and Kelvin scale are essentially identical, in the
+sense that a temperature difference of <span class="math notranslate nohighlight">\(1\;^\mathrm{o}\mathrm{C}\)</span> is equal to a
+difference of <span class="math notranslate nohighlight">\(1 \;\mathrm{K}\)</span>, except that the absolute values are shifted,
+<span class="math notranslate nohighlight">\(0\;^\mathrm{o}\mathrm{C}=273.15 \;\mathrm{K}\)</span>.</p>
+<p>During phase transitions such as freezing and boiling the molecules of a
+substance radically change their configuration or density. These
+transitions can be induced by a change in temperature or pressure, or by
+external fields. During the process of freezing, the molecules in a
+liquid phase lose their ability to diffuse and get trapped in an
+ordered, crystalline lattice. This usually happens by a process called
+“nucleation and growth” where a small nucleus of frozen molecules
+grows larger and larger over time, after overcoming a “nucleation
+barrier”. To overcome this energy barrier, nuclei first need to grow
+large enough by thermal fluctuations before they can grow spontaneously
+(i.e. before growth leads to a lowering of the free energy). If the
+temperature of the environment is not too low, the nucleation barrier
+may be sufficiently high to prevent multiple nuclei overcoming the
+nucleation barrier. In that case, the new phase will grow from a single
+nucleus and may have a high degree of symmetry. On the other hand, if
+multiple nuclei start growing at the same time, the resulting phase may
+consist of many crystalline domains, separated by fault lines and
+defects. For some applications, this may be highly desirable, while for
+others it is not (see exercise). <a class="reference internal" href="#liquid-crystal-domains"><span class="std std-numref">Fig. 6.1</span></a> shows a
+liquid crystal, frozen into different crystalline domains.</p>
+<div class="figure align-default" id="liquid-crystal-domains">
+<img alt="../_images/Crystal_domains.png" src="../_images/Crystal_domains.png" />
+<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Crystal domains of a liquid crystal, and a ray of light being
+refracted by different domains and domain walls.</span><a class="headerlink" href="#liquid-crystal-domains" title="Permalink to this image">¶</a></p>
+</div>
+<p>A phase transition can also happen by another type of process, where the
+transition happens spontaneously, everywhere, and almost
+instantaneously. This process has the fancy name of “spinodal
+decomposition”, and happens after one disturbs a supercooled phase.
+This phenomenon is responsible for freezing rain. Under special weather
+conditions, rain drops can be cooled below the freezing temperature of
+water on their way to the earth’s surface, and hit the ground before
+they have the time to freeze via nucleation. The shockwave of the impact
+is sufficient to start the phase transition at every point at the same
+time, making the droplet freeze in an instant. This phenomenon may be
+beautiful to behold, but can, understandably, also be a major
+disturbance for traffic and infrastructure. In northern places where
+this phenomenon is more common, it is feared by trees and electricity
+lines.</p>
+<p>In discussions about phase transitions, water seems a natural example,
+because of its abundance and relevance for life, and our experience with
+its behavior, but it has many exceptional properties that other
+substances do not have, and some of them are still not understood. We
+will skip that discussion for now.</p>
+<ol>
+<li><p>Recipes usually recommend adding salt to boiling water before adding
+pasta, to make the pasta less sticky. When one adds salt to boiling
+water, it usually produces a short burst of bubbles. Why would this
+happen?</p></li>
+<li><p>Why is it important to “temper” chocolate (i.e. to cool it very
+slowly below its freezing point)? Name at least two reasons.</p></li>
+<li><p>What preparations are important if one wants to make a dessert with
+supercooled water? Name at least three important measures.</p></li>
+<li><p>Some types of frogs can freeze for an entire winter. About 70% of
+the water in their body freezes completely. When the nights turn
+colder, the frogs produce a special type of protein that regulates
+the formation of ice crystals in their body, in places where water
+is allowed to freeze. To prevent desiccation via osmosis, their body
+also produces higher levels of glucose. Eventually their heartbeat
+and breathing come to a complete standstill, and they are basically
+dead, until spring returns.</p>
+<p>Why is frost so harmful for other creatures? And why is frozen food
+so soft? (this may be one of the reasons why one should not eat kale
+before the first night of frost, as old wisdom says.)</p>
+</li>
+<li><p>The Gibbs free energy of a solid nucleus is approximated by</p>
+<div class="math notranslate nohighlight">
+\[
+        G = 4\pi R^2 \gamma - \frac{4\pi R^3}{3} \Delta G
+    \]</div>
+<p>with <span class="math notranslate nohighlight">\(R\)</span> the
+radius of the nucleus, <span class="math notranslate nohighlight">\(\gamma\)</span> the surface tension between the
+nucleus and the continuum phase, and <span class="math notranslate nohighlight">\(\Delta G\)</span> the (free) energy
+difference between the solid and liquid phase. Calculate how large a
+nucleus needs to grow before it can grow spontaneously, in terms of
+<span class="math notranslate nohighlight">\(\gamma\)</span> and <span class="math notranslate nohighlight">\(\Delta G\)</span>. Call the corresponding critical radius
+<span class="math notranslate nohighlight">\(R_\mathrm{crit}\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="van-der-waals-fluids">
+<h2><span class="section-number">6.2. </span>Van der Waals fluids<a class="headerlink" href="#van-der-waals-fluids" title="Permalink to this headline">¶</a></h2>
+<p>This question will not be about “Van der Waals forces”, a type of
+interaction that acts between every type of atom and molecule, and tends
+to be attractive. These forces make molecules attract each other, and
+make nature at its smallest scales rather ‘sticky’. The origin of these
+forces is electromagnetic. Electrons orbiting the nucleus of an atom
+create temporal dipole moments, and these moments can couple to that of
+other atoms. But let us not get into all the subtleties of these forces
+(and there are quite a few).</p>
+<div class="figure align-default" id="fig-gecko">
+<img alt="../_images/Gecko.png" src="../_images/Gecko.png" />
+<p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text">A gecko can scale walls thanks to sticky Van der Waals forces. Their
+feet have a lot of grooves to increase their surface area. Research
+groups have tried to imitate their art to create ‘spider man suits’ for
+human beings. Unfortunately, the ratio between our body weight and
+surface area is not optimal for this ability.</span><a class="headerlink" href="#fig-gecko" title="Permalink to this image">¶</a></p>
+</div>
+<p>Johannes van der Waals tried to understand why fluids can decide to
+separate into two phases, a dense liquid phase, and a dilute gas phase.
+He constructed a model, based on the ideal gas, but with two extra
+modifications. One modification was to change the volume <span class="math notranslate nohighlight">\(V\)</span> by
+subtracting the volume occupied by the fluid (effectively giving the
+particles a ‘size’ such that they can collide with each other), and the
+other modification was to make the fluid cohesive (equivalent to adding
+attractive forces between the particles). His model predicted that such
+fluids can phase separate, if the temperature is sufficiently low, and
+that there is a ‘critical temperature’ and ‘critical density’ where the
+fluid is just about to separate. This exercise will guide you through
+his model. James Clerk Maxwell was so curious to learn about his work
+and his thesis in particular, that he decided to learn Dutch.</p>
+<p>Van der Waals modified the free energy of an ideal gas</p>
+<div class="math notranslate nohighlight">
+\[
+    F_\mathrm{id} = k_\mathrm{B}TN \left( \ln{\frac{N}{V}} - 1 \right)
+\]</div>
+<p>to</p>
+<div class="math notranslate nohighlight">
+\[
+    F_\mathrm{VdW} = k_\mathrm{B}TN \left( \ln{\frac{N}{V - bN}} - 1 \right) - a \frac{N^2}{V}.
+\]</div>
+<p>The second term, containing the parameter <span class="math notranslate nohighlight">\(a\)</span>, represents cohesion. One
+can see that this term lowers the free energy as the density gets
+larger. In the first term, the volume is adapted by a parameter <span class="math notranslate nohighlight">\(bN\)</span>,
+where <span class="math notranslate nohighlight">\(b\)</span> represents the size of a particle.</p>
+<ol>
+<li><p>The pressure can be calculated by the fundamental relation</p>
+<div class="math notranslate nohighlight">
+\[
+        p = - \frac{\partial F}{\partial V}.
+    \]</div>
+<p>Calculate the pressure of
+the ideal gas and of a Van der Waals fluid.</p>
+</li>
+<li><p>Plot the ideal gas pressure and that of a van der Waals fluid as a
+function of density <span class="math notranslate nohighlight">\(\rho = \frac{N}{V}\)</span>, for two values of
+<span class="math notranslate nohighlight">\(a\)</span>: <span class="math notranslate nohighlight">\(a=0\)</span> and <span class="math notranslate nohighlight">\(a&gt;0\)</span>. You can
+use graphic calculators, Wolfram Alpha, or any tool you like, or
+just the mental skills. You can set <span class="math notranslate nohighlight">\(k_\mathrm{B}T\)</span> to 1 if you
+prefer.</p></li>
+<li><p>In the previous question, you may have noticed that the pressure may
+decrease with density, if <span class="math notranslate nohighlight">\(a\)</span> is sufficiently large. What does this
+mean? (Try to imagine what would happen if a small fluctuation in
+density would occur.)</p></li>
+<li><p>If the pressure as a function of density has maxima and minima, it
+is a sign that the fluid may separate into two phases. One condition
+for phase coexistence is that the pressures of the two phases need
+to be the same (this comes down to Newton’s first law) Sketch o new
+plot <span class="math notranslate nohighlight">\(p\)</span> vs. <span class="math notranslate nohighlight">\(\rho\)</span> (with sufficiently large <span class="math notranslate nohighlight">\(a\)</span>) and indicate the
+interval of densities where you could expect a phase coexistence.</p></li>
+<li><p>The other condition for phase coexistence is that the chemical
+potentials of the two phases need to be the same;</p>
+<div class="math notranslate nohighlight">
+\[
+        \mu = \frac{\partial F}{\partial N}.
+    \]</div>
+<p>Calculate the chemical potential of the ideal gas and of a Van der Waals fluid.</p>
+</li>
+<li><p>Plot the chemical potential of the ideal gas and that of a van der
+Waals fluid as a function of density, for two values of <span class="math notranslate nohighlight">\(a\)</span>: <span class="math notranslate nohighlight">\(a=0\)</span>
+and <span class="math notranslate nohighlight">\(a&gt;0\)</span>. If you used a computational tool to generate the graph of
+<span class="math notranslate nohighlight">\(p\)</span> vs. <span class="math notranslate nohighlight">\(\rho\)</span>, use the same value of <span class="math notranslate nohighlight">\(a\)</span> to calculate the chemical
+potential.</p></li>
+<li><p>Is there an interval where you could expect a phase coexistence, if
+you look at the graph of the chemical potential vs. density?</p>
+<p>There is a clever method to check whether a fluid will phase
+separate, and if so, what the two coexisting densities will be.
+Those two densities should have the same pressure and chemical
+potential.</p>
+</li>
+<li><p>First let us introduce the free energy density <span class="math notranslate nohighlight">\(f\)</span>, defined as
+<span class="math notranslate nohighlight">\(f\equiv \frac{F}{V}\)</span>. Show that</p>
+<div class="math notranslate nohighlight">
+\[
+        f_\mathrm{VdW} = k_\mathrm{B}T\rho \left( \ln{\frac{\rho}{1-b\rho}} -1 \right) - a \rho^2.
+    \]</div>
+</li>
+<li><p>From the definition of <span class="math notranslate nohighlight">\(f = \frac{F}{V}\)</span>, derive that</p>
+<div class="math notranslate nohighlight" id="equation-eq-mu-rho">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-eq-mu-rho" title="Permalink to this equation">¶</a></span>\[
+            \mu = \frac{\partial f}{\partial \rho}
+    \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-p-rho">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-eq-p-rho" title="Permalink to this equation">¶</a></span>\[
+            p = \rho \frac{\partial f}{\partial \rho} - f.
+    \]</div>
+<p>Hint: it
+may be useful to substitute <span class="math notranslate nohighlight">\(F=Vf\)</span>, and to use the chain rule</p>
+<div class="math notranslate nohighlight">
+\[
+        \frac{\partial}{\partial V} = \frac{\partial \rho}{\partial V}\frac{\partial}{\partial \rho}
+    \]</div>
+<p>to derive the equations.</p>
+</li>
+<li><p>If you would plot <span class="math notranslate nohighlight">\(f\)</span> as a function of density, the graph may look
+something like <a class="reference internal" href="#fig-free-energy-density"><span class="std std-numref">Fig. 6.3</span></a>, depending on the value of <span class="math notranslate nohighlight">\(a\)</span>.
+Then, if you would put your ruler against the graph, to draw a
+straight line connecting two points with the same slope, by a
+straight line with the same slope, you would get the black line
+shown in <a class="reference internal" href="#fig-free-energy-density"><span class="std std-numref">Fig. 6.3</span></a>. Using equations <a class="reference internal" href="#equation-eq-mu-rho">(6.1)</a>
+and <a class="reference internal" href="#equation-eq-p-rho">(6.2)</a>, argue that the two points, <span class="math notranslate nohighlight">\(\rho_1\)</span> and
+<span class="math notranslate nohighlight">\(\rho_2\)</span> have the same pressures and chemical potentials.</p></li>
+</ol>
+<div class="cell tag_hide-input tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">config</span> InlineBackend.figure_formats = [&#39;svg&#39;]
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
+
+<span class="c1"># Global parameters</span>
+<span class="n">kbt</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># --&gt; all energy (f, a, ...) in units of k_B T</span>
+<span class="n">linear_coefficient</span> <span class="o">=</span> <span class="mf">2.5</span> <span class="c1"># add a term linear in rho to f_vdw for a nicer plot</span>
+<span class="c1"># this linear term has no impact on the conditions for phase coexistence</span>
+<span class="n">line</span> <span class="o">=</span> <span class="s1">&#39;#ff5638&#39;</span>
+
+<span class="k">def</span> <span class="nf">f_vdw</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the free energy density for a Van der Waals fluid.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">kbt</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">rho</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">rho</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">a</span><span class="o">*</span><span class="n">rho</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">linear_coefficient</span><span class="o">*</span><span class="n">kbt</span><span class="o">*</span><span class="n">rho</span>
+
+<span class="k">def</span> <span class="nf">f_vdw_prime</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the derivative w.r.t. the density rho of the free energy</span>
+<span class="sd">    density of a VdW fluid.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">kbt</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">rho</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">rho</span><span class="p">))</span> <span class="o">+</span> <span class="n">kbt</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">rho</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">rho</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">rho</span> <span class="o">+</span> <span class="n">linear_coefficient</span><span class="o">*</span><span class="n">kbt</span>
+
+<span class="k">def</span> <span class="nf">conditions_for_coexistence</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function that should be zero when phases coexist. A vector with</span>
+<span class="sd">    one element mu1 - mu2, and one element p1 - p2.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rho1</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">rho2</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">mu1</span> <span class="o">=</span> <span class="n">f_vdw_prime</span><span class="p">(</span><span class="n">rho1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">mu2</span> <span class="o">=</span> <span class="n">f_vdw_prime</span><span class="p">(</span><span class="n">rho2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">f1</span> <span class="o">=</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rho1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">f2</span> <span class="o">=</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rho2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="n">mu_deficit</span> <span class="o">=</span> <span class="n">mu1</span> <span class="o">-</span> <span class="n">mu2</span>
+    <span class="n">p_deficit</span>  <span class="o">=</span> <span class="n">rho1</span><span class="o">*</span><span class="n">mu1</span> <span class="o">-</span> <span class="n">f1</span> <span class="o">-</span> <span class="n">rho2</span><span class="o">*</span><span class="n">mu2</span> <span class="o">+</span> <span class="n">f2</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">mu_deficit</span><span class="p">,</span> <span class="n">p_deficit</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">f_mix</span><span class="p">(</span><span class="n">rho_av</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Free energy density for a mixture of gas (density rho1) and liquid (density</span>
+<span class="sd">    rho2). The gas and liquid densities (rho1 and rho2) are found numerically.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rhosol</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="n">conditions_for_coexistence</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">],</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+    <span class="n">rho1</span> <span class="o">=</span> <span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">rho2</span> <span class="o">=</span> <span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rho1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">f_vdw</span><span class="p">(</span><span class="n">rho2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rho1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">rho2</span><span class="o">-</span><span class="n">rho1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">rho_av</span> <span class="o">-</span> <span class="n">rho1</span><span class="p">)</span>
+
+<span class="c1">## Prepare all the graphs that are to be plotted</span>
+<span class="c1"># Define the range of densities to plot</span>
+<span class="n">rho</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Set the parameters a and b</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># Find the densities at which the gas and liquid phases coexist by solving</span>
+<span class="c1"># numerically. If you use different a and b you might need to change the</span>
+<span class="c1"># guesses, x0.</span>
+<span class="n">rhosol</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="n">conditions_for_coexistence</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">],</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+
+<span class="c1">## Make the plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># Put axes on the zeros</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1"># Remove label at 0.0</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+
+<span class="c1"># Plot the graphs</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">line</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">f_mix</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create markers rho1 and rho2</span>
+<span class="n">rho1_marker_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">rho1_marker_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">rho1_marker_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho1_marker_x</span><span class="p">,</span> <span class="n">rho1_marker_y</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">)</span>
+<span class="n">rho2_marker_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">rho2_marker_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">rho2_marker_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho2_marker_x</span><span class="p">,</span> <span class="n">rho2_marker_y</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">0.01</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\rho_1$&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.01</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\rho_2$&#39;</span><span class="p">)</span>
+
+<span class="c1"># Labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\rho$&#39;</span><span class="p">),</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$f$&#39;</span><span class="p">)</span>
+
+<span class="c1"># Limits</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">rho</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">])</span>
+
+<span class="c1"># Save graph to load in figure later (special Jupyter Book feature)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;free_energy_density&quot;</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="figure align-default" id="fig-free-energy-density">
+<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">The free energy density (blue curve), with a “common tangent construction”
+(black straight line), connecting two points with the same slope, by a straight
+line with the same slope.</span><a class="headerlink" href="#fig-free-energy-density" title="Permalink to this image">¶</a></p>
+</div>
+<p>The region in between these two points is ‘unstable’. If you would
+prepare a system with an intermediate density, it could separate
+into the two coexisting densities, found in the previous question.
+<a class="reference internal" href="#fig-free-energy-density-again"><span class="std std-numref">Fig. 6.4</span></a> shows that the free
+energy of a phase separated system is lower than that of a
+homogeneous system, if the average density of the phase-separated mixture is
+<span class="math notranslate nohighlight">\(\rho_1&lt;\rho_\mathrm{average}&lt;\rho_2\)</span> <a class="footnote-reference brackets" href="#id2" id="id1">1</a>.</p>
+<p>However, to separate
+completely, a homogeneous system may have to overcome an energy
+barrier to do so. This happens in the regime where <span class="math notranslate nohighlight">\(f\)</span> is convex
+(the second derivative is positive). In that regime, small
+fluctuations in the density have a higher free energy than the
+homogeneous phase (draw a straight line between two points on a
+convex curve to see how that works).</p>
+<p>But when <span class="math notranslate nohighlight">\(f\)</span> is concave,
+any tiny fluctuation will lower the free energy, and the separation
+would occur spontaneously. This happens during “spinodal
+decomposition”, e.g. when you disturb a supercooled liquid.</p>
+<p><a class="reference internal" href="#fig-free-energy-density-separation-regimes"><span class="std std-numref">Fig. 6.5</span></a> shows the
+regimes where these processes take place. Usually it is the
+temperature that induces a transition. By lowering the temperature,
+the parameter <span class="math notranslate nohighlight">\(a/k_\mathrm{B}T\)</span> increases, and the free
+energy curve changes. If you want to supercool a liquid, it is
+advisable to do it quickly, in a clean bottle, to prevent the
+nucleation process, and to cool it fast to a low temperature
+(<span class="math notranslate nohighlight">\(&lt;-18^\mathrm{o}\)</span>C) to make sure that the water ends up in the
+highly unstable regime (blue shaded region in
+<a class="reference internal" href="#fig-free-energy-density-separation-regimes"><span class="std std-numref">Fig. 6.5</span></a>). Any tiny
+perturbation will then initiate the separation process.</p>
+<div class="cell tag_hide-input tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig2</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># Put axes on the zeros</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1"># Remove label at 0.0</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+
+<span class="c1"># Grey area</span>
+<span class="n">grey</span> <span class="o">=</span> <span class="s1">&#39;#eeeeee&#39;</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">grey</span><span class="p">)</span>
+
+<span class="c1"># Plot the graphs</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">line</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;homogeneous density&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">f_mix</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;phase separated&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create markers for rho1 and rho2</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">0.01</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\rho_1$&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.01</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\rho_2$&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Create markers for rho_average</span>
+<span class="n">rhoavg</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">rhoavg_marker_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">f_mix</span><span class="p">(</span><span class="n">rhoavg</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">rhoavg_marker_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">rho1_marker_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="n">rhoavg</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rhoavg_marker_x</span><span class="p">,</span> <span class="n">rhoavg_marker_y</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">)</span>
+<span class="n">fmix_at_rhoavg</span> <span class="o">=</span> <span class="n">f_mix</span><span class="p">(</span><span class="n">rhoavg</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">fvdw_at_rhoavg</span> <span class="o">=</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rhoavg</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">hline_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">rhoavg</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">mix_hline_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">hline_x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="n">fmix_at_rhoavg</span>
+<span class="n">vdw_hline_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">hline_x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">*</span><span class="n">fvdw_at_rhoavg</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hline_x</span><span class="p">,</span> <span class="n">mix_hline_y</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hline_x</span><span class="p">,</span> <span class="n">vdw_hline_y</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">line</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rhoavg</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\rho_\mathrm</span><span class="si">{average}</span><span class="s1">$&#39;</span><span class="p">)</span>
+
+<span class="c1"># Labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\rho$&#39;</span><span class="p">),</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$f$&#39;</span><span class="p">)</span>
+
+<span class="c1"># Limits</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">rho</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">])</span>
+
+<span class="c1"># Legend</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># Save graph to load in figure later (special Jupyter Book feature)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;free_energy_density_again&quot;</span><span class="p">,</span> <span class="n">fig2</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="figure align-default" id="fig-free-energy-density-again">
+<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text">The free energy density of a homogeneous system (blue curve) plotted
+against the density, and
+of a phase separated system (points on the black line, in between
+<span class="math notranslate nohighlight">\(\rho_1\)</span> and <span class="math notranslate nohighlight">\(\rho_2\)</span>), plotted against its mean density <span class="math notranslate nohighlight">\(\rho_\mathrm{average}\)</span>.</span><a class="headerlink" href="#fig-free-energy-density-again" title="Permalink to this image">¶</a></p>
+</div>
+<div class="cell tag_hide-input tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">fsolve</span>
+
+<span class="k">def</span> <span class="nf">f_vdw_doubleprime</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the second derivative of the free energy density for a</span>
+<span class="sd">    Van der Waals fluid.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">kbt</span><span class="o">/</span><span class="p">(</span><span class="n">rho</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">rho</span><span class="p">))</span> <span class="o">+</span> <span class="n">kbt</span><span class="o">*</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">b</span><span class="o">*</span><span class="n">rho</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">a</span>
+
+<span class="c1">## Find points where the second derivative is zero.</span>
+<span class="n">rho_turningpoints</span> <span class="o">=</span> <span class="n">fsolve</span><span class="p">(</span><span class="n">f_vdw_doubleprime</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">))</span>
+
+<span class="n">fig3</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># Put axes on the zeros</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+
+<span class="c1"># Remove label at 0.0</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+
+<span class="c1"># Fill areas</span>
+<span class="n">spinodal_color</span> <span class="o">=</span> <span class="s1">&#39;#BBDEF0&#39;</span>
+<span class="n">nucleatn_color</span> <span class="o">=</span> <span class="s1">&#39;#4D7298&#39;</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rho_turningpoints</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rho_turningpoints</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">nucleatn_color</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Nucleation and growth (energy barrier)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="n">rho_turningpoints</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rho_turningpoints</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rho_turningpoints</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rho_turningpoints</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">spinodal_color</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Spinodal decomposition (spontaneous)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill</span><span class="p">([</span><span class="n">rho_turningpoints</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rho_turningpoints</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span>
+      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+      <span class="n">color</span><span class="o">=</span><span class="n">nucleatn_color</span><span class="p">)</span>
+
+<span class="c1"># Plot the graphs</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">f_vdw</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="n">line</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">f_mix</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create markers for rho1 and rho2</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">0.01</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\rho_1$&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">rhosol</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">0.01</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\rho_2$&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\rho$&#39;</span><span class="p">),</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$f$&#39;</span><span class="p">)</span>
+
+<span class="c1"># Limits</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">rho</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">)</span>
+
+<span class="c1"># Save graph to load in figure later (special Jupyter Book feature)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;free_energy_density_separation_regimes&quot;</span><span class="p">,</span> <span class="n">fig3</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="figure align-default" id="fig-free-energy-density-separation-regimes">
+<p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">The regimes where spontaneous separation occurs (light blue shading) and
+where an energy barrier has to be overcome (dark blue shading).
+At the bottom of this page, there is an interactive figure where you
+can vary the parameter <span class="math notranslate nohighlight">\(a\)</span>.</span><a class="headerlink" href="#fig-free-energy-density-separation-regimes" title="Permalink to this image">¶</a></p>
+</div>
+<ol>
+<li><p><strong>Bonus question</strong>: Calculate the critical density and critical
+temperature of a Van der Waals fluid, in terms of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. The
+critical temperature is the temperature at which the fluid is about
+to separate. <a class="reference internal" href="#fig-free-energy-density"><span class="std std-numref">Fig. 6.3</span></a> and
+<a class="reference internal" href="#fig-free-energy-density-separation-regimes"><span class="std std-numref">Fig. 6.5</span></a> are well
+below the critical temperature, because there is a large density
+regime, where the system will phase separate. To find these critical
+values, you need to check for the point where the second derivative
+of <span class="math notranslate nohighlight">\(f\)</span> vanishes (i.e. where <span class="math notranslate nohighlight">\(f\)</span> is no longer convex), and where also
+the third derivative vanishes (i.e. <span class="math notranslate nohighlight">\(f\)</span> remains convex, except at
+one point, where the second derivative is zero). If you would draw
+the free energy at this temperature, you would see that <span class="math notranslate nohighlight">\(f\)</span> would
+look like a straight line, over a large interval of densities. That
+is why the density fluctuates so easily in a fluid close to the
+critical point. Any linear combination of densities in this interval
+will have the same free energy. These fluctuations make the fluid
+opaque, and extend over all length scales.</p>
+<p>If you solved this question: congratulations! Five bonus points will
+be added.</p>
+</li>
+</ol>
+<div class="cell tag_remove-input docutils container">
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>There is “simple algebra” that can support this statement, but
+it is skipped for now</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Exercise_set_5.html" title="previous page"><span class="section-number">5. </span>Distributions</a>
+    <a class='right-next' id="next-link" href="Exercise_set_7.html" title="next page"><span class="section-number">7. </span>Ionic screening</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By JZ/LDK<br/>
+        
+            &copy; Copyright Delft University of Technology, CC BY-SA 4.0.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

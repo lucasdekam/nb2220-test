@@ -1,0 +1,32 @@
+/*
+To just use a. b. c. etc, you just need:
+ol {
+  list-style-type: lower-alpha;
+} */
+
+
+/* For a), b), c) etc., use the following code: */
+/* div.section is needed to only include lists in the text, and not in the sidebar */
+div.section ol {
+    counter-reset: list;
+    margin: 0;
+}
+
+div.section ol > li {
+    list-style: none;
+    position: relative;
+}
+
+div.section ol > li:before {
+    counter-increment: list;
+    content: counter(list, lower-alpha) ") ";
+    position: absolute;
+    left: -1.4em;
+}
+
+/* This part increases horizontal spacing between the counter a) and the text,
+and the vertical spacing between lines */
+div.section li {
+  padding-left:1em;
+  margin-bottom:5px
+}

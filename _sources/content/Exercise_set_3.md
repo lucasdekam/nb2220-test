@@ -60,15 +60,24 @@ with $u = \mathrm{d}f/\mathrm{d}x$.
 For a system in contact with a thermal reservoir, $T = \partial E/\partial S$
 is easier to think about than the entropy $S$. The temperature is
 constant and easy to measure or control, whereas the entropy may depend on the
-temperature in some complicated manner. Taking the Legendre transform of $E(S)$ now
-gives us a convenient quantity $F(T)$ that contains information about the energy
-in terms of the temperature.
+temperature in some complicated manner. So, let's take the Legendre transform
+of $E(S)$ to get a function of $T$. According to equation {eq}`eq:legendre_def`,
+the Legendre transform is given by
 
-You may notice that according to equation
-{eq}`eq:legendre_def`, the Legendre transform of $E(S)$ is actually
-$TS - E = -F(T)$. The advantage of the definition in equation {eq}`eq:Helmholtz`
-is that $F$ has the same sign as the internal energy $E$, so we can talk
-about it in the same way. The same thing is true for other thermodynamic potentials.
+$$
+  TS - E(S),
+$$
+
+which is $-F(T)$, according to equation {eq}`eq:Helmholtz`. We define
+$F(T)$ as the *negative* of the Legendre transform to give it the same sign
+as the internal energy $E$. The same thing is true for other thermodynamic
+potentials.
+
+The Helmholtz free energy $F(T)$ contains information about the energy in
+terms of the temperature. It is called 'free energy' because it represents
+the amount of work you can extract from a system that is being kept at a
+constant temperature (apparently, there is an energy $TS$ that
+you cannot extract as work).
 
 So far we considered exchanging $S$ with $T$ for a system
 in contact with a thermal reservoir. If your system is in direct contact with

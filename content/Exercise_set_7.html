@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Ionic screening &#8212; NB2220 Statistical Physics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ordered_lists_with_lowercase_letters.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Solutions" href="Solutions.html" />
+    <link rel="prev" title="6. Phase transitions" href="Exercise_set_6.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/tudelft.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NB2220 Statistical Physics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Statistical Physics for Nanobiology
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problem sets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_1.html">
+   1. Large numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_2.html">
+   2. Phases of matter and random walks, part I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_3.html">
+   3. Classical thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_4.html">
+   4. Boltzmann statistics and entropy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_5.html">
+   5. Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_6.html">
+   6. Phase transitions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Ionic screening
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Solutions.html">
+   Solutions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_1_solutions.html">
+     Problem set 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_2_solutions.html">
+     Problem set 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_3_solutions.html">
+     Problem set 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_4_solutions.html">
+     Problem set 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_6_solutions.html">
+     Problem set 6
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Exercise_set_7.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercise_set_7.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ionic-screening">
+<h1><span class="section-number">7. </span>Ionic screening<a class="headerlink" href="#ionic-screening" title="Permalink to this headline">¶</a></h1>
+<p>The goal of this exercise is to estimate the length over which electric
+fields can extend in electrolyte solutions. It is known since the
+experiments of Charles-Auguste de Coulomb that the electric force
+between two charged spheres depends on the inverse distance squared, or,</p>
+<div class="math notranslate nohighlight">
+\[
+    F\propto \frac{1}{r^2}
+\]</div>
+<p>and so does the electric field around a
+charged sphere or point charge. In vacuum or air, there is no typical
+“range” of the electric field. The length over which you could measure
+the field would depend on the quality of the device you are using, or
+the strength of the charge. This is different for electric fields in
+electrolyte solutions, where electric fields drop to zero after a
+well-defined length, because of the influence of the ions. This length
+is usually much smaller than a micrometer in water, and depends on the
+concentration of electrolytes.</p>
+<p>In this exercise we will calculate the density of ions near a charged
+plate, e.g. an electrode. The plate has a surface charge density
+<span class="math notranslate nohighlight">\(-\sigma\)</span>, is immersed in a solution with dielectric permittivity
+<span class="math notranslate nohighlight">\(\epsilon_\mathrm{w}\)</span>, and salt concentration of 0.1 M. The ions are
+monovalent, i.e. their charge is <span class="math notranslate nohighlight">\(+e\)</span> or <span class="math notranslate nohighlight">\(-e\)</span>, with <span class="math notranslate nohighlight">\(e\)</span> the elementary
+charge. A schematic picture is shown in <a class="reference internal" href="#fig-screening-schematic"><span class="std std-numref">Fig. 7.1</span></a>.</p>
+<div class="figure align-default" id="fig-screening-schematic">
+<a class="reference internal image-reference" href="../_images/screening.svg"><img alt="../_images/screening.svg" src="../_images/screening.svg" width="50%" /></a>
+<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Schematic depiction of a distribution of ions near a flat surface with negative
+charge.</span><a class="headerlink" href="#fig-screening-schematic" title="Permalink to this image">¶</a></p>
+</div>
+<ol>
+<li><p>Express the law of Gauss</p>
+<div class="math notranslate nohighlight">
+\[
+        \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_\mathrm{w}}
+    \]</div>
+<p>in terms of the electric potential <span class="math notranslate nohighlight">\(\psi\)</span>, with
+<span class="math notranslate nohighlight">\(\vec{E} = -\vec{\nabla} \psi\)</span>. This law is referred to as Poisson’s
+law. The symbol <span class="math notranslate nohighlight">\(\rho\)</span> stands for the charge density.</p>
+</li>
+<li><p>What is the potential energy of a positive ion, and what of a
+negative ion, at a distance <span class="math notranslate nohighlight">\(z\)</span> from the plate? (Express the answer
+in terms of the electric potential <span class="math notranslate nohighlight">\(\psi(z)\)</span>.)</p></li>
+<li><p>What would be the density of ions as a function of <span class="math notranslate nohighlight">\(z\)</span>, in terms of
+the potential <span class="math notranslate nohighlight">\(\psi(z)\)</span>, if one would use the Boltzmann
+distribution? (This is actually a terribly difficult question,
+which has not completely been solved after a century of literature.
+A couple of hints will be given: Remember that the Boltzmann
+distribution is</p>
+<div class="math notranslate nohighlight">
+\[
+        P_n = \frac{1}{Z}e^{-\beta E_n}
+    \]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the
+state of the system, and <span class="math notranslate nohighlight">\(E_n\)</span> the energy of that state. If the
+particles would not interact with each other, then the density of
+positive ions would be</p>
+<div class="math notranslate nohighlight" id="equation-eq-boltzmann-distribution-ions">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-eq-boltzmann-distribution-ions" title="Permalink to this equation">¶</a></span>\[
+        \rho_+(z) = \rho_{+0} e^{-\beta V_+(z)}
+    \]</div>
+<p>with <span class="math notranslate nohighlight">\(\rho_+(z)\)</span>
+in units of number per volume, <span class="math notranslate nohighlight">\(V_+(z)\)</span> the potential energy of a
+positive ion at position <span class="math notranslate nohighlight">\(z\)</span>, and <span class="math notranslate nohighlight">\(\rho_{+0}\)</span> the density far away
+from the plate, where <span class="math notranslate nohighlight">\(V_+(z)\)</span> is set to zero. Of course, the ions
+do interact with each other, and that makes the question very
+difficult. A more appropriate distribution would be</p>
+<div class="math notranslate nohighlight">
+\[
+        \rho_+(z) = \rho_{+0} e^{-\beta (V_\mathrm{plate}(z) + V_\mathrm{int}(z))}
+    \]</div>
+<p>where <span class="math notranslate nohighlight">\(V_\mathrm{plate}(z)\)</span> is the potential energy of an ion,
+caused by the plate, and <span class="math notranslate nohighlight">\(V_\mathrm{int}(z)\)</span> is the average
+potential energy from the interaction between an ion at position <span class="math notranslate nohighlight">\(z\)</span>
+and all the other ions. This second term is very difficult to
+calculate, without making assumptions. For now, we will assume that
+we can use <a class="reference internal" href="#equation-eq-boltzmann-distribution-ions">(7.1)</a>, with <span class="math notranslate nohighlight">\(V_+(z)\)</span> as found
+in the previous question.)</p>
+</li>
+<li><p>What would be the charge density at position <span class="math notranslate nohighlight">\(z\)</span>?</p></li>
+<li><p>Argue why the constants <span class="math notranslate nohighlight">\(\rho_{+0} = \rho_{-0}\)</span>. Call
+<span class="math notranslate nohighlight">\(\rho_{+0}\equiv\rho_0\)</span>.</p></li>
+<li><p>Express Poisson’s law in terms of <span class="math notranslate nohighlight">\(\rho_+(z)\)</span> and <span class="math notranslate nohighlight">\(\rho_-(z)\)</span>, and
+derive the second order differential equation for <span class="math notranslate nohighlight">\(\psi(z)\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+        \psi''(z) = \frac{2e\rho_0}{\epsilon_\mathrm{w}}\sinh{\beta e \psi(z)}
+    \]</div>
+<p>using the relation <span class="math notranslate nohighlight">\(2\sinh{x}=e^x - e^{-x}\)</span>.</p>
+</li>
+<li><p>Rewrite the equation in terms of the variable
+<span class="math notranslate nohighlight">\(\phi(z)\equiv\beta e \psi(z)\)</span> (which can be interpreted as the
+potential energy of a positive ion at position <span class="math notranslate nohighlight">\(z\)</span> in units of
+<span class="math notranslate nohighlight">\(k_\mathrm{B}T\)</span>) in the form:</p>
+<div class="math notranslate nohighlight" id="equation-eq-pb">
+<span class="eqno">(7.2)<a class="headerlink" href="#equation-eq-pb" title="Permalink to this equation">¶</a></span>\[
+        \phi''(z) = \kappa^2 \sinh{\phi(z)}
+    \]</div>
+<p>This equation is
+referred to as the “Poisson-Boltzmann equation”, because it
+combines the Poisson equation (for the electric potential) with the
+Boltzmann distribution (for the ions). The Boltzmann distribution of
+the ions is approximated here.</p>
+</li>
+<li><p>What is <span class="math notranslate nohighlight">\(\kappa\)</span> in terms of the system parameters?</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\phi &lt; 1\)</span> one can approximate <span class="math notranslate nohighlight">\(\sinh{\phi}\approx \phi\)</span>. Find
+the general solution of the differential equation for small
+<span class="math notranslate nohighlight">\(\phi&lt;1\)</span>.</p></li>
+<li><p>Use the boundary conditions to find the solution specific to this
+system. Hint: make sure that the electric potential goes to zero
+for large <span class="math notranslate nohighlight">\(z\)</span> and that the electric field at <span class="math notranslate nohighlight">\(z=0\)</span> obeys
+<span class="math notranslate nohighlight">\(E_0 = \frac{\sigma}{\epsilon_\mathrm{w}}\)</span>.</p></li>
+<li><p>Sketch this function, and find the distance over which the density
+drops by a factor <span class="math notranslate nohighlight">\(e^{-1}\)</span>. This distance is known as the “Debye
+screening length” named after Pieter Debye.</p></li>
+<li><p>Sketch the density of positive and negative ions near the plate.
+Hint: you can use the assumption that <span class="math notranslate nohighlight">\(\phi\ll1\)</span>.</p></li>
+<li><p>Calling this distance <span class="math notranslate nohighlight">\(\lambda_\mathrm{D} \equiv \kappa^{-1}\)</span>, what
+is the screening length in water, with a concentration of 100 mM
+sodium chloride? And what for 1 mM? Hint: to convert molar density
+to number density, one simply has to multiply by Avogadro’s number
+<span class="math notranslate nohighlight">\(6.022\cdot10^{23}\)</span>. It should be roughly between 0.1 and 100 nm, in
+case the calculated number would fall outside this interval.</p></li>
+</ol>
+<p>In this specific case, there is also an analytical solution to equation
+<a class="reference internal" href="#equation-eq-pb">(7.2)</a>, but the
+solution is only different from the one you calculated if <span class="math notranslate nohighlight">\(\phi&gt;1\)</span>,
+which can only occur close to the plate, say <span class="math notranslate nohighlight">\(z &lt; \lambda_\mathrm{D}\)</span>.
+Even though we made a convenient assumption in part (c), the expression
+for the screening length that you calculated is still a very useful
+estimate for how far electric fields extend in electrolyte solutions,
+and how far charged particles such as proteins can interact with each
+other. What happens within that distance can be very complicated,
+especially when the electrolytes interact more strongly, such as
+Ca<span class="math notranslate nohighlight">\(^{2+}\)</span> ions and ions in other solutions with a smaller dielectric
+constant. Also, it takes some time for the ions to screen a charged
+object, because they have to diffuse over some distance (of the order of
+a few nanoseconds at 0.1 M). Therefore, quickly varying fields can
+penetrate deeper into an electrolyte solution, and can also be
+disruptive for cell membranes. This phenomenon is known as
+electroporation. And there are many more interesting effects that rely
+on the response of electrolytes, that the body uses for many purposes.
+But that is a story for another time…</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Exercise_set_6.html" title="previous page"><span class="section-number">6. </span>Phase transitions</a>
+    <a class='right-next' id="next-link" href="Solutions.html" title="next page">Solutions</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By JZ/LDK<br/>
+        
+            &copy; Copyright Delft University of Technology, CC BY-SA 4.0.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

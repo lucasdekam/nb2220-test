@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Boltzmann statistics and entropy &#8212; NB2220 Statistical Physics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/ordered_lists_with_lowercase_letters.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Distributions" href="Exercise_set_5.html" />
+    <link rel="prev" title="3. Classical thermodynamics" href="Exercise_set_3.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/tudelft.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NB2220 Statistical Physics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   Statistical Physics for Nanobiology
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Problem sets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_1.html">
+   1. Large numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_2.html">
+   2. Phases of matter and random walks, part I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_3.html">
+   3. Classical thermodynamics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Boltzmann statistics and entropy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_5.html">
+   5. Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_6.html">
+   6. Phase transitions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise_set_7.html">
+   7. Ionic screening
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Solutions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Solutions.html">
+   Solutions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_1_solutions.html">
+     Problem set 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_2_solutions.html">
+     Problem set 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_3_solutions.html">
+     Problem set 3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_4_solutions.html">
+     Problem set 4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise_set_6_solutions.html">
+     Problem set 6
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Exercise_set_4.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology/issues/new?title=Issue%20on%20page%20%2Fcontent/Exercise_set_4.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stirling-approximation">
+   4.1. Stirling approximation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-law-of-thermodynamics">
+   4.2. Second law of thermodynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-microcanonical-ensemble-and-the-canonical-ensemble">
+   4.3. The microcanonical ensemble and the canonical ensemble
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#random-walk-part-ii">
+   4.4. Random walk, part II
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="boltzmann-statistics-and-entropy">
+<span id="ch-chapter4"></span><h1><span class="section-number">4. </span>Boltzmann statistics and entropy<a class="headerlink" href="#boltzmann-statistics-and-entropy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="stirling-approximation">
+<span id="sec-stirling-approximation"></span><h2><span class="section-number">4.1. </span>Stirling approximation<a class="headerlink" href="#stirling-approximation" title="Permalink to this headline">¶</a></h2>
+<p>Counting the number of microstates is an essential procedure in
+statistical physics. These numbers are usually very large, and often
+appear as factorial numbers <span class="math notranslate nohighlight">\(N!\)</span> with <span class="math notranslate nohighlight">\(N\)</span> a very large number. Common
+calculators typically do not go beyond <span class="math notranslate nohighlight">\(100!\)</span>. Fortunately, it is often
+sufficient to calculate the logarithm of that number, <span class="math notranslate nohighlight">\(\ln{N!}\)</span>. The
+Stirling approximation is then very useful:</p>
+<div class="math notranslate nohighlight">
+\[
+  \ln{N!} \approx N \ln{N} - N + \frac{1}{2}\ln{(2\pi N)}.
+\]</div>
+<p>The last
+term is completely negligible for large <span class="math notranslate nohighlight">\(N\)</span>. The first two terms can be
+derived quickly. Given that</p>
+<div class="math notranslate nohighlight">
+\[
+  \ln{N!} = \ln{(N\cdot(N-1)\cdot...1)} = \ln{N} + \ln{(N-1)} + ... + \ln{1} = \sum \limits_{n=1}^N \ln{n},
+\]</div>
+<p>one can approximate the sum by an integral</p>
+<div class="math notranslate nohighlight">
+\[
+  \int \limits_1^N \ln{(x)} \ dx = N \ln{N} - N + 1.
+\]</div>
+<p>For large <span class="math notranslate nohighlight">\(N\)</span> one
+can ignore the <span class="math notranslate nohighlight">\(+1\)</span> term, and obtain the extremely useful result, which
+we will refer to as the Stirling approximation:</p>
+<div class="math notranslate nohighlight" id="equation-eq-stirling">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-eq-stirling" title="Permalink to this equation">¶</a></span>\[
+\boxed{\ln{N!}\approx N\ln{N} - N}
+\]</div>
+<ol>
+<li><p>What is the relative error of the Stirling approximation for
+<span class="math notranslate nohighlight">\(\ln{100!}\)</span>? If your calculator cannot handle <span class="math notranslate nohighlight">\(100!\)</span> you can pick a
+smaller number.</p>
+<p>Macroscopic systems typically contain <span class="math notranslate nohighlight">\(&gt;10^{20}\)</span> particles, and in
+that case the approximation is as good as exact.</p>
+</li>
+<li><p>Use the Stirling approximation to rewrite <span class="math notranslate nohighlight">\(\ln{\binom{N}{n}}\)</span>.</p></li>
+<li><p>Find the value of <span class="math notranslate nohighlight">\(n\)</span> that maximises <span class="math notranslate nohighlight">\(f(n) = \ln{\binom{N}{n}}\)</span>.</p></li>
+<li><p>Find the value of <span class="math notranslate nohighlight">\(n\)</span> that maximises
+<span class="math notranslate nohighlight">\(f(n) = \ln{\binom{N}{n}} + n \epsilon\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="second-law-of-thermodynamics">
+<span id="sec-second-law-via-boltzmann"></span><h2><span class="section-number">4.2. </span>Second law of thermodynamics<a class="headerlink" href="#second-law-of-thermodynamics" title="Permalink to this headline">¶</a></h2>
+<p>In this exercise you are going to derive the second law of
+thermodynamics from the definition of the Boltzmann entropy</p>
+<div class="math notranslate nohighlight" id="equation-eq-boltzmann-entropy">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-eq-boltzmann-entropy" title="Permalink to this equation">¶</a></span>\[  
+  \boxed{S=k_\mathrm{B} \ln{\Omega}}
+\]</div>
+<p>and the definition of temperature</p>
+<div class="math notranslate nohighlight" id="equation-eq-temperature">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-eq-temperature" title="Permalink to this equation">¶</a></span>\[
+    \boxed{\frac{\partial S}{\partial E} = \frac{1}{T}}
+\]</div>
+<p>In the future,
+we will call the Boltzmann entropy just “the entropy”, but know that
+there are very similar expressions defined for probability distributions
+(Gibbs entropy), quantum systems (Neumann entropy) and information
+theory (Shannon entropy). All these definitions of entropy can be
+related back to the Boltzmann entropy, and have similar, if not
+identical properties. The definition of temperature may seem a bit
+awkward at first, but you will see that it is very meaningful in the
+end.</p>
+<ol>
+<li><p>Two isolated systems, system 1 and system 2, have entropy <span class="math notranslate nohighlight">\(S_1\)</span> and
+<span class="math notranslate nohighlight">\(S_2\)</span>, and energy <span class="math notranslate nohighlight">\(E_1\)</span> and <span class="math notranslate nohighlight">\(E_2\)</span>, respectively. System 1 has a
+total number of <span class="math notranslate nohighlight">\(\Omega_1(E_1)\)</span> microstates with energy <span class="math notranslate nohighlight">\(E_1\)</span>, and
+system 2 has <span class="math notranslate nohighlight">\(\Omega_2(E_2)\)</span> microstates with energy <span class="math notranslate nohighlight">\(E_2\)</span>. Show
+that entropy is extensive.</p></li>
+<li><p>The two systems are now linked together with a thin wall in between,
+which allows for heat transfer. The systems together are still
+isolated from the environment. Explain that the total number of
+possible configurations of the combined system is now</p>
+<div class="math notranslate nohighlight" id="equation-eq-total-number-of-configurations">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-eq-total-number-of-configurations" title="Permalink to this equation">¶</a></span>\[
+      \Omega_\mathrm{tot} = \sum \limits_{E_1} e^{\frac{S_1(E_1)}{k_\mathrm{B}} + \frac{S_2(E-E_1)}{k_\mathrm{B}}}
+    \]</div>
+<p>and demonstrate that the total entropy should increase, or stay the
+same, when the systems are connected.</p>
+<p>Under special conditions, the entropy will stay constant. These
+conditions will be derived in the following questions.</p>
+</li>
+<li><p>The number of configurations depends exponentially on the entropy,
+<span class="math notranslate nohighlight">\(\Omega = \exp{\left(\frac{S}{k_\mathrm{B}}\right)}\)</span>, where <span class="math notranslate nohighlight">\(S\)</span> is
+already a large number, typically (much) larger than the number of
+particles <span class="math notranslate nohighlight">\(N\)</span>. Argue that the sum in equation <a class="reference internal" href="#equation-eq-total-number-of-configurations">(4.4)</a>
+is completely
+dominated by its maximum, and that all the other terms can be
+ignored.</p></li>
+<li><p>Demonstrate that the condition for this maximal value is</p>
+<div class="math notranslate nohighlight" id="equation-eq-thermal-equilibrium-entropy">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-eq-thermal-equilibrium-entropy" title="Permalink to this equation">¶</a></span>\[
+      \frac{\partial S_1 (E_1)}{\partial E_1}  = \frac{S_2(E_2)}{\partial E_2}.
+    \]</div>
+<p>Call the energy of system 1 for which <span class="math notranslate nohighlight">\(S_1 + S_2\)</span> is maximal <span class="math notranslate nohighlight">\(E^*\)</span>.</p>
+</li>
+<li><p>If one would prepare system 1 with an initial energy <span class="math notranslate nohighlight">\(E^*\)</span>, nothing
+would change after the connection with system 2. No energy would
+flow between the systems and the total entropy would remain the
+same. In that case, the systems are said to be in thermal
+equilibrium. So the equation <a class="reference internal" href="#equation-eq-thermal-equilibrium-entropy">(4.5)</a> you derived in the previous question, is a condition for
+thermodynamic equilibrium. Derive the condition for thermal
+equilibrium in terms of <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span>.</p></li>
+<li><p>If we prepare system 1 at a higher temperature than system 2,
+<span class="math notranslate nohighlight">\(T_1&gt;T_2\)</span> before they are connected, the entropy would necessarily
+increase (you already derived this). For small changes</p>
+<div class="math notranslate nohighlight">
+\[
+      \delta S = \frac{\partial S_1}{\partial E_1} \delta E_1 + \frac{\partial S_2}{\partial E_2}\delta E_2.
+    \]</div>
+<p>Show that the change in energy <span class="math notranslate nohighlight">\(\delta E_1 &lt; 0\)</span>.</p>
+</li>
+<li><p>Argue that you just derived the second law of thermodynamics.</p></li>
+</ol>
+</div>
+<div class="section" id="the-microcanonical-ensemble-and-the-canonical-ensemble">
+<span id="sec-canonical-ensemble"></span><h2><span class="section-number">4.3. </span>The microcanonical ensemble and the canonical ensemble<a class="headerlink" href="#the-microcanonical-ensemble-and-the-canonical-ensemble" title="Permalink to this headline">¶</a></h2>
+<p>A fundamental assumption in statistical physics is that</p>
+<blockquote>
+<div><p>In a closed system, each microstate is equally probable.</p>
+</div></blockquote>
+<!-- Isolated system? Closed and isolated are sometimes used interchangably,
+but in chemistry they're different. -->
+<p>We refer to such a system as a <em>microcanonical ensemble</em>. So, in the
+microcanonical ensemble all configurations with energy <span class="math notranslate nohighlight">\(E\)</span> are equally
+probable with probability</p>
+<div class="math notranslate nohighlight">
+\[
+  P(n) = \frac{1}{\Omega(E)},
+\]</div>
+<p>where
+<span class="math notranslate nohighlight">\(\Omega(E)\)</span> is the total number of configurations with energy <span class="math notranslate nohighlight">\(E\)</span>, and
+each microstate is labelled by an index <span class="math notranslate nohighlight">\(n\)</span> (in general, one can label
+microstates in different ways, but let’s assume we can count them with
+this index <span class="math notranslate nohighlight">\(n\)</span>).</p>
+<p>We can now derive a probability distribution for systems in contact with
+a thermal reservoir, as shown in <a class="reference internal" href="#canonical-ensemble"><span class="std std-numref">Fig. 4.1</span></a>, which we call the
+<em>canonical ensemble</em>. The system and reservoir together are isolated from the
+environment, so together they form a microcanonical ensemble. Each
+microstate of the entire system is equally probable, but not in the
+system and reservoir separately, because each microstate of the system
+constrains the number of possible microstates of the reservoir. In this
+exercise you will derive the probability distribution <span class="math notranslate nohighlight">\(P(n)\)</span> for each
+state <span class="math notranslate nohighlight">\(n\)</span> in the system.</p>
+<div class="figure align-default" id="canonical-ensemble">
+<a class="reference internal image-reference" href="../_images/canonicalensemble.svg"><img alt="../_images/canonicalensemble.svg" src="../_images/canonicalensemble.svg" width="40%" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">The canonical ensemble: a system in thermal contact with a
+reservoir.</span><a class="headerlink" href="#canonical-ensemble" title="Permalink to this image">¶</a></p>
+</div>
+<ol>
+<li><p>The total number of microstates of the entire system is</p>
+<div class="math notranslate nohighlight">
+\[
+      \Omega_\mathrm{tot}(E) = \sum \limits_n \Omega_\mathrm{Reservoir}(E-E_n)
+    \]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> labels all possible microstates of the system. So, for
+each microstate <span class="math notranslate nohighlight">\(n\)</span> of the system, the reservoir can be in
+<span class="math notranslate nohighlight">\(\Omega(E-E_n)\)</span> different microstates. Express
+<span class="math notranslate nohighlight">\(\Omega_\mathrm{Reservoir}\)</span> in terms of the entropy of the
+reservoir, and make a Taylor expansion around <span class="math notranslate nohighlight">\(E\)</span> up to first order.</p>
+</li>
+<li><p>Use the definition for temperature (equation <a class="reference internal" href="#equation-eq-temperature">(4.3)</a>) and use clear
+argumentation to derive</p>
+<div class="math notranslate nohighlight" id="equation-eq-canonical-ensemble-p">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-eq-canonical-ensemble-p" title="Permalink to this equation">¶</a></span>\[
+      \boxed{P(n) = \frac{1}{Z} e^{-\frac{E_n}{k_\mathrm{B} T}}}
+    \]</div>
+<p>with normalisation factor</p>
+<div class="math notranslate nohighlight" id="equation-eq-partition-function">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-eq-partition-function" title="Permalink to this equation">¶</a></span>\[
+      \boxed{Z = \sum \limits_n e^{-\frac{E_n}{k_\mathrm{B} T}}}
+    \]</div>
+<p>Equation <a class="reference internal" href="#equation-eq-canonical-ensemble-p">(4.6)</a> is called the
+<em>Boltzmann distribution</em>, and equation
+<a class="reference internal" href="#equation-eq-partition-function">(4.7)</a> is called the <em>partition
+function</em>. If you managed to solve this exercise, you just derived
+the most important equations of this course.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="random-walk-part-ii">
+<span id="sec-random-walk-part-ii"></span><h2><span class="section-number">4.4. </span>Random walk, part II<a class="headerlink" href="#random-walk-part-ii" title="Permalink to this headline">¶</a></h2>
+<!-- I'm pretty sure something like this is studied in Biophysics
+and Computational Science as well. Possibly relate it somehow? -->
+<p>Einstein used the “random walk” to describe diffusing particles. The
+experiments of Jean Perrin confirmed that particles in solution actually
+make a random walk. The random walk can also be used to describe
+flexible polymers. Let’s consider a polymer consisting of <span class="math notranslate nohighlight">\(N\)</span> identical
+monomers. Each monomer is modeled as a rigid segment with length <span class="math notranslate nohighlight">\(b\)</span>,
+and each segment is connected to the next in such a way that they can
+rotate freely with respect to each other. For simplicity, we will ignore
+all possible interactions between the monomers, and refer to this
+polymer as an “ideal polymer” (analogous to a gas of non-interacting
+particles, the “ideal gas”). Therefore, each possible configuration of
+the polymer has the same energy, and according to the previous
+exercises, is equally probable. In this exercise we are going to
+calculate the amount of work that is needed to stretch this polymer over
+a distance <span class="math notranslate nohighlight">\(R\)</span>, or more precisely, the work required to increase the
+end-to-end distance from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(R\)</span>. First we will calculate the
+probability that the end-to-end distance is <span class="math notranslate nohighlight">\(R\)</span>; given that each
+configuration is equally likely,</p>
+<div class="math notranslate nohighlight" id="equation-eq-probability-r">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-eq-probability-r" title="Permalink to this equation">¶</a></span>\[
+  P(R) = \frac{\Omega(R)}{\Omega_\mathrm{tot}}.
+\]</div>
+<p>Counting all the
+possible configurations with an end-to-end distance <span class="math notranslate nohighlight">\(R\)</span> can be done in
+the following way. A random configuration is sampled by a set of <span class="math notranslate nohighlight">\(N\)</span>
+random vectors <span class="math notranslate nohighlight">\(\vec{r}_i\)</span> of length <span class="math notranslate nohighlight">\(b\)</span> for each segment <span class="math notranslate nohighlight">\(i\)</span>. The
+vector pointing from the beginning of the polymer to the endpoint is
+then given by <span class="math notranslate nohighlight">\(\vec{R} \equiv \vec{r}_1+\vec{r}_2+...+\vec{r}_N\)</span>, see
+<a class="reference internal" href="#flexible-polymer"><span class="std std-numref">Fig. 4.2</span></a>.</p>
+<div class="figure align-default" id="flexible-polymer">
+<a class="reference internal image-reference" href="../_images/flexiblepolymer.svg"><img alt="../_images/flexiblepolymer.svg" src="../_images/flexiblepolymer.svg" width="50%" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">A configuration of a flexible polymer, describing a random walk in
+3 dimensions.</span><a class="headerlink" href="#flexible-polymer" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>Determine the mean of <span class="math notranslate nohighlight">\(\vec{r}_1\)</span> by simple arguments. Hint: Write
+down the mathematical expression for the mean, and remember that
+each configuration is equally probable.</p></li>
+<li><p>If we write the vector <span class="math notranslate nohighlight">\(\vec{r}_1\)</span> in terms of Cartesian coordinates
+<span class="math notranslate nohighlight">\(\vec{r}_1 = (x_1,y_1,z_1)\)</span>, argue that
+<span class="math notranslate nohighlight">\(\langle x_1^2 \rangle = \frac{1}{3}b^2\)</span>. (Hint: work out
+<span class="math notranslate nohighlight">\(\langle \vec{r}_1 \cdot \vec{r}_1 \rangle\)</span> and remember that the
+vector can point in each direction with equal probability.)</p></li>
+<li><p>Give the standard deviation of the <span class="math notranslate nohighlight">\(x\)</span>-component of
+<span class="math notranslate nohighlight">\(\vec{R}=(x,y,z)\)</span>. (Hint: <span class="math notranslate nohighlight">\(x = x_1 + x_2 + ... x_N\)</span> and use that
+<span class="math notranslate nohighlight">\(N\)</span> is large.)</p></li>
+<li><p>What is the probability to find the endpoint at <span class="math notranslate nohighlight">\(\vec{R}=(x,y,z)\)</span>?
+(Hint: calculate <span class="math notranslate nohighlight">\(P(x)\)</span> first - the probability that the
+<span class="math notranslate nohighlight">\(x\)</span>-component of <span class="math notranslate nohighlight">\(\vec{R}\)</span> is at position <span class="math notranslate nohighlight">\(x\)</span>, and then use that
+<span class="math notranslate nohighlight">\(P(x,y,z)=P(x)P(y)P(z)\)</span>.)</p></li>
+<li><p>How does the entropy scale with <span class="math notranslate nohighlight">\(R\)</span>, which is the length of <span class="math notranslate nohighlight">\(\vec{R}\)</span>? (Hint:
+Remember that <span class="math notranslate nohighlight">\(S(R)\)</span> depends on <span class="math notranslate nohighlight">\(\Omega(R)\)</span>, the number of
+configurations for a fixed end-to-end distance <span class="math notranslate nohighlight">\(R\)</span>, and that
+<span class="math notranslate nohighlight">\(\Omega(R)\)</span> is related to <span class="math notranslate nohighlight">\(P(R)\)</span> by equation <a class="reference internal" href="#equation-eq-probability-r">(4.8)</a>.)</p></li>
+<li><p>Now the polymer is coupled to a thermal reservoir, by putting it
+into an aqueous solution. How does the free energy <span class="math notranslate nohighlight">\(F = E - TS\)</span>
+depend on the distance between the endpoints <span class="math notranslate nohighlight">\(R\)</span>? Does the answer
+look familiar to an important system in classical mechanics?</p></li>
+<li><p>Flexible polymers are sometimes referred to as <em>entropic springs</em>.
+Now you know the origin. They have elastic properties, depending on
+the number of segments <span class="math notranslate nohighlight">\(N\)</span>, the segment length <span class="math notranslate nohighlight">\(b\)</span>, and to some
+extent on the temperature <span class="math notranslate nohighlight">\(T\)</span>. Give the spring constant of a
+polymer, depending on <span class="math notranslate nohighlight">\(N,b\)</span> and <span class="math notranslate nohighlight">\(T\)</span>.</p></li>
+<li><p>How much work do you have to perform to stretch the polymer from
+<span class="math notranslate nohighlight">\(R=0\)</span> to <span class="math notranslate nohighlight">\(R = \sqrt{N} b\)</span>? And to <span class="math notranslate nohighlight">\(R = 2 \sqrt{N} b\)</span>?</p></li>
+</ol>
+<p>The energy value <span class="math notranslate nohighlight">\(k_\mathrm{B}T\)</span> is very meaningful in thermodynamic
+systems, as we will see shortly. (It is comparable to the typical
+kinetic energy of the particles.)</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Exercise_set_3.html" title="previous page"><span class="section-number">3. </span>Classical thermodynamics</a>
+    <a class='right-next' id="next-link" href="Exercise_set_5.html" title="next page"><span class="section-number">5. </span>Distributions</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By JZ/LDK<br/>
+        
+            &copy; Copyright Delft University of Technology, CC BY-SA 4.0.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
