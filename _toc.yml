@@ -1,16 +1,26 @@
-# Table of content
+# Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
 root: index
-defaults:
-  numbered: True
 parts:
-  - caption: Name of the first part
+  - caption: Problem sets
+    numbered: True # Only applies to chapters in Part 1.
     chapters:
-    - file: placeholder
-    - file: Exercise_set_3
-    - file: probability
+    - file: content/Exercise_set_1
+    - file: content/Exercise_set_2
+    - file: content/Exercise_set_3
+    - file: content/Exercise_set_4
+    - file: content/Exercise_set_5
+    - file: content/Exercise_set_6
+    - file: content/Exercise_set_7
+  - caption: Solutions
+    numbered: False
+    chapters:
+    - file: content/Solutions
       sections:
-        - file: phasetransitions
-        - file: project
+        - file: content/Exercise_set_1_solutions
+        - file: content/Exercise_set_2_solutions
+        - file: content/Exercise_set_3_solutions
+        - file: content/Exercise_set_4_solutions
+        - file: content/Exercise_set_6_solutions

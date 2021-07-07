@@ -3,8 +3,8 @@
 
 title: NB2220 Statistical Physics
 author: JZ/LDK
-copyright: 2021 Delft University of Technology, CC BY-SA 4.0
 logo: tudelft.png
+copyright: Delft University of Technology, CC BY-SA 4.0
 
 # Only build files in the ToC to avoid building README, etc.
 only_build_toc_files: true
@@ -23,9 +23,15 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
+sphinx:
+  config:
+    html_js_files:
+    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/lucasdekam/nb2220-test  # Online location of your book
+  url: https://gitlab.tudelft.nl/jzwanikken/open-education-statistical-physics-for-nanobiology  # Online location of your book
+  # path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
@@ -33,3 +39,5 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  comments:
+    hypothesis: true
