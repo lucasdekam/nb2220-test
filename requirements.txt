@@ -1,6 +1,6 @@
-jupyter-book
+sphinx-thebe==0.0.8
+jupyter-book==0.11.1
 numpy
 plotly
 scipy
 matplotlib
-sphinx-thebe==0.0.8
