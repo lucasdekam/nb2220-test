@@ -47,12 +47,12 @@ defects. For some applications, this may be highly desirable, while for
 others it is not (see exercise). {numref}`liquid_crystal_domains` shows a
 liquid crystal, frozen into different crystalline domains.
 
-```{figure} images/crystaldomains_green.svg
+```{figure} images/crystaldomains_white.svg
 ---
 name: liquid_crystal_domains
-width: 80%
+width: 75%
 ---
-Crystal domains of a liquid crystal. In each domain, the crystal structure 
+Crystal domains of a liquid crystal. In each domain, the crystal structure
 has a different orientation.
 ```
 
@@ -271,7 +271,12 @@ from scipy.optimize import fsolve
 kbt = 1 # --> all energy (f, a, ...) in units of k_B T
 linear_coefficient = 2.5 # add a term linear in rho to f_vdw for a nicer plot
 # this linear term has no impact on the conditions for phase coexistence
-line = '#ff5638'
+
+# Colors
+grey = '#eeeeee' # light grey fill
+line = '#e96868' # red line
+nucleatn_color = '#6a8ba4' # dark blue for nucleation&growth
+spinodal_color = '#BBDEF0' # light blue for spinodal decomposition
 
 def f_vdw(rho, a, b):
     """
@@ -404,6 +409,9 @@ highly unstable regime (blue shaded region in
 {numref}`fig:free_energy_density_separation_regimes`). Any tiny
 perturbation will then initiate the separation process.
 
+At the bottom of this page, you can find an interactive plot for the
+free energy density where you can vary the parameter $a$.
+
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
 
@@ -421,7 +429,6 @@ ax.yaxis.set_ticks_position('left')
 ax.set_xticks([0.2, 0.4, 0.6, 0.8])
 
 # Grey area
-grey = '#eeeeee'
 ax.fill([rhosol[0], rhosol[0], rhosol[1], rhosol[1]],
         [0, -0.4, -0.4, 0],
         color=grey)
@@ -500,8 +507,6 @@ ax.yaxis.set_ticks_position('left')
 ax.set_xticks([0.2, 0.4, 0.6, 0.8])
 
 # Fill areas
-spinodal_color = '#BBDEF0'
-nucleatn_color = '#4D7298'
 ax.fill([rhosol[0], rhosol[0], rho_turningpoints[0], rho_turningpoints[0]],
         [0, -0.4, -0.4, 0],
         color=nucleatn_color,
@@ -594,7 +599,7 @@ for a in range_a:
             fill="toself",
             mode='lines',
             name='nucleation and growth',
-            line=dict(color='#4D7298')))
+            line=dict(color=nucleatn_color)))
     fig.add_trace(
         go.Scatter(
             visible=False,
@@ -603,7 +608,7 @@ for a in range_a:
             fill="toself",
             mode='lines',
             name='nucleation and growth',
-            line=dict(color='#4D7298'),
+            line=dict(color=nucleatn_color),
             showlegend=False))    
     fig.add_trace(
         go.Scatter(
@@ -613,13 +618,13 @@ for a in range_a:
             fill="toself",
             mode='lines',
             name='spinodal decomposition',
-            line=dict(color='#BBDEF0')))    
+            line=dict(color=spinodal_color)))    
     fig.add_trace(        
         go.Scatter(
             visible=False,
             x=rho,
             y=f_vdw(rho, a, b),
-            line=dict(color="#ff5638"),
+            line=dict(color=line),
             mode='lines',
             name='VdW fluid'))
     fig.add_trace(  
