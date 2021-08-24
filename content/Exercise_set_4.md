@@ -247,7 +247,7 @@ then given by $\vec{R} \equiv \vec{r}_1+\vec{r}_2+...+\vec{r}_N$, see
 ```{figure} images/flexiblepolymer.svg
 ---
 name: Flexible_polymer
-width: 50%
+width: 40%
 ---
 A configuration of a flexible polymer, describing a random walk in
 3 dimensions.

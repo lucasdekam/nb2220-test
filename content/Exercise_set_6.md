@@ -47,12 +47,13 @@ defects. For some applications, this may be highly desirable, while for
 others it is not (see exercise). {numref}`liquid_crystal_domains` shows a
 liquid crystal, frozen into different crystalline domains.
 
-```{figure} images/Crystal_domains.png
+```{figure} images/crystaldomains_green.svg
 ---
 name: liquid_crystal_domains
+width: 80%
 ---
-Crystal domains of a liquid crystal, and a ray of light being
-refracted by different domains and domain walls.
+Crystal domains of a liquid crystal. In each domain, the crystal structure 
+has a different orientation.
 ```
 
 A phase transition can also happen by another type of process, where the
@@ -125,7 +126,7 @@ create temporal dipole moments, and these moments can couple to that of
 other atoms. But let us not get into all the subtleties of these forces
 (and there are quite a few).
 
-```{figure} images/Gecko.png
+```{figure} images/geckos.png
 ---
 name: fig:gecko
 ---
@@ -134,6 +135,8 @@ feet have a lot of grooves to increase their surface area. Research
 groups have tried to imitate their art to create 'spider man suits' for
 human beings. Unfortunately, the ratio between our body weight and
 surface area is not optimal for this ability.
+Images by Verdian Chua on [Unsplash](https://unsplash.com/photos/imyYqxSgu4Q)
+and Matt Reinbold on [Flickr](https://www.flickr.com/photos/furryscalyman/3830578747).
 ```
 
 Johannes van der Waals tried to understand why fluids can decide to
@@ -473,11 +476,6 @@ $\rho_1$ and $\rho_2$), plotted against its mean density $\rho_\mathrm{average}$
 ```{code-cell} ipython3
 :tags: [hide-input, remove-output]
 
-import numpy as np
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-from scipy.optimize import fsolve
-
 def f_vdw_doubleprime(rho, a, b):
     """
     Calculates the second derivative of the free energy density for a
@@ -575,6 +573,8 @@ can vary the parameter $a$.
 ```{code-cell} ipython3
 :tags: [remove-input]
 
+import plotly.graph_objects as go
+
 range_a = np.arange(3.5, 5, 0.1)
 
 ## Create plot
@@ -662,8 +662,6 @@ sliders = [dict(
 
 fig.update_layout(
     sliders=sliders,
-    xaxis_title=r'$\mathrm{density} \; \rho$',
-    yaxis_title=r'$\mathrm{pressure} \; p$',
     legend_title="Legend",
 )
 

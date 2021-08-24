@@ -90,9 +90,10 @@
     reservoir to a hot reservoir, violating the law of Clausius. So,
     violating Kelvin's law implies violating Clausius's law.
 
-    ```{figure} images/Second_law_non_Kelvin.png
+    ```{figure} images/Second_law_non_Kelvin.svg
     ---
     name: fig:second_law_non_Kelvin
+    width: 60%
     ---
     Magic machine, violating Kelvin's law, powering a heat pump. The
     combined effect of the machine plus heat pump is that energy is
@@ -113,9 +114,10 @@
     violating Kelvin's law. Combined with the previous answer, we see
     that the laws are identical.
 
-    ```{figure} images/Second_law_non_Clausius.png
+    ```{figure} images/Second_law_non_Clausius.svg
     ---
     name: fig:second_law_non_Clausius
+    width: 60%
     ---
     Magic heat pump, violating Clausius's law, pumping back the waste
     heat of a machine. The combined effect of both devices is a machine
@@ -127,9 +129,10 @@
 
 1.  See {numref}`fig:Carnot_cycle`.
 
-    ```{figure} images/Carnot_cycle.png
+    ```{figure} images/carnotcycle.svg
     ---
     name: fig:Carnot_cycle
+    width: 80%
     ---
     The Carnot cycle in a $p,V$-diagram and a $T,S$-diagram. Adiabatic
     branches are BC and DA. Isothermal branches are AB

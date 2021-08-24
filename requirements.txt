@@ -1,6 +1,5 @@
 jupyter-book
-notebook
 numpy
 plotly
-matplotlib
 scipy
+matplotlib
