@@ -13,14 +13,6 @@ kernelspec:
 
 # Problem set 6
 
-Test,
-
-$$
-  e^{i \pi} + 1 = 0
-$$ (eq:best-equation-ever)
-
-is the best equation ever.
-
 ```{code-cell} ipython3
 :tags: [hide-input]
 
