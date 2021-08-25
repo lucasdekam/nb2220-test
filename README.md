@@ -2,8 +2,18 @@ Open Education Statistical Physics for Nanobiology
 ===================================================
 
 The aim of this project is to create and publish lecture notes for NB2220
-Statistical Physics for Nanobiology using [Jupyter Book](https://jupyterbook.org/intro.html). This README serves
-as the documentation for teachers or TA's working on this book.
+Statistical Physics for Nanobiology using [Jupyter Book](https://jupyterbook.org/intro.html).
+
+We found that open materials available online are either
+
+* meant for undergraduate physics students, and aimed at quantum mechanics;
+* or aimed at biology, but meant for graduate physics students, and therefore too advanced.
+
+In this course, students are introduced to statistical physics without expecting
+a background in quantum mechanics. Also, the aim is to provide biological examples
+as much as possible.
+
+This README serves as the documentation for teachers or TA's working on this book.
 
 ## Writing the book
 The book is written in an extended version of the Markdown language used by Jupyter Book.
