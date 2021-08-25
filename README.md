@@ -58,5 +58,5 @@ to use a Python 3.7 installation when you work on the book.
 * Publish documentation on the OLMO Teams and Google Drive, so it is accessible for people in
 other projects as well
 
-## Feedback
-[Document with summary of all course feedback for 2020/2021](https://docs.google.com/document/d/1PffzMkjXvT5hYC_5ylx8LJYlzYyWNNwSCUNJjPjUUfk/edit?usp=sharing)
+<!-- ## Feedback
+[Document with summary of all course feedback for 2020/2021](https://docs.google.com/document/d/1PffzMkjXvT5hYC_5ylx8LJYlzYyWNNwSCUNJjPjUUfk/edit?usp=sharing) -->
