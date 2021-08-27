@@ -1,17 +1,23 @@
 Open Education Statistical Physics for Nanobiology
 ===================================================
 
-The aim of this project is to create and publish lecture notes for NB2220
-Statistical Physics for Nanobiology using [Jupyter Book](https://jupyterbook.org/intro.html).
-
-We found that open materials available online are either
-
-* meant for undergraduate physics students, and aimed at quantum mechanics;
-* or aimed at biology, but meant for graduate physics students, and therefore too advanced.
-
-In this course, students are introduced to statistical physics without expecting
+In this Statistical Physics course, students are introduced to statistical physics without expecting
 a background in quantum mechanics. Also, the aim is to provide biological examples
 as much as possible.
+
+The goal of this project was initially to find and organize open education
+materials that could be used in the course.
+However, we found that open materials available online are either
+
+* meant for undergraduate physics students, but aimed at applications in quantum mechanics (e.g. [Tong's lecture notes](http://www.damtp.cam.ac.uk/user/tong/statphys.html));
+* or aimed at applications in biology, but too advanced (e.g. an [MIT open course](https://ocw.mit.edu/courses/physics/8-592j-statistical-physics-in-biology-spring-2011/index.htm)).
+
+Therefore, Jos Zwanikken developed his own problem sets for this course. These
+sets have now been published as a [Jupyter Book](https://jupyterbook.org/intro.html).
+A demo version is available [here](https://lucasdekam.github.io/nb2220-test/), published from
+[this GitHub repository](https://github.com/lucasdekam/nb2220-test).
+
+Credits to Josephine Spit for recreating many of the images (all of which are now copyright-free).
 
 This README serves as the documentation for teachers or TA's working on this book.
 
@@ -62,11 +68,12 @@ to use a Python 3.7 installation when you work on the book.
 ...
 
 ## To-do list
-* Publish the website
-* Write documentation on publishing
-* Add learning goals to each chapter in an admonition box?
-* Publish documentation on the OLMO Teams and Google Drive, so it is accessible for people in
-other projects as well
+See also my post on the OLMO Teams. In short:
 
-<!-- ## Feedback
-[Document with summary of all course feedback for 2020/2021](https://docs.google.com/document/d/1PffzMkjXvT5hYC_5ylx8LJYlzYyWNNwSCUNJjPjUUfk/edit?usp=sharing) -->
+* Publish the website
+* Write documentation on publishing and make it available to anyone who needs it
+* Expand the Book as needed, e.g. adding learning goals to each chapter in an admonition box,
+or adding more interactive plots where appropriate
+
+## Feedback
+[Document with summary of all course feedback for 2020/2021](https://docs.google.com/document/d/1PffzMkjXvT5hYC_5ylx8LJYlzYyWNNwSCUNJjPjUUfk/edit?usp=sharing)
