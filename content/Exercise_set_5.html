@@ -399,8 +399,8 @@ exchange between the system and the reservoir.</p>
 <ol>
 <li><p>Show that in the canonical ensemble (<span class="math notranslate nohighlight">\(N,V,T\)</span>-ensemble) the
 expectation value of the energy obeys</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="math notranslate nohighlight" id="equation-eq-average-energy">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-average-energy" title="Permalink to this equation">¶</a></span>\[
         \langle E \rangle = -\frac{\partial}{\partial \beta} \ln{Z}
     \]</div>
 <p>with <span class="math notranslate nohighlight">\(Z\)</span> the partition function.</p>
@@ -460,7 +460,7 @@ rewrite the equation in terms of momentum <span class="math notranslate nohighli
 down the total energy of <span class="math notranslate nohighlight">\(N\)</span> non-interacting particles in a fluid, the
 expression is almost the same, except for a summation sign:</p>
 <div class="math notranslate nohighlight" id="equation-eq-total-energy-hamiltonian">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-total-energy-hamiltonian" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-total-energy-hamiltonian" title="Permalink to this equation">¶</a></span>\[
     E = \sum \limits_{i=1}^N \left(\frac{p_i^2}{2m} + V(x_i)\right)
 \]</div>
 <p>One simply sums the total energy of each particle. The term
@@ -473,7 +473,7 @@ interaction term</p>
 \]</div>
 <p>One can generalize the situation also to three dimensions, but to keep
 the notation simple, we will focus on one dimension for now, and use
-equation <a class="reference internal" href="#equation-eq-total-energy-hamiltonian">(5.2)</a>.</p>
+equation <a class="reference internal" href="#equation-eq-total-energy-hamiltonian">(5.3)</a>.</p>
 <p>If we enclose these particles in a volume <span class="math notranslate nohighlight">\(V\)</span> coupled to a thermal
 reservoir (that is, we create a canonical ensemble) then we can
 calculate the probability to find the system in a certain configuration
@@ -493,7 +493,7 @@ conceptually what is going on. The notational difficulty is that we have
 to replace the sum over <span class="math notranslate nohighlight">\(n\)</span> by integrals over all positions <span class="math notranslate nohighlight">\(x_i\)</span> and
 momenta <span class="math notranslate nohighlight">\(p_i\)</span>, if one wants to evaluate <span class="math notranslate nohighlight">\(Z\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-partition-sum-hamiltonian">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-partition-sum-hamiltonian" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-partition-sum-hamiltonian" title="Permalink to this equation">¶</a></span>\[\begin{split}
 \begin{aligned}
     Z &amp;= \int e^{-\beta E(\vec{\Gamma})}d\vec{\Gamma}\\
     &amp;= \int e^{-\beta \sum \limits_{i=1}^N \left(\frac{p_i^2}{2m} + V(x_i)\right)}dx_1 dp_1 \cdots dx_N dp_N.
@@ -502,7 +502,7 @@ momenta <span class="math notranslate nohighlight">\(p_i\)</span>, if one wants 
 <p>Conceptually, the expression is not as complicated as it looks: one
 rearranges the particles in all possible ways, with all possible
 momenta, and sums (integrates) all the <span class="math notranslate nohighlight">\(e\)</span>-factors. Equation
-<a class="reference internal" href="#equation-eq-partition-sum-hamiltonian">(5.3)</a> is a <span class="math notranslate nohighlight">\(2N\)</span>-dimensional
+<a class="reference internal" href="#equation-eq-partition-sum-hamiltonian">(5.4)</a> is a <span class="math notranslate nohighlight">\(2N\)</span>-dimensional
 integral, over all the positions <span class="math notranslate nohighlight">\(x_i\)</span> and momenta <span class="math notranslate nohighlight">\(p_i\)</span> of <span class="math notranslate nohighlight">\(N\)</span>
 particles. In practice we can use clever tricks to deal with this
 integral.</p>
@@ -513,7 +513,7 @@ integral.</p>
         e^{-\beta \sum \limits_{i=1}^N \left(\frac{p_i^2}{2m} + V(x_i)\right)} = \prod \limits_{i=1}^N e^{-\beta \left(\frac{p_i^2}{2m} + V(x_i)\right)}.
     \]</div>
 </li>
-<li><p>Argue that the intimidating expression, equation <a class="reference internal" href="#equation-eq-partition-sum-hamiltonian">(5.3)</a>, is just
+<li><p>Argue that the intimidating expression, equation <a class="reference internal" href="#equation-eq-partition-sum-hamiltonian">(5.4)</a>, is just
 the product of <span class="math notranslate nohighlight">\(N\)</span> identical terms, and that one only needs to calculate</p>
 <div class="math notranslate nohighlight">
 \[
@@ -645,7 +645,7 @@ because particles can float in and out, they have a chemical potential
 specific statistical properties. The probability that an open system is
 in a state <span class="math notranslate nohighlight">\(m\)</span> is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-grand-canonical-distribution">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-eq-grand-canonical-distribution" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-eq-grand-canonical-distribution" title="Permalink to this equation">¶</a></span>\[
     P(m) = \frac{1}{\mathcal{Z}}e^{-\beta E_m + \beta \mu N_m}.
 \]</div>
 <p>The expression looks similar to the Boltzmann distribution, equation
@@ -659,7 +659,7 @@ number <span class="math notranslate nohighlight">\(N_m\)</span> stands for the 
 contrast to the <span class="math notranslate nohighlight">\(N,V,T\)</span>-ensemble). The factor <span class="math notranslate nohighlight">\(\mathcal{Z}\)</span> is a
 normalization factor, given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-grand-partition-function">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-eq-grand-partition-function" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-eq-grand-partition-function" title="Permalink to this equation">¶</a></span>\[
     \mathcal{Z} = \sum \limits_m e^{-\beta E_m + \beta \mu N_m}
 \]</div>
 <p>and is called the “grand canonical partition function”. It seems an
@@ -683,7 +683,7 @@ particles on the polymer is simply</p>
 \[
         E = N\epsilon
     \]</div>
-<p>In equation <a class="reference internal" href="#equation-eq-grand-partition-function">(5.5)</a> the sum is over all states.
+<p>In equation <a class="reference internal" href="#equation-eq-grand-partition-function">(5.6)</a> the sum is over all states.
 In the following questions, this sum will be rewritten as a sum over
 <span class="math notranslate nohighlight">\(N\)</span>, the number of particles in the system. For that, one needs to
 know how many states there are with <span class="math notranslate nohighlight">\(N\)</span> particles.</p>
