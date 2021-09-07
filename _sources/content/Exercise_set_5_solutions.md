@@ -19,7 +19,7 @@
     $$ (eq:average_energy_lhs)
 
     The factor $Z$ does not depend on $n$, so it can be taken out of the
-    sum. Now, solving the right hand side of {eq}`eq:average_energy`,
+    sum. Now, solving the right hand side of equation {eq}`eq:average_energy`,
     one can use the chain rule
 
     $$
@@ -30,8 +30,8 @@
     \end{aligned}
     $$
 
-    and the final expression is identical to {eq}`eq:average_energy_lhs`, which
-    demonstrates the equality in {eq}`eq:average_energy`.
+    and the final expression is identical to equation {eq}`eq:average_energy_lhs`, which
+    demonstrates the equality in equation {eq}`eq:average_energy`.
 
 2.  The more difficult part of this exercise is to show
 
@@ -97,24 +97,7 @@
 
     as requested.
 
-3.  To calculate the expectation value of the kinetic energy of all the
-    particles, one has to evaluate, in principle
-
-    $$\left\langle \sum \limits_{i=1}^N \frac{p_i^2}{2m} \right\rangle$$
-
-    However, instead one only needs to calculate
-
-    $$\left\langle \sum \limits_{i=1}^N \frac{p_i^2}{2m} \right\rangle = N \left\langle \frac{p_1^2}{2m} \right\rangle$$
-
-    with
-
-    $$
-       \left\langle \frac{p_1^2}{2m} \right\rangle = \frac{ \int \frac{p_1^2}{2m} e^{-\beta \frac{p_1^2}{2m}} dp_1}{ \int e^{-\beta \frac{p_1^2}{2m}} dp_1}
-    $$
-
-    Argue why.
-
-    The particles are identical, so there should not be a distinction
+3.  The particles are identical, so there should not be a distinction
     between any of the particles. Even though the kinetic energies can
     be different for a given microstate, the expectation value should be
     the same for each particle. This can also be verified
@@ -158,47 +141,13 @@
     of how the particles interact, or other properties of the system. It
     is a universal relation.
 
-5.  If the particles are trapped in harmonic potential wells
-    $V(x) = \frac{1}{2}kx^2$, what would be the average potential energy
-    of one particle?
-
-    $$\left \langle \frac{1}{2}kx^2  \right \rangle = \frac{ \int \frac{1}{2}kx^2 e^{-\beta \frac{1}{2}kx^2} dx}{ \int e^{-\beta \frac{1}{2}kx^2} dx}$$
-
-    if everything worked out well, you found that for particles in
-    harmonic wells
-
-    $$\left \langle \frac{p^2}{2m} \right \rangle = \left \langle \frac{1}{2}kx^2 \right \rangle = \frac{1}{2}k_\mathrm{B}T$$
-
-    This is called the <span>*equipartition theorem*</span>: any degree
-    of freedom that appears as a quadratic term in the energy of a
-    microstate, contributes $\frac{1}{2}k_\mathrm{B}T$ to the average
-    energy. In this special case, the energy of each particle is equally
-    divided between kinetic energy and potential energy, on average.
-
-    And as if that is not puzzling enough, this situation is not
-    artificial, but very common. In every solid, the atoms or molecules
-    are trapped in some position, and vibrate at some location, in some
-    potential well. Close to the minimum of that potential well, the
-    potential is harmonic, regardless of the nature of the potential. If
-    we make a Taylor expansion up to second order, around the minimum of
-    the well $x_0$:
-
-    $$V(x_0+x) = V(x_0) + V'(x_0) x + \frac{1}{2} V''(x_0) x^2$$
-
-    then we can ignore the linear term in $x$, because $V'(x_0) = 0$ at
-    the minimum, but $V''(x_0) \neq 0$, so that the potential is
-    approximately harmonic (i.e. quadratic in $x$) close to its minimum,
-    with “spring constant” $k = V''(x_0)$. So, in any solid at
-    sufficiently low temperature, the equipartition theorem applies.
+5.  ...
 
 ## Problem 5.4
 
-1.  Calculate the probability $P(h)$ to find a particle at height $h$
-    using the Boltzmann distribution.
-
-    The probability of being in state $n$ is given by the Boltzmann
-    distribution, equation [eq:Boltzmann~d~istribution~s~et~5~],
-
+1.  The probability of being in state $n$ is given by the Boltzmann
+    distribution, equation {eq}`Boltzmann_distribution_set_5`,
+    
     $$P(n) = \frac{1}{Z}e^{-\beta E_n}$$
 
     The state is in this case determined by all the positions and
@@ -225,10 +174,7 @@
     $V(|r_i - r_j|)$, and that complicates the derivation of $P(h)$
     significantly]
 
-2.  Calculate the density of particles $\rho(h)$ at height $h$, using
-    $\rho(h) = \rho_0 P(h)$, with $\rho_0 = N/V$ the average density
-
-    This would be
+2.  This would be
 
     $$\rho(h) \propto e^{-\beta m g h}$$
 
@@ -236,10 +182,7 @@
     e.g. if the concentration at a given height were known, or if the
     total number of particles was given.
 
-3.  Find an expression for the length scale over which the density drops
-    by a factor $e^{-1}\approx37\%$.
-
-    In other words, find $L$ for which
+3.  In other words, find $L$ for which
 
     $$e^{-\beta mg(h+L)} = e^{-1}e^{-\beta mgh}$$
 
@@ -247,19 +190,7 @@
 
     $$L = \frac{k_\mathrm{B}T}{mg}$$
 
-4.  What would this length scale be for oxygen molecules, if the
-    temperature of the air were 0 $^\mathrm{o}$C? You can use the
-    following numbers:
-
-    -   Avogadro’s number: $R_\mathrm{A}=6,022\cdot10^{23}$ (particles
-        per mole)
-
-    -   Boltzmann’s constant: $k_\mathrm{B} = 1.38\cdot10^{-23}$ (J
-        K$^{-1}$)
-
-    -   Mass oxygen: 16u or 16 g per mole
-
-    Oxygen molecules have a mass $2 \cdot 16$ g/mole, and there are
+4.  Oxygen molecules have a mass $2 \cdot 16$ g/mole, and there are
     $6,022\cdot10^{23}$ particles per mole, so one oxygen molecule has a
     mass of $5,314\cdot10^{-26}$ kg. The corresponding length scale
     $L_\mathrm{O_2} = 7227$ m. This indicates why breathing at high
@@ -267,7 +198,7 @@
     the Himalayas.
 
 5.  What would this length scale be for spherical gold nanoparticles
-    with a radius of $5$ nm in an aqueous solution? The mass density of
+    with a radius of 5 nm in an aqueous solution? The mass density of
     gold is approximately $19.3\cdot10^3$ kg/m$^3$ (19 kg per liter).
 
     The mass of a single nanoparticle is $1,011\cdot10^{-20}$ kg, which
@@ -280,80 +211,4 @@
 
 ## Problem 5.5
 
-A system that can exchange heat and particles with a reservoir is called
-an “open system”, or a “$\mu,V,T$-ensemble”, or a “grand canonical
-ensemble”. The terms are used as synonyms, but shed light on specific
-properties of these systems. As an example of an open system, one can
-consider the electrolytes in a hydrogel in contact with a salt buffer,
-or the electrolytes in a solution of proteins in contact with a buffer,
-separated by a semi-permeable membrane. Open systems are called “open”
-because particles can float in and out, they have a chemical potential
-$\mu$ and temperature $T$ fixed by a reservoir (a “buffer”), and obey
-specific statistical properties. The probability that an open system is
-in a state $m$ is given by
-
-$$
-    P(m) = \frac{1}{\mathcal{Z}}e^{-\beta E_m + \beta \mu N_m}
-$$ (eq:Grand_canonical_distribution)
-
-The expression looks similar to the Boltzmann distribution, equation
-`eq`{eq:Boltzmann_distribution_set_5}, but with an extra term
-$\beta \mu N_m$. It can be derived in a similar way as the Boltzmann
-distribution. The chemical potential $\mu$ (the amount of energy needed
-to add one particle to the system) is fixed by the reservoir, and
-basically depends on the density of particles in the reservoir. The
-number $N_m$ stands for the number of particles in the system, in state
-$m$ (different states may have different numbers of particles, in
-contrast to the $N,V,T$-ensemble). The factor $\mathcal{Z}$ is a
-normalisation factor, given by
-
-$$
-    \mathcal{Z} = \sum \limits_m e^{-\beta E_m + \beta \mu N_m}
-$$ (eq:Grand_partition_function)
-
-and is called the “grand canonical partition function”. It seems an
-inappropriately long name for a normalisation factor, but it is secretly
-much more than that. A few properties will be explored in this exercise.
-
-1.  Show that the average number of particles in an open system can be
-    derived from $\mathcal{Z}$ by
-
-    $$\langle N \rangle = k_\mathrm{B}T \frac{\partial}{\partial \mu} \ln{\mathcal{Z}}$$
-
-    [hint: work out the right hand side and see that it results in the
-    definition of the expectation value]
-
-    A certain polymer has $M$ sites where particles can bind. It is in
-    contact with a solution (the buffer) with a chemical potential $\mu$
-    and temperature $T$. The binding energy of a particle to the polymer
-    is $\epsilon$, such that the energy of a configuration of $N$
-    particles on the polymer is simply
-
-    $$E = N\epsilon$$
-
-    In {eq}`eq:Grand_partition_function` the sum is over all
-    states. In the following questions, this sum will be rewritten as a
-    sum over $N$, the number of particles in the system. For that, one
-    needs to know how many states there are with $N$ particles.
-
-2.  How many different states are there given that $N$ particles are
-    bound to the polymer? [Hint: in other words, in how many ways can
-    $N$ identical particles bind to $M$ sites?]
-
-3.  Show that $\mathcal{Z}$ can be rewritten as
-
-    $$\mathcal{Z} = \sum \limits_{N=0}^M \binom{M}{N} \left( e^{-\beta(\epsilon - \mu)} \right)^N$$
-
-4.  Use the relation
-
-    $$\sum \limits_{N=0}^{M} \binom{M}{N} a^N b^{M-N} = (a + b)^M$$
-
-    to derive that
-
-    $$\mathcal{Z} = (e^{-\beta(\epsilon-\mu)} + 1)^M$$
-
-5.  Find the average number of particles that bind to the polymer
-    $\langle N \rangle$, as a function of $\mu$ and sketch this
-    function. [hint: when sketching it may be useful to check the limits
-    of $\mu \rightarrow \infty$ and $\mu \rightarrow -\infty$ and
-    $\mu = \epsilon$, and to check whether those limits make sense]
+...
