@@ -107,7 +107,7 @@ exchange between the system and the reservoir.
 
     $$
         \langle E \rangle = -\frac{\partial}{\partial \beta} \ln{Z}
-    $$
+    $$ (eq:average_energy)
 
     with $Z$ the partition function.
 
