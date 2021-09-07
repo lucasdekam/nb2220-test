@@ -146,7 +146,7 @@
 ## Problem 5.4
 
 1.  The probability of being in state $n$ is given by the Boltzmann
-    distribution, equation {eq}`Boltzmann_distribution_set_5`,
+    distribution, equation {eq}`eq:Boltzmann_distribution_set_5`,
     
     $$P(n) = \frac{1}{Z}e^{-\beta E_n}$$
 
