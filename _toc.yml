@@ -23,4 +23,6 @@ parts:
         - file: content/Exercise_set_2_solutions
         - file: content/Exercise_set_3_solutions
         - file: content/Exercise_set_4_solutions
+        - file: content/Exercise_set_5_solutions
         - file: content/Exercise_set_6_solutions
+        - file: content/Exercise_set_7_solutions
