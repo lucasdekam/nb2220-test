@@ -13,8 +13,113 @@ kernelspec:
 
 # Problem set 6
 
+## Problem 6.1
+
+1.  Salt ions disrupt the structure of the water molecules, and
+    stimulate the nucleation process. For the formation of a new phase
+    (here, a gas bubble) an energy barrier needs to be overcome. Small
+    particles or a dirty pan can lower the barrier of the nucleation
+    process locally. (this is actually a difficult question, and this
+    answer is not the full story)
+
+2.  To prevent the formation of many different crystalline domains,
+    which gives an undesirable texture and look, and to make sure that
+    one ends up with the ’desirable’ crystalline phase (which forms
+    around 32$^\mathrm{o}$C) which is the shiniest and makes the best
+    sound when it is broken.
+
+3.  Important is to use a clean bottle, to cool rapidly, and to cool
+    deep enough, and not too long, to make sure that the nucleation
+    process does not take over.
+
+4.  The formation and growth of ice crystals cuts organic material into
+    pieces at a microscopic scale. And if that is not harmful enough, it
+    also changes the osmotic pressure in the remaining fluid phase, such
+    that cells can dry out or burst.
+
+5.  If one minimises $G$ one finds that
+
+    $$\frac{\partial G}{\partial R} = 0$$
+
+    implies
+
+    $$R_\mathrm{crit} = \frac{\Delta G}{2 \gamma}$$
+
+    How the surface tension $\gamma$ and change in free energy
+    $\Delta G$ are calculated is a story for another time.
+
+## Problem 6.2
+
+1.  For an ideal gas
+
+    $$p = k_\mathrm{B}T \rho$$
+
+    and a Van der Waals fluid
+
+    $$p = k_\mathrm{B}T \frac{\rho}{1-b\rho} - a \rho^2$$
+
+2.  See plot at the bottom of this page.
+
+3.  See lecture (slides)
+
+4.  Anywhere where there are multiple densities with the same pressure,
+    one could expect a phase coexistence (draw a horizontal line in the
+    $p$ vs. $\rho$ curve). However, the regime where the pressure
+    decreases with density should not be counted, because these
+    densities unstable (see lecture)
+
+5.  For an ideal gas
+
+    $$\mu = k_\mathrm{B}T\ln{\rho}$$
+
+    and for a Van der Waals fluid
+
+    $$\mu = k_\mathrm{B}T\ln\frac{\rho}{1-b\rho} + \frac{k_\mathrm{B}T}{1-b\rho} - 2a\rho$$
+
+6.  See plot at the bottom of this page.
+
+7.  Yes, if there are multiple densities with the same $\mu$ one can
+    expect a phase coexistence. The regime where $\mu$ decreases with
+    density should not be counted (see part d and lecture slides)
+
+8.  This follows quickly after substituting $\frac{N}{V}$ by $\rho$.
+
+9.  For the pressure (use the sum rule and the chain rule):
+
+    $$p = - \frac{\partial}{\partial V} Vf = - f - V \frac{\partial f}{\partial V} = -f - V \frac{\partial \rho}{\partial V}\frac{\partial f}{\partial \rho} = \rho \frac{\partial f}{\partial \rho} - f$$
+
+    and for $\mu$ similarly:
+
+    $$\mu = \frac{\partial}{\partial N} Vf = V \frac{\partial f}{\partial N} = V \frac{\partial \rho}{\partial N}\frac{\partial f}{\partial \rho} = \frac{\partial f}{\partial \rho}$$
+
+10. It may be obvious that the chemical potentials are the same, because
+    $\mu = \frac{\partial f}{\partial \rho}$ is the slope of the curve,
+    and the two points obviously have the same slope:
+
+    $$\mu_1 = f'(\rho_1) = f'(\rho_2) = \mu_2$$
+
+    For $p_1 = p_2$ another condition has to be met. If that is the
+    case, then
+
+    $$p_1 = \rho_1 f'(\rho_1) - f(\rho_1) =  \rho_2 f'(\rho_2) - f(\rho_2) = p_2$$
+
+    Swapping some terms, gives
+
+    $$\rho_1 f'(\rho_1) - \rho_2 f'(\rho_2) = f(\rho_1) - f(\rho_2)$$
+
+    but we know that $f'(\rho_1)=f'(\rho_2)$, so
+
+    $$f'(\rho_1) = f'(\rho_2) = \frac{f(\rho_1) - f(\rho_2)}{\rho_1 - \rho_2}$$
+
+    This statement tells us that for the pressures to be the same, the
+    points need to have the same slope, and in addition to that, that if
+    the two points are connected with a straight line, that this line
+    has to have the same slope as well. This can be done very easily by
+    putting a ruler against the curve of $f(\rho)$, as shown in
+    {numref}`fig:free_energy_density`.
+
 ```{code-cell} ipython3
-:tags: [hide-input]
+:tags: [remove-input]
 
 import numpy as np
 import plotly.graph_objects as go
@@ -110,8 +215,6 @@ sliders = [dict(
 
 fig.update_layout(
     sliders=sliders,
-    xaxis_title=r'$\mathrm{density} \; \rho$',
-    yaxis_title=r'$\mathrm{pressure} \; p$',
     legend_title="Legend",
     height=400
 )

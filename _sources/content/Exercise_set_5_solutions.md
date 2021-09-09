@@ -107,7 +107,7 @@
 
     $$
     \begin{aligned}
-        \left \langle \frac{p_1^2}{2m} \right \rangle &=& \frac { \int \frac{p_1^2}{2m} e^{-\beta \sum \limits_{i=1}^N \left(\frac{p_n^2}{2m} + V(x_n)\right)}dx_1 dp_1 \cdots dx_N dp_N } { \int e^{-\beta \sum \limits_{i=1}^N \left(\frac{p_n^2}{2m} + V(x_n)\right)}dx_1 dp_1 \cdots dx_N dp_N }
+        \left \langle \frac{p_1^2}{2m} \right \rangle &= \frac { \int \frac{p_1^2}{2m} e^{-\beta \sum \limits_{i=1}^N \left(\frac{p_n^2}{2m} + V(x_n)\right)}dx_1 dp_1 \cdots dx_N dp_N } { \int e^{-\beta \sum \limits_{i=1}^N \left(\frac{p_n^2}{2m} + V(x_n)\right)}dx_1 dp_1 \cdots dx_N dp_N }
     \end{aligned}
     $$
 
@@ -116,7 +116,7 @@
 
     $$
     \begin{aligned}
-        \left \langle \frac{p_1^2}{2m} \right \rangle &=& \frac { \int \frac{p_1^2}{2m} e^{-\beta \frac{p_n^2}{2m}} dp_1 \int e^{-\beta V(x)} dx_1 \left( \int e^{-\beta V(x)} dx \int e^{-\beta \frac{p^2}{2m}} dp \right )^{N-1} } { \left( \int e^{-\beta V(x)} dx \int e^{-\beta \frac{p^2}{2m}} dp \right )^N } \\
+        \left \langle \frac{p_1^2}{2m} \right \rangle &= \frac { \int \frac{p_1^2}{2m} e^{-\beta \frac{p_n^2}{2m}} dp_1 \int e^{-\beta V(x)} dx_1 \left( \int e^{-\beta V(x)} dx \int e^{-\beta \frac{p^2}{2m}} dp \right )^{N-1} } { \left( \int e^{-\beta V(x)} dx \int e^{-\beta \frac{p^2}{2m}} dp \right )^N } \\
         &= \frac{ \int \frac{p_1^2}{2m} e^{-\beta \frac{p_1^2}{2m}} dp_1}{ \int e^{-\beta \frac{p_1^2}{2m}} dp_1}
     \end{aligned}
     $$
@@ -147,7 +147,7 @@
 
 1.  The probability of being in state $n$ is given by the Boltzmann
     distribution, equation {eq}`eq:Boltzmann_distribution_set_5`,
-    
+
     $$P(n) = \frac{1}{Z}e^{-\beta E_n}$$
 
     The state is in this case determined by all the positions and
@@ -197,11 +197,7 @@
     altitude becomes more difficult, and why it can be dangerous to hike
     the Himalayas.
 
-5.  What would this length scale be for spherical gold nanoparticles
-    with a radius of 5 nm in an aqueous solution? The mass density of
-    gold is approximately $19.3\cdot10^3$ kg/m$^3$ (19 kg per liter).
-
-    The mass of a single nanoparticle is $1,011\cdot10^{-20}$ kg, which
+5.  The mass of a single nanoparticle is $1,011\cdot10^{-20}$ kg, which
     is about a million times heavier than an oxygen molecule, so the
     length scale is also about a million times smaller, being around
     $L_\mathrm{AuNP} = 3,80$ cm. Still, this length scale is enormous

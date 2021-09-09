@@ -184,7 +184,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Exercise_set_7_solutions.html">
-     Ionic screening {#ionic-screening .unnumbered}
+     Problem set 7
     </a>
    </li>
   </ul>
@@ -395,7 +395,7 @@ and the volume may change. Hence, you might consider exchanging <span class="mat
 <span class="math notranslate nohighlight">\(p= -\partial E/\partial V\)</span> using a Legendre transform. Similarly, if your
 system can exchange particles with its environment, it’s often easier to consider
 the chemical potential <span class="math notranslate nohighlight">\(\mu = \partial E/ \partial N\)</span> than <span class="math notranslate nohighlight">\(N\)</span>.</p>
-<p>If you want to know more about Legendre transforms, <a class="reference external" href="https://www.lpsm.paris/pageperso/lecomte/references2013/making-sense-of-legendre-transform.pdf">this</a> article is a good place to start <span id="id1">[<a class="reference internal" href="#id4">1</a>]</span>.</p>
+<p>If you want to know more about Legendre transforms, <a class="reference external" href="https://www.lpsm.paris/pageperso/lecomte/references2013/making-sense-of-legendre-transform.pdf">this</a> article is a good place to start <span id="id1">[<a class="reference internal" href="#id5">1</a>]</span>.</p>
 </div>
 <div class="figure align-default" id="thermodynamic-systems">
 <a class="reference internal image-reference" href="../_images/foursystems.svg"><img alt="../_images/foursystems.svg" src="../_images/foursystems.svg" width="100%" /></a>
@@ -529,11 +529,11 @@ cycle</p>
 loop</p>
 <div class="math notranslate nohighlight">
 \[
-      \oint \frac{dQ}{T} = 0.
+      \oint \frac{\mathrm{d}Q}{T} = 0.
     \]</div>
 <p>It seems like there is an equation
 of state. This equation of state is called <em>entropy</em> with symbol
-<span class="math notranslate nohighlight">\(S\)</span>, and <span class="math notranslate nohighlight">\(dQ = TdS\)</span>.</p>
+<span class="math notranslate nohighlight">\(S\)</span>, and <span class="math notranslate nohighlight">\(\mathrm{d}Q = T\mathrm{d}S\)</span>.</p>
 </li>
 <li><p>The Carnot cycle is a reversible cycle. One can prove quickly that
 reversible cycles all have the same efficiency, and that this
@@ -554,7 +554,7 @@ this to derive that</p>
 <p>With some more math one can derive now that for <em>any</em> cycle</p>
 <div class="math notranslate nohighlight">
 \[
-  \oint \frac{dQ}{T} \leq 0.
+  \oint \frac{\mathrm{d}Q}{T} \leq 0.
 \]</div>
 <p>This is called the Clausius
 inequality. A consequence is that for an adiabatic process
@@ -563,13 +563,17 @@ state 2.</p>
 <blockquote>
 <div><p>The entropy of an isolated system never decreases.</p>
 </div></blockquote>
-<p>For a more detailed description of the math, see David Tong’s reader, page 122.</p>
+<p>For a more detailed description of the math, see David Tong’s reader
+<span id="id2">[<a class="reference internal" href="#id6">2</a>]</span>, page 122.</p>
 </div>
 <div class="section" id="references">
 <h2><span class="section-number">3.6. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p id="id2"><dl class="citation">
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<p id="id3"><dl class="citation">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Royce KP Zia, Edward F Redish, and Susan R McKay. Making sense of the Legendre transform. <em>American Journal of Physics</em>, 77(7):614–622, 2009.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>David Tong. <em>Statistical Physics</em>. University of Cambridge, 2012. <span><a class="reference external" href="#"></a></span>http://www.damtp.cam.ac.uk/user/tong/statphys.html.</p>
 </dd>
 </dl>
 </p>

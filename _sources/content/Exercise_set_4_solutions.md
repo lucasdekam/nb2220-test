@@ -284,7 +284,7 @@
     So, in this exercise you derived a property that is applicable to a
     large class of polymers.
 
-8.  The work required to pull the end of the polymer from $r=0$ to
+8.  The work required to pull the end of the polymer from $R=0$ to
     $R = \sqrt{N}b$ is $\frac{3}{2}k_\mathrm{B}T$, and to
     $R = 2\sqrt{N}b$ it is $6 k_\mathrm{B}T$. The typical kinetic energy
     of the components in a system in thermal equilibrium is

@@ -98,7 +98,7 @@ charge.
 
     $$
         \psi''(z) = \frac{2e\rho_0}{\epsilon_\mathrm{w}}\sinh{\beta e \psi(z)}
-    $$
+    $$ (eq:PB_psi)
 
     using the relation $2\sinh{x}=e^x - e^{-x}$.
 

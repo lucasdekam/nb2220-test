@@ -240,12 +240,12 @@ the one you derived, equation {eq}`eq:Carnot_efficiency`.
     loop
 
     $$
-      \oint \frac{dQ}{T} = 0.
+      \oint \frac{\mathrm{d}Q}{T} = 0.
     $$
 
     It seems like there is an equation
     of state. This equation of state is called *entropy* with symbol
-    $S$, and $dQ = TdS$.
+    $S$, and $\mathrm{d}Q = T\mathrm{d}S$.
 
 2.  The Carnot cycle is a reversible cycle. One can prove quickly that
     reversible cycles all have the same efficiency, and that this
@@ -265,7 +265,7 @@ the one you derived, equation {eq}`eq:Carnot_efficiency`.
 With some more math one can derive now that for *any* cycle
 
 $$
-  \oint \frac{dQ}{T} \leq 0.
+  \oint \frac{\mathrm{d}Q}{T} \leq 0.
 $$
 
 This is called the Clausius
@@ -275,7 +275,8 @@ state 2.
 
 >    The entropy of an isolated system never decreases.
 
-For a more detailed description of the math, see David Tong's reader, page 122.
+For a more detailed description of the math, see David Tong's reader
+{cite:p}`tong_statphys`, page 122.
 
 ## References
 ```{bibliography}
