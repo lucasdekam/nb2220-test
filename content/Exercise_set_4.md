@@ -244,7 +244,7 @@ vector pointing from the beginning of the polymer to the endpoint is
 then given by $\vec{R} \equiv \vec{r}_1+\vec{r}_2+...+\vec{r}_N$, see
 {numref}`Flexible_polymer`.
 
-```{figure} images/flexiblepolymer.svg
+```{figure} images/flexiblepolymer_old.svg
 ---
 name: Flexible_polymer
 width: 40%

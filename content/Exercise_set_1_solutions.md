@@ -1,7 +1,6 @@
 # Problem set 1
 
 ## Problem 1.1
-{ref}`Link to problem <sec:Oxygen_in_Box>`
 
 1.  The probability density function is assumed to be constant, so
     $P(\mathbf{x}) = 1/V$, where $V$ is the volume of the classroom ($P$
@@ -61,7 +60,6 @@
     concepts in Statistical Physics.
 
 ## Problem 1.2
-{ref}`Link to problem <sec:Central_limit_theorem_dice>`
 
 1.  The expectation value $\mu = 3.5$, and all outcomes are equally
     probable. The standard deviation is
@@ -111,7 +109,6 @@
     mean.
 
 ## Problem 1.3
-{ref}`Link to problem <sec:Orders_of_magnitude>`
 
 These are estimates of the order of magnitude.
 
@@ -134,7 +131,6 @@ These are estimates of the order of magnitude.
     with a monolayer of cells.
 
 ## Problem 1.4
-{ref}`Link to problem <sec:Emergent_behavior>`
 
 All phenomena can be seen as emergent. The final points would deserve a
 much longer discussion, and have been discussed throughout the
